@@ -77,7 +77,14 @@
     font-family: 'Roboto Condensed', sans-serif;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  /* html { */
+    /* scroll-behavior: smooth; */
+  /* } */
+}
+
+
+/* NATIVE VIEW TRANSITIONS API */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
 }

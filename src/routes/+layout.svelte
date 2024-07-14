@@ -6,11 +6,30 @@
 	import { Button } from '$lib/components/ui/button';
 	import Nav from '$lib/components/ui/Nav.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	const { data: propsData, children } = $props();
+
+	// START VIEW TRANSITIONS API
+	import { onNavigate } from '$app/navigation';
+
+	onNavigate((navigation) => {
+		// @ts-ignore <-- This is a private API so we need to ignore the TS error
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			// @ts-ignore <-- This is a private API so we need to ignore the TS error
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
+	// END VIEW TRANSITIONS API
 </script>
 
 <ModeWatcher />
+<Toaster />
 
 <div class="flex min-h-screen flex-col">
 	<Nav />

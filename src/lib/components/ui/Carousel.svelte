@@ -19,11 +19,11 @@
 	>
 		<Carousel.Content>
 			{#each results as result}
-				<Carousel.Item class="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-					<a href={result.url}>
+				<Carousel.Item class=" sm:basis-1/2 md:basis-1/3">
+					<a href="/results">
 						<div class="p-1">
 							<Card.Root>
-								<Card.Content class="flex aspect-square items-center justify-center p-2">
+								<Card.Content class="flex aspect-square h-full items-center justify-center p-2">
 									<img
 										src={result.image}
 										alt={result.title}

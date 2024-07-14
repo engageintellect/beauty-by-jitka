@@ -5,21 +5,22 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<div class="flex w-full flex-col rounded-lg sm:flex-row lg:p-5">
-	<div class="flex w-full items-center justify-center">
+<div
+	class="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 rounded-lg transition-all duration-300 md:flex-row md:gap-0"
+>
+	<div class="flex w-full justify-center">
 		<div class="flex w-full max-w-md flex-col gap-5 text-center lg:p-5">
 			<div class="w-full text-4xl font-bold">JITKA ZAVADILOVA, RN</div>
-			<div class="text-lg font-thin">
+			<div class="text-xl font-thin">
 				Elevating beauty standards on social media, she stands as one of the most coveted facial
 				injectors, proudly amassing millions of views.
 			</div>
-
 			<div class="flex items-center justify-center gap-5">
 				<a href="/about">
 					<Button
 						size="lg"
-						class="group/readMoreButton flex w-full items-center gap-2 text-lg md:w-fit"
-						variant="outline"
+						class="group/readMoreButton flex w-full items-center gap-2 text-xl md:w-fit"
+						variant="ghost"
 					>
 						<div>Read More</div>
 						<Icon
@@ -31,7 +32,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex w-full justify-end md:w-2/3">
-		<img src={jitkaImage} alt="Jitka" class="w-full rounded-lg bg-pink-100" />
+	<div class="flex w-full justify-end">
+		<img
+			src={jitkaImage}
+			alt=""
+			class="mx-auto h-80 w-64 rounded-full bg-pink-200 object-cover object-top shadow-lg transition-all duration-300 md:h-[450px] md:w-2/3 md:rounded-lg md:bg-pink-100"
+		/>
 	</div>
 </div>

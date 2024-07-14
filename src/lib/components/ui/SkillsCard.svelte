@@ -1,13 +1,10 @@
 <script lang="ts">
-	import jitkaImage from '$lib/assets/images/jitka.png';
 	import girlImage from '$lib/assets/images/girl1.png';
-	import lipInjecttionImage from '$lib/assets/images/lip-injection.png';
-	import bbjLogo from '$lib/assets/images/bbj-logo.png';
 	import { Button } from './button/index.js';
 	import Icon from '@iconify/svelte';
 </script>
 
-<div class="flex w-full flex-col md:flex-row">
+<div class="my-10 flex w-full flex-col gap-10 md:flex-row md:gap-0">
 	<div class="flex w-full rounded-lg bg-pink-100 dark:bg-pink-500">
 		<div class="z-20 flex w-1/2 flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold">AESTEHTICS AND BEAUTY COMBINED</div>
@@ -17,24 +14,28 @@
 			</div>
 
 			<div>
-				<Button
-					size="lg"
-					class="group/resultsButton flex w-full items-center gap-2 text-lg md:w-fit"
-				>
-					<div>Results</div>
-					<Icon
-						icon="akar-icons:arrow-right"
-						class="h-5 w-5 transition-transform duration-300 lg:group-hover/resultsButton:translate-x-1"
-					/>
-				</Button>
+				<a href="/results">
+					<Button
+						size="lg"
+						class="group/resultsButton flex w-full items-center gap-2 text-xl md:w-fit"
+					>
+						<div>See Results</div>
+						<Icon
+							icon="akar-icons:arrow-right"
+							class="h-5 w-5 transition-transform duration-300 md:group-hover/resultsButton:translate-x-1"
+						/>
+					</Button>
+				</a>
 			</div>
 		</div>
 
 		<img src={girlImage} alt="Jitka" class="w-1/2 object-cover" />
 	</div>
 
-	<div class="w-full lg:mt-20">
-		<div class="flex h-full flex-col gap-5 bg-neutral-100 p-5 dark:bg-neutral-700">
+	<div class="w-full md:translate-y-10">
+		<div
+			class="flex h-full flex-col gap-5 rounded-lg bg-neutral-100 p-5 shadow-lg dark:bg-neutral-700"
+		>
 			<div class="flex flex-col gap-2">
 				<div class="text-2xl font-bold">A-List Medical Professional</div>
 				<div>
