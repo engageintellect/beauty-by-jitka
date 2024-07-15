@@ -11,8 +11,6 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"postinstall": "node node_modules/puppeteer/install.js"
-
-
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -40,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@iconify/svelte": "^4.0.2",
+		"@sparticuz/chromium": "^123.0.1",
 		"bits-ui": "^0.21.12",
 		"chrome-aws-lambda": "^10.1.0",
 		"clsx": "^2.1.1",

@@ -1,14 +1,14 @@
-import chromium from 'chrome-aws-lambda';
+import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 
 export async function scrapeTikTok() {
     let browser = null;
-    try {
-        const executablePath = await chromium.executablePath;
 
+    try {
         browser = await puppeteer.launch({
             args: chromium.args,
-            executablePath: executablePath || process.env.CHROME_EXECUTABLE_PATH,
+            defaultViewport: chromium.defaultViewport,
+            executablePath: await chromium.executablePath(),
             headless: chromium.headless,
             ignoreHTTPSErrors: true,
         });
@@ -36,6 +36,7 @@ export async function scrapeTikTok() {
 
     } catch (error) {
         console.error('Error scraping TikTok:', error);
+        throw error;
     } finally {
         if (browser) {
             await browser.close();
