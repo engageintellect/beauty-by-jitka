@@ -4,10 +4,13 @@ import puppeteer from 'puppeteer-core';
 export async function scrapeTikTok() {
     let browser = null;
     try {
+        const executablePath = await chromium.executablePath;
+
         browser = await puppeteer.launch({
             args: chromium.args,
-            executablePath: await chromium.executablePath,
+            executablePath: executablePath || '/usr/bin/chromium-browser',
             headless: chromium.headless,
+            ignoreHTTPSErrors: true,
         });
 
         const page = await browser.newPage();
