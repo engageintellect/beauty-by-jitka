@@ -8,7 +8,7 @@ export async function scrapeTikTok() {
 
         browser = await puppeteer.launch({
             args: chromium.args,
-            executablePath: executablePath || '/usr/bin/chromium-browser',
+            executablePath: executablePath || process.env.CHROME_EXECUTABLE_PATH,
             headless: chromium.headless,
             ignoreHTTPSErrors: true,
         });
