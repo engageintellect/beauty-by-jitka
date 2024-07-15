@@ -54,12 +54,15 @@
 	<div class="w-full max-w-sm">
 		<div class="flex flex-col items-start gap-2">
 			<div class="flex items-center gap-5">
-				<div class="text-7xl font-bold">Let's Chat</div>
-				<Icon icon="material-symbols:android-chat" class="text-7xl" />
+				<div class="text-5xl font-bold md:text-7xl">Contact</div>
+				<Icon icon="material-symbols:android-chat" class="text-5xl md:text-7xl" />
 			</div>
 			<div class="text-lg font-thin">
-				If you have a question, or would like to schedule an appointment, please fill out the form,
-				we'll get back to you soon. Or, give us a call at <span class="text-2xl font-bold"
+				Have a have a question, or would like to schedule a consultation or appointment? Fill out
+				the form, we'll get back to you soon.
+			</div>
+			<div class="text-lg font-thin">
+				Or, give us a call at <span class="text-2xl font-bold"
 					><a href="tel:9499935222" class="ml-2">949.993.5222</a></span
 				>.
 			</div>

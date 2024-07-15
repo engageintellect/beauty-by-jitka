@@ -22,7 +22,7 @@
 	<div class="h-full w-full rounded-lg bg-pink-100 p-2 shadow-lg dark:bg-pink-500 md:p-5">
 		<div class="w-full text-5xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Founder</div>
-		<div class="mt-2 text-4xl md:mt-5">
+		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
 			Serving patients in Corona Del Mar and Long Beach, California.
 		</div>
 
@@ -32,7 +32,7 @@
 			class="mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="mr-5 flex-1 text-xl">
+			<div class="mr-5 flex-1 text-2xl font-thin">
 				<p>
 					Jitka Zavadilova is a certified nurse injector and registered nurse with extensive
 					credentials and experience both in the United States and Europe. Her practice brings a
@@ -69,7 +69,7 @@
 	<div class="mt-20 h-full rounded-lg bg-teal-100 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5">
 		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, MD</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Medical Director</div>
-		<div class="mt-2 text-4xl md:mt-5">
+		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
 			Serving patients in Corona Del Mar and Long Beach, California.
 		</div>
 
@@ -79,7 +79,7 @@
 			class="mt-5 w-full rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="ml-5 flex-1 text-xl">
+			<div class="ml-5 flex-1 text-2xl font-thin">
 				<p>
 					Discover unparalleled healthcare with Dr. Reynolds, a seasoned Board Certified Family
 					Medicine Specialist based in vibrant Long Beach, California. With over 29 years of
@@ -109,7 +109,7 @@
 				href={getDirectionsUrl('2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625')}
 				target="_blank"
 			>
-				<Button class="flex items-center gap-2">
+				<Button variant="outline" class="flex items-center gap-2">
 					<div>Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
@@ -125,7 +125,7 @@
 			<div class="w-full text-xl font-thin">Long Beach</div>
 			<div class="w-full text-lg">5865 E. Naples Plaza Long Beach, CA 90803</div>
 			<a href={getDirectionsUrl('5865 E. Naples Plaza Long Beach, CA 90803')} target="_blank">
-				<Button class="flex items-center gap-2">
+				<Button variant="outline" class="flex items-center gap-2">
 					<div>Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
@@ -141,8 +141,9 @@
 <div class="mb-20 mt-20 w-full p-2 md:p-5">
 	<div class="mb-5 text-5xl font-bold md:text-7xl">Booking</div>
 	<a href="/contact">
-		<Button size="lg" variant="default" class="w-full text-xl md:w-fit"
-			>Schedule an Appointment</Button
-		>
+		<Button size="lg" variant="default" class="flex w-full items-center gap-2 text-xl md:w-fit">
+			<div>Schedule a Consultation</div>
+			<Icon icon="akar-icons:arrow-right" class="h-5 w-5" />
+		</Button>
 	</a>
 </div>

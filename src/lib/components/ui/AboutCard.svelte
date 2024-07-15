@@ -3,6 +3,7 @@
 	import bbjLogo from '$lib/assets/images/bbj-logo.png';
 	import { Button } from './button/index.js';
 	import Icon from '@iconify/svelte';
+	import TikTokStats from './TikTokStats.svelte';
 </script>
 
 <div
@@ -11,9 +12,9 @@
 	<div class="flex w-full justify-center">
 		<div class="flex w-full max-w-md flex-col gap-5 text-center lg:p-5">
 			<div class="w-full text-4xl font-bold">JITKA ZAVADILOVA, RN</div>
-			<div class="text-xl font-thin">
-				Elevating beauty standards on social media, she stands as one of the most coveted facial
-				injectors, proudly amassing millions of views.
+			<div class="text-xl font-thin md:text-2xl">
+				Renowned on social media for her exceptional skills, she has become one of the most
+				sought-after facial injectors, attracting millions of views.
 			</div>
 			<div class="flex items-center justify-center gap-5">
 				<a href="/about">
@@ -30,13 +31,18 @@
 					</Button>
 				</a>
 			</div>
+			<TikTokStats />
 		</div>
 	</div>
-	<div class="flex w-full justify-end">
-		<img
-			src={jitkaImage}
-			alt=""
-			class="mx-auto h-80 w-64 rounded-full bg-pink-200 object-cover object-top shadow-lg transition-all duration-300 md:h-[450px] md:w-2/3 md:rounded-lg md:bg-pink-100"
-		/>
+
+	<div class="relative flex w-full justify-end">
+		<div class="relative mx-auto h-80 w-64 md:h-[450px] md:w-2/3">
+			<img
+				src={jitkaImage}
+				alt="Jitka"
+				class="h-full w-full rounded-full bg-pink-200 object-cover object-top transition-all duration-300 md:rounded-lg md:bg-pink-100"
+			/>
+			<div class="md:bg-fade-down pointer-events-none absolute bottom-0 left-0 h-1/3 w-full"></div>
+		</div>
 	</div>
 </div>

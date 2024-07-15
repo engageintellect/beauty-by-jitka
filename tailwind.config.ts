@@ -56,7 +56,15 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans]
-			}
+			},
+			backgroundImage: {
+				'fade-up': `linear-gradient(to top, rgba(255, 255, 255, 0), hsl(var(--background)))`,
+				'fade-down': `linear-gradient(to bottom, rgba(255, 255, 255, 0), hsl(var(--background)))`,
+				'fade-left': `linear-gradient(to left, rgba(255, 255, 255, 0), hsl(var(--background)))`,
+				'fade-right': `linear-gradient(to right, rgba(255, 255, 255, 0), hsl(var(--background)))`,
+
+
+      },
 		}
 	},
 };

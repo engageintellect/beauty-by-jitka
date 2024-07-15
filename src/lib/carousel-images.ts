@@ -13,7 +13,8 @@ import result12 from '$lib/assets/images/results/result-12.png';
 import result13 from '$lib/assets/images/results/result-13.png';
 import result14 from '$lib/assets/images/results/result-14.png';
 import result15 from '$lib/assets/images/results/result-15.png';
-import result16 from '$lib/assets/images/results/result-16.png';
+import result16 from '$lib/assets/images/results/result-29.png';
+
 
 
 export const results = [

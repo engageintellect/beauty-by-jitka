@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
 
 	let stuff: any;
@@ -16,8 +17,18 @@
 </script>
 
 {#if stuff?.counters}
-	<p>followers: {stuff?.counters[0]}</p>
-	<p>likes: {stuff?.counters[1]}</p>
+	<div in:fade={{ duration: 500 }} class="flex w-full items-center justify-center gap-5">
+		<div>
+			<span class="font-bold">{stuff?.counters[0]}</span> followers, and
+			<span class="font-bold"
+				>{stuff?.counters[1]} likes on
+				<a href="https://www.tiktok.com/@beautybyjitka?lang=en">tiktok</a></span
+			>
+		</div>
+	</div>
 {:else}
-	<Icon icon="svg-spinners:8-dots-rotate" class="" />
+	<div class="flex w-full items-center justify-center gap-2">
+		<Icon icon="svg-spinners:8-dots-rotate" class="" />
+		<div class="animate-pulse">Calculating current social stats...</div>
+	</div>
 {/if}

@@ -27,6 +27,13 @@
 			stagger: 0.1,
 			ease: 'power2.out'
 		});
+
+		gsap.from('.animate-title', {
+			duration: 0.5,
+			opacity: 0,
+			x: 50,
+			ease: 'power2.out'
+		});
 	});
 </script>
 
@@ -37,9 +44,9 @@
 			<div class="text-xl">Back</div>
 		</Button>
 	</a>
-	<div class="mt-5 flex items-center gap-5">
+	<div class="animate-title mt-5 flex items-center gap-5">
 		<div class="text-5xl font-bold md:text-7xl">Gallery</div>
-		<Icon icon="material-symbols:gallery-thumbnail-outline" class="text-5xl md:text-7xl" />
+		<Icon icon="ri:gallery-view-2" class="text-5xl md:text-7xl" />
 	</div>
 
 	<div class="animate-results my-5 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
@@ -50,7 +57,7 @@
 					on:click={() => openModal(result.image)}
 					on:keydown={(e) => e.key === 'Enter' && openModal(result.image)}
 				>
-					<img src={result.image} alt="" class="h-full w-full rounded-lg object-cover" />
+					<img src={result.image} alt="result" class="h-full w-full rounded-lg object-cover" />
 				</button>
 			</div>
 		{/each}
