@@ -1,12 +1,12 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import puppeteer from 'puppeteer';
+import { chromium } from 'playwright';
 
 export const GET: RequestHandler = async () => {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
     try {
-        await page.goto('https://countik.com/user/@beautybyjitka', { waitUntil: 'networkidle2' });
+        await page.goto('https://countik.com/user/@beautybyjitka', { waitUntil: 'networkidle' });
         
         // Wait for the followers count elements and ensure content is fully loaded
         await page.waitForSelector('.count', { timeout: 20000 });
@@ -15,7 +15,9 @@ export const GET: RequestHandler = async () => {
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         // Extract all counters
-        const counters = await page.$$eval('.count', elements => elements.map(el => el.textContent?.trim()));
+        const counters = await page.$$eval('.count', (elements: Element[]) => 
+            elements.map(el => el.textContent?.trim())
+        );
 
         await browser.close();
 

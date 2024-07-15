@@ -1,22 +1,23 @@
-import chromium from '@sparticuz/chromium';
-import puppeteer from 'puppeteer-core';
+import { chromium } from 'playwright-core';
+import { installBrowsersForNpmInstall } from '@playwright/test/lib/install/installer';
 
 export async function scrapeTikTok() {
     let browser = null;
 
     try {
-        browser = await puppeteer.launch({
-            args: chromium.args,
-            defaultViewport: chromium.defaultViewport,
-            executablePath: await chromium.executablePath(),
-            headless: chromium.headless,
-            ignoreHTTPSErrors: true,
+        // Ensure browsers are installed
+        await installBrowsersForNpmInstall();
+
+        // Launch browser
+        browser = await chromium.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            headless: true,
         });
 
         const page = await browser.newPage();
 
         // Navigate to the TikTok profile
-        await page.goto('https://www.tiktok.com/@beautybyjitka?lang=en', { waitUntil: 'networkidle2' });
+        await page.goto('https://www.tiktok.com/@beautybyjitka?lang=en', { waitUntil: 'networkidle' });
 
         // Wait for the followers and likes elements to load
         await page.waitForSelector('.tiktok-1p43p3m-DivNumber.e1awr0xi0'); // Update this selector as necessary

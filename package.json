@@ -9,7 +9,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "npx playwright install --with-deps"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
@@ -36,7 +37,7 @@
   },
   "dependencies": {
     "@iconify/svelte": "^4.0.2",
-    "@sparticuz/chromium": "^123.0.1",
+    "@playwright/test": "^1.45.1",
     "bits-ui": "^0.21.12",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.1.6",
@@ -46,7 +47,7 @@
     "lucide-svelte": "^0.408.0",
     "maplibre-gl": "^4.5.0",
     "mode-watcher": "^0.3.1",
-    "puppeteer": "^22.13.0",
+    "playwright": "^1.45.1",
     "puppeteer-core": "^22.13.0",
     "svelte-maplibre": "^0.9.9",
     "svelte-sonner": "^0.3.26",
