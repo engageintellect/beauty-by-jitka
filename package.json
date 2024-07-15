@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "@iconify/svelte": "^4.0.2",
-    "@playwright/test": "^1.45.1",
     "bits-ui": "^0.21.12",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.1.6",
@@ -47,8 +46,7 @@
     "lucide-svelte": "^0.408.0",
     "maplibre-gl": "^4.5.0",
     "mode-watcher": "^0.3.1",
-    "playwright": "^1.45.1",
-    "puppeteer-core": "^22.13.0",
+    "playwright": "^1.27.1",
     "svelte-maplibre": "^0.9.9",
     "svelte-sonner": "^0.3.26",
     "sveltekit-superforms": "^2.16.0",

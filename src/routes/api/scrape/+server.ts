@@ -9,10 +9,10 @@ export const GET: RequestHandler = async () => {
         await page.goto('https://countik.com/user/@beautybyjitka', { waitUntil: 'networkidle' });
         
         // Wait for the followers count elements and ensure content is fully loaded
-        await page.waitForSelector('.count', { timeout: 20000 });
+        await page.waitForSelector('.count', { timeout: 30000 });
 
         // Introduce a manual delay to ensure the content is loaded
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 3000));
 
         // Extract all counters
         const counters = await page.$$eval('.count', (elements: Element[]) => 
