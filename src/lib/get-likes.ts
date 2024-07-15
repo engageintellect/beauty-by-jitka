@@ -1,28 +1,41 @@
-import puppeteer from "puppeteer";
+import chromium from 'chrome-aws-lambda';
+import puppeteer from 'puppeteer-core';
 
 export async function scrapeTikTok() {
-    const browser = await puppeteer.launch({ headless: true });
-    const page = await browser.newPage();
+    let browser = null;
+    try {
+        browser = await puppeteer.launch({
+            args: chromium.args,
+            executablePath: await chromium.executablePath,
+            headless: chromium.headless,
+        });
 
-    // Navigate to the TikTok profile
-    await page.goto('https://www.tiktok.com/@beautybyjitka?lang=en', { waitUntil: 'networkidle2' });
+        const page = await browser.newPage();
 
-    // Wait for the followers and likes elements to load
-    await page.waitForSelector('.tiktok-1p43p3m-DivNumber.e1awr0xi0'); // Update this selector as necessary
+        // Navigate to the TikTok profile
+        await page.goto('https://www.tiktok.com/@beautybyjitka?lang=en', { waitUntil: 'networkidle2' });
 
-    // Scrape the followers count
-    const followers = await page.evaluate(() => {
-        return document.querySelectorAll('.tiktok-1p43p3m-DivNumber.e1awr0xi0')[0].textContent;
-    });
+        // Wait for the followers and likes elements to load
+        await page.waitForSelector('.tiktok-1p43p3m-DivNumber.e1awr0xi0'); // Update this selector as necessary
 
-    // Scrape the likes count
-    const likes = await page.evaluate(() => {
-        return document.querySelectorAll('.tiktok-1p43p3m-DivNumber.e1awr0xi0')[1].textContent;
-    });
+        // Scrape the followers count
+        const followers = await page.evaluate(() => {
+            return document.querySelectorAll('.tiktok-1p43p3m-DivNumber.e1awr0xi0')[0].textContent;
+        });
 
-    console.log(`Followers: ${followers}`);
-    console.log(`Likes: ${likes}`);
+        // Scrape the likes count
+        const likes = await page.evaluate(() => {
+            return document.querySelectorAll('.tiktok-1p43p3m-DivNumber.e1awr0xi0')[1].textContent;
+        });
 
-    await browser.close();
+        console.log(`Followers: ${followers}`);
+        console.log(`Likes: ${likes}`);
+
+    } catch (error) {
+        console.error('Error scraping TikTok:', error);
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
+    }
 }
-
