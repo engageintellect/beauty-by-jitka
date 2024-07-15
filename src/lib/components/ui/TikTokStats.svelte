@@ -6,7 +6,7 @@
 	let stuff: any;
 
 	const getLikes = async () => {
-		const res = await fetch('/api/scrape');
+		const res = await fetch('/api/scrape-tiktok');
 		stuff = await res.json();
 		return stuff;
 	};
@@ -16,12 +16,12 @@
 	});
 </script>
 
-{#if stuff?.counters}
+{#if stuff}
 	<div in:fade={{ duration: 500 }} class="flex w-full items-center justify-center gap-5">
 		<div>
-			<span class="font-bold">{stuff?.counters[0]}</span> followers, and
+			<span class="font-bold">{stuff.followers}</span> followers, and
 			<span class="font-bold"
-				>{stuff?.counters[1]} likes on
+				>{stuff.likes} likes on
 				<a href="https://www.tiktok.com/@beautybyjitka?lang=en">tiktok</a></span
 			>
 		</div>
