@@ -1,13 +1,9 @@
-import { chromium } from 'playwright-core';
-import { installBrowsersForNpmInstall } from '@playwright/test/lib/install/installer';
+import { chromium } from 'playwright';
 
 export async function scrapeTikTok() {
     let browser = null;
 
     try {
-        // Ensure browsers are installed
-        await installBrowsersForNpmInstall();
-
         // Launch browser
         browser = await chromium.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
