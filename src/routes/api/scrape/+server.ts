@@ -2,17 +2,25 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { chromium } from 'playwright';
 
 export const GET: RequestHandler = async () => {
-    const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    let browser = null;
 
     try {
+        // Launch browser
+        browser = await chromium.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            headless: true,
+        });
+
+        const page = await browser.newPage();
+
+        // Navigate to the TikTok profile
         await page.goto('https://countik.com/user/@beautybyjitka', { waitUntil: 'networkidle' });
-        
+
         // Wait for the followers count elements and ensure content is fully loaded
-        await page.waitForSelector('.count', { timeout: 30000 });
+        await page.waitForSelector('.count', { timeout: 20000 });
 
         // Introduce a manual delay to ensure the content is loaded
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise(resolve => setTimeout(resolve, 5000));
 
         // Extract all counters
         const counters = await page.$$eval('.count', (elements: Element[]) => 
@@ -29,7 +37,10 @@ export const GET: RequestHandler = async () => {
     } catch (error) {
         console.error('Failed to fetch data:', error);  // Log the error
 
-        await browser.close();
+        if (browser) {
+            await browser.close();
+        }
+
         return new Response(JSON.stringify({ error: 'Failed to fetch data' }), {
             headers: {
                 'Content-Type': 'application/json'
