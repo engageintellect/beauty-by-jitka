@@ -7,7 +7,7 @@
 
 <Sonner
 	theme={$mode}
-	class="toaster group"
+	class="toaster group text-lg"
 	toastOptions={{
 		classes: {
 			toast:

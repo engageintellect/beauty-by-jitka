@@ -1,10 +1,71 @@
 <script lang="ts">
 	import Image from '$lib/assets/images/results/result-29.png';
+
+	import { onDestroy, onMount, tick } from 'svelte';
+	import * as Avatar from '$lib/components/ui/avatar/index.js';
+
+	let gsapInstance: any;
+	let ScrollTriggerInstance: any;
+
+	const initializeAnimations = () => {
+		tick();
+
+		gsapInstance.from('.text-section', {
+			duration: 1,
+			opacity: 0,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.text-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.image-section', {
+			duration: 1,
+			opacity: 0,
+			scale: 0.9,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.image-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+	};
+
+	onMount(() => {
+		if (typeof window !== 'undefined') {
+			import('gsap').then(({ gsap }) => {
+				import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
+					gsap.registerPlugin(ScrollTrigger);
+					gsapInstance = gsap;
+					ScrollTriggerInstance = ScrollTrigger;
+					initializeAnimations();
+					ScrollTriggerInstance.refresh();
+				});
+			});
+		}
+	});
+
+	onDestroy(() => {
+		if (typeof window !== 'undefined' && ScrollTriggerInstance) {
+			ScrollTriggerInstance.getAll().forEach((trigger: any) => trigger.kill());
+		}
+	});
 </script>
 
 <a href="/results">
-	<div class="pb-5 text-5xl">See the difference</div>
-	<div class="rounded-lg bg-pink-100 p-2 shadow-lg dark:bg-pink-500 md:p-5">
+	<div class="text-section flex flex-col gap-5">
+		<div class="text-5xl font-bold uppercase">See the difference</div>
+		<div class="text-2xl font-thin">
+			See the stunning results of our treatments with real before and after photos from our clients.
+		</div>
+	</div>
+	<div
+		class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"
+	>
 		<div class="relative">
 			<img src={Image} alt="Difference" class="rounded-lg shadow-lg" />
 			<div class="absolute left-5 top-5 text-lg text-white drop-shadow">before</div>

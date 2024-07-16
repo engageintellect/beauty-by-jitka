@@ -4,32 +4,133 @@
 	import Icon from '@iconify/svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Location from '$lib/components/ui/Location.svelte';
+	import { onDestroy, onMount, tick } from 'svelte';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 	}
+
+	let gsapInstance: any;
+	let ScrollTriggerInstance: any;
+
+	const initializeAnimations = () => {
+		tick();
+		gsapInstance.from('.jitka-section', {
+			duration: 1,
+			opacity: 0,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.jitka-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.jitka-section-photo', {
+			duration: 1,
+			opacity: 0,
+			x: 20,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.jitka-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.doctor-section', {
+			duration: 1,
+			opacity: 0,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.doctor-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.doctor-section-photo', {
+			duration: 1,
+			opacity: 0,
+			x: -20,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.doctor-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.locations-section', {
+			duration: 1,
+			opacity: 0,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.locations-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.booking-section', {
+			duration: 1,
+			opacity: 0,
+			y: 10,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.booking-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+	};
+
+	onMount(() => {
+		if (typeof window !== 'undefined') {
+			import('gsap').then(({ gsap }) => {
+				import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
+					gsap.registerPlugin(ScrollTrigger);
+					gsapInstance = gsap;
+					ScrollTriggerInstance = ScrollTrigger;
+					initializeAnimations();
+					ScrollTriggerInstance.refresh();
+				});
+			});
+		}
+	});
+
+	onDestroy(() => {
+		if (typeof window !== 'undefined' && ScrollTriggerInstance) {
+			ScrollTriggerInstance.getAll().forEach((trigger: any) => trigger.kill());
+		}
+	});
 </script>
 
-<a href={'/'}>
-	<Button variant="outline" class="flex items-center gap-2">
-		<Icon icon="akar-icons:arrow-left" class="text-xl" />
-		<div class="text-xl">Back</div>
+<a href="javascript:history.back()">
+	<Button size="lg" variant="outline" class="flex items-center gap-2">
+		<Icon icon="akar-icons:arrow-left" class="" />
+		<div class="uppercase">Back</div>
 	</Button>
 </a>
 <div class="mt-5 w-full">
-	<!-- JITKA -->
-	<div class="mb-5 text-5xl font-bold md:text-7xl">About</div>
-	<div class="h-full w-full rounded-lg bg-pink-100 p-2 shadow-lg dark:bg-pink-500 md:p-5">
+	<!-- JITKA SECTION -->
+	<div class="jitka-section mb-5 text-5xl font-bold md:text-7xl">ABOUT</div>
+	<div
+		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
+	>
 		<div class="w-full text-5xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Founder</div>
 		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
-			Serving patients in Corona Del Mar and Long Beach, California.
+			Serving patients in Orange County and Los Angeles, California.
 		</div>
 
 		<img
 			src={jitkaImage}
 			alt="Jitka Zavadilova"
-			class="mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
+			class="jitka-section-photo mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
 			<div class="mr-5 flex-1 text-2xl font-thin">
@@ -65,8 +166,10 @@
 		</div>
 	</div>
 
-	<!-- DOCTOR -->
-	<div class="mt-20 h-full rounded-lg bg-teal-100 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5">
+	<!-- DOCTOR SECTION -->
+	<div
+		class="doctor-section mt-20 h-full rounded-lg bg-teal-50 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5"
+	>
 		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, MD</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Medical Director</div>
 		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
@@ -76,7 +179,7 @@
 		<img
 			src={drReynoldsImage}
 			alt="Dr. Steven Reynolds"
-			class="mt-5 w-full rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
+			class="doctor-section-photo mt-5 mt-5 w-full w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
 			<div class="ml-5 flex-1 text-2xl font-thin">
@@ -98,8 +201,8 @@
 	</div>
 </div>
 
-<!-- LOCATIONS -->
-<div class="mt-20 w-full rounded-lg p-2 shadow-lg md:p-5 lg:mt-48">
+<!-- LOCATIONS SECTION -->
+<div class="locations-section mt-20 w-full rounded-lg p-2 shadow-lg md:p-5 lg:mt-48">
 	<div class="mb-5 text-5xl font-bold md:text-7xl">Locations</div>
 	<div class="flex flex-col items-center gap-5 md:flex-row">
 		<div class="w-full">
@@ -110,7 +213,7 @@
 				target="_blank"
 			>
 				<Button variant="outline" class="flex items-center gap-2">
-					<div>Directions</div>
+					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
@@ -126,7 +229,7 @@
 			<div class="w-full text-lg">5865 E. Naples Plaza Long Beach, CA 90803</div>
 			<a href={getDirectionsUrl('5865 E. Naples Plaza Long Beach, CA 90803')} target="_blank">
 				<Button variant="outline" class="flex items-center gap-2">
-					<div>Directions</div>
+					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
@@ -137,12 +240,12 @@
 	</div>
 </div>
 
-<!-- LOCATIONS -->
-<div class="mb-20 mt-20 w-full p-2 md:p-5">
+<!-- BOOKING -->
+<div class="booking-section mb-20 mt-20 w-full p-2 md:p-5">
 	<div class="mb-5 text-5xl font-bold md:text-7xl">Booking</div>
 	<a href="/contact">
 		<Button size="lg" variant="default" class="flex w-full items-center gap-2 text-xl md:w-fit">
-			<div>Schedule a Consultation</div>
+			<div class="uppercase">Schedule a Consultation</div>
 			<Icon icon="akar-icons:arrow-right" class="h-5 w-5" />
 		</Button>
 	</a>

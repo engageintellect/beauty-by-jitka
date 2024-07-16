@@ -19,23 +19,24 @@
 	}
 </script>
 
-<MapLibre
-	style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
-	class={mapClasses}
-	standardControls
-	zoom={10}
-	{center}
->
-	{#each markers as { lngLat, name }}
-		<DefaultMarker {lngLat} class="shadow-lg">
-			<Popup offset={[0, -10]}>
-				<div class="cursor-pointer text-lg font-bold" on:click={() => openInGoogleMaps(name)}>
-					{name}
-				</div>
-			</Popup>
-		</DefaultMarker>
-	{/each}
-</MapLibre>
+<div class="z-10">
+	<MapLibre
+		style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+		class={mapClasses}
+		zoom={10}
+		{center}
+	>
+		{#each markers as { lngLat, name }}
+			<DefaultMarker {lngLat} class="shadow-lg">
+				<Popup offset={[0, -10]}>
+					<div class="cursor-pointer text-lg font-bold" on:click={() => openInGoogleMaps(name)}>
+						{name}
+					</div>
+				</Popup>
+			</DefaultMarker>
+		{/each}
+	</MapLibre>
+</div>
 
 <style>
 	:global(.map) {

@@ -38,16 +38,16 @@
 </script>
 
 <div>
-	<a href={'/'}>
-		<Button variant="outline" class="flex items-center gap-2">
-			<Icon icon="akar-icons:arrow-left" class="text-xl" />
-			<div class="text-xl">Back</div>
+	<a href={'javascript:history.back()'}>
+		<Button size="lg" variant="outline" class="flex items-center gap-2">
+			<Icon icon="akar-icons:arrow-left" class="" />
+			<div class="uppercase">Back</div>
 		</Button>
 	</a>
-	<div class="animate-title mt-5 flex items-center gap-5">
+	<!-- <div class="animate-title mt-5 flex items-center gap-5">
 		<div class="text-5xl font-bold md:text-7xl">Gallery</div>
 		<Icon icon="ri:gallery-view-2" class="text-5xl md:text-7xl" />
-	</div>
+	</div> -->
 
 	<div class="animate-results my-5 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
 		{#each results as result}

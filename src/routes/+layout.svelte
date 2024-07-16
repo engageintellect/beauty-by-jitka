@@ -7,6 +7,7 @@
 	import Nav from '$lib/components/ui/Nav.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
+	import Icon from '@iconify/svelte';
 
 	const { data: propsData, children } = $props();
 
@@ -29,7 +30,7 @@
 </script>
 
 <ModeWatcher />
-<Toaster />
+<Toaster position="bottom-right" richColors={true} />
 
 <div class="flex min-h-screen flex-col">
 	<Nav />

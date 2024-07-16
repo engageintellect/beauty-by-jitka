@@ -1,33 +1,88 @@
 <script lang="ts">
 	import girlImage from '$lib/assets/images/girl1.png';
-	import { Button } from './button/index.js';
+	import girl2Image from '$lib/assets/images/girl2.png';
+	import girl3Image from '$lib/assets/images/girl3.png';
+	import girl4Image from '$lib/assets/images/girl4.png';
+	import girl5Image from '$lib/assets/images/girl5.png';
+	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
-	import { onDestroy, onMount, afterUpdate } from 'svelte';
+	import { onDestroy, onMount, tick } from 'svelte';
+	import * as Avatar from '$lib/components/ui/avatar/index.js';
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
 
 	const initializeAnimations = () => {
-		gsapInstance.from('.animate-on-scroll-up', {
+		tick();
+		gsapInstance.from('.card1', {
 			duration: 1,
 			opacity: 0,
 			y: 50,
 			ease: 'power2.out',
 			scrollTrigger: {
-				trigger: '.animate-on-scroll-up',
-				start: 'top 80%', // Adjust as needed
+				trigger: '.card1',
+				start: 'top 90%',
 				toggleActions: 'play none none none'
 			}
 		});
 
-		gsapInstance.from('.animate-on-scroll-down', {
+		gsapInstance.from('.card2', {
 			duration: 1,
 			opacity: 0,
 			y: -50,
 			ease: 'power2.out',
 			scrollTrigger: {
-				trigger: '.animate-on-scroll-down',
-				start: 'top 80%', // Adjust as needed
+				trigger: '.card2',
+				start: 'top 90%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.card3', {
+			duration: 1,
+			opacity: 0,
+			x: -50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.card3',
+				start: 'top 90%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.card4', {
+			duration: 1,
+			opacity: 0,
+			x: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.card4',
+				start: 'top 90%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.card5', {
+			duration: 1,
+			opacity: 0,
+			scale: 0.8,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.card5',
+				start: 'top 90%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.card6', {
+			duration: 1,
+			opacity: 0,
+			// rotation: 10,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.card6',
+				start: 'top 90%',
 				toggleActions: 'play none none none'
 			}
 		});
@@ -47,12 +102,6 @@
 		}
 	});
 
-	afterUpdate(() => {
-		if (typeof window !== 'undefined' && ScrollTriggerInstance) {
-			ScrollTriggerInstance.refresh();
-		}
-	});
-
 	onDestroy(() => {
 		if (typeof window !== 'undefined' && ScrollTriggerInstance) {
 			ScrollTriggerInstance.getAll().forEach((trigger: any) => trigger.kill());
@@ -60,60 +109,119 @@
 	});
 </script>
 
-<div class="my-10 flex w-full flex-col gap-10 md:flex-row md:gap-0">
-	<div class="animate-on-scroll-up flex w-full rounded-lg bg-pink-100 shadow-lg dark:bg-pink-500">
+<div class="my-20 grid w-full grid-cols-1 gap-10 md:grid-cols-2 md:gap-10">
+	<!-- CARD 1 -->
+	<div
+		class="card1 relative order-1 flex h-full min-h-[500px] w-full rounded-lg bg-rose-300 text-white shadow-lg dark:bg-rose-500"
+	>
+		<img
+			src={girl4Image}
+			alt="Jitka"
+			class="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
+		/>
 		<div class="z-20 flex w-1/2 flex-col gap-5 p-5">
-			<div class="w-full text-5xl font-bold">AESTHETICS AND BEAUTY, COMBINED</div>
-			<div class="text-lg font-thin">
-				We execute each treatment meticulously to deliver optimal outcomes. Attain stunning results
-				with tailored treatments that complement your unique features.
-			</div>
+			<div class="w-full text-5xl font-bold uppercase drop-shadow">Revitalize Refresh Renew</div>
+		</div>
+	</div>
 
-			<div>
-				<a href="/results">
-					<Button size="lg" class="group/resultsButton flex items-center gap-2 text-xl">
-						<div>See Results</div>
-						<Icon
-							icon="mdi:arrow-right"
-							class="transition-all duration-300 md:group-hover/resultsButton:translate-x-1"
-						/>
-					</Button>
+	<!-- CARD 2 -->
+	<div class="card2 relative order-2 flex h-full w-full">
+		<div class="z-20 flex w-full flex-col gap-5 p-2 md:p-5">
+			<div class="w-full text-3xl font-bold uppercase">services</div>
+			<div class="text-2xl font-thin">
+				Offering a range of cosmetic injections to address your unique beauty goals. Our services
+				include:
+			</div>
+			<ul class="flex flex-col gap-2 text-xl font-thin">
+				<li>
+					<strong>Botox:</strong> Smooth out fine lines and wrinkles for a youthful appearance.
+				</li>
+				<li><strong>Dermal Fillers:</strong> Add volume and definition to your facial features.</li>
+				<li><strong>Lip Enhancements:</strong> Achieve fuller, more defined lips.</li>
+				<li><strong>Skin Rejuvenation:</strong> Revitalize your skin for a fresh, radiant glow.</li>
+			</ul>
+			<div class="flex items-center gap-2">
+				<a href="/contact">
+					<Button
+						size="lg"
+						variant="default"
+						class="bg-rose-300 uppercase transition-all duration-300 hover:bg-rose-500 dark:bg-rose-500 dark:hover:bg-rose-300"
+						>Consultation</Button
+					>
+				</a>
+				<a href="tel:9499935222">
+					<Button size="lg" variant="outline" class="w-fit uppercase">Call</Button>
+				</a>
+				<a href="sms:9499935222">
+					<Button size="lg" variant="outline" class="w-fit uppercase">Text</Button>
 				</a>
 			</div>
 		</div>
-
-		<img src={girlImage} alt="Jitka" class="w-1/2 object-cover" />
 	</div>
 
-	<div class="animate-on-scroll-down w-full md:translate-y-10">
-		<div
-			class="flex h-full flex-col gap-5 rounded-lg bg-neutral-100 p-5 shadow-lg dark:bg-neutral-700"
-		>
-			<div class="flex flex-col gap-2">
-				<div class="text-2xl font-bold">Committed to Safety</div>
-				<div class="italic">
-					"Safety is the cornerstone of Beauty By Jitka. As a fully-trained professional operating
-					in a state-of-the-art facility, I provide a safe, comfortable, and exceptional
-					experience."
-				</div>
+	<!-- CARD 3 -->
+	<div class="card3 relative order-4 flex h-full w-full md:order-3">
+		<div class="z-20 flex w-full flex-col gap-5 p-2 md:p-5">
+			<div class="w-full text-3xl font-bold">OUR COMMITMENT TO SAFETY</div>
+			<div class="text-2xl font-thin">
+				Your safety is our priority. We understand that cosmetic treatments can be a significant
+				decision. By prioritizing your safety and comfort, we ensure that you can enjoy the benefits
+				of your treatment with peace of mind. Our commitment to excellence in safety and care is
+				what sets us apart.
 			</div>
-
-			<div class="flex flex-col gap-2">
-				<div class="text-2xl font-bold">Tailored Treatments</div>
-				<div class="italic">
-					"I believe in dedicating myself to every treatment, customizing it in unique ways to align
-					with your individual goals and beauty. With a thorough consultation process, I can design
-					your treatment from scratch for a bespoke approach."
-				</div>
+			<div class="text-2xl font-thin">
+				We follow industry best practices and use only the highest quality products. Our team of
+				professionals is dedicated to providing you with the best possible experience.
 			</div>
+		</div>
+	</div>
 
-			<div class="flex flex-col gap-2">
-				<div class="text-2xl font-bold">Sneak a Peak</div>
-				<div class="italic">
-					"Images often convey more than words, and results speak for themselves. Explore our full
-					gallery of before-and-after photos to witness the transformations possible through our
-					comprehensive suite of treatments."
-				</div>
+	<!-- CARD 4 -->
+	<div
+		class="card4 relative order-3 flex h-full min-h-[500px] w-full rounded-lg bg-neutral-300 text-white shadow-lg dark:bg-neutral-500 md:order-4"
+	>
+		<img
+			src={girl5Image}
+			alt="Jitka"
+			class="absolute bottom-0 right-0 h-[550px] scale-x-[-1] rounded-lg object-cover"
+		/>
+		<div class="absolute bottom-0 right-0 z-20 flex w-full flex-col gap-5 p-5">
+			<div class="w-full text-5xl font-bold drop-shadow">SAFE & EFFECTIVE</div>
+		</div>
+	</div>
+
+	<!-- CARD 5 -->
+	<div
+		class="card5 relative order-5 flex h-full min-h-[500px] w-full rounded-lg bg-sky-300 text-white shadow-lg dark:bg-sky-500"
+	>
+		<img
+			src={girl2Image}
+			alt="Jitka"
+			class="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
+		/>
+		<div class="z-20 flex w-2/3 flex-col gap-5 p-5">
+			<div class="w-full text-5xl font-bold uppercase drop-shadow">Where Science Meets Beauty</div>
+		</div>
+	</div>
+
+	<!-- CARD 6 -->
+	<div class="card6 relative order-6 flex h-full w-full">
+		<div class="z-20 flex w-full flex-col gap-5 p-2 md:p-5">
+			<div class="w-full text-3xl font-bold uppercase">results backed by research</div>
+			<div class="text-2xl font-thin">
+				We believe that the best aesthetic results are achieved through the power of science. Our
+				treatments are not only designed to enhance your natural beauty but are also grounded in
+				rigorous scientific research and proven methodologies.
+			</div>
+			<div class="flex items-center gap-2">
+				<a href="/results">
+					<Button
+						size="lg"
+						variant="default"
+						class="bg-sky-300 uppercase hover:bg-sky-500 dark:bg-sky-500 dark:hover:bg-sky-300"
+						>Before & After Gallery</Button
+					>
+				</a>
 			</div>
 		</div>
 	</div>

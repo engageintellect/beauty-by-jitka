@@ -22,7 +22,7 @@ export const actions: Actions = {
 
     // Prepare the payload for the Google Form
     const payload = new URLSearchParams({
-      'entry.452429752': form.data.name,
+      'entry.452429752': form.data.firstName,
       'entry.479393351': form.data.phone,
       'entry.352214429': form.data.message,
       'emailAddress': form.data.email,

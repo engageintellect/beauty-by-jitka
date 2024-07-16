@@ -3,40 +3,54 @@
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import Autoplay from 'embla-carousel-autoplay';
 	import { results } from '$lib/carousel-images';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import CarouselNext from './carousel/carousel-next.svelte';
+	import CarouselPrevious from './carousel/carousel-previous.svelte';
+
+	let autoplay = Autoplay({ delay: 2000, stopOnInteraction: false });
+
+	function handleMouseEnter() {
+		autoplay.stop();
+	}
+
+	function handleMouseLeave() {
+		autoplay.play();
+	}
 </script>
 
-<div class="mx-16 flex justify-center">
-	<Carousel.Root
-		opts={{
-			align: 'start'
-		}}
-		class="w-full max-w-xs sm:max-w-full"
-		plugins={[
-			Autoplay({
-				delay: 3000
-			})
-		]}
-	>
-		<Carousel.Content>
-			{#each results as result}
-				<Carousel.Item class=" sm:basis-1/2 md:basis-1/3">
-					<a href="/results">
-						<div class="p-1">
-							<Card.Root>
-								<Card.Content class="flex aspect-square h-full items-center justify-center p-2">
+<div>
+	<a href="/results">
+		<Button variant="outline" size="lg" class="mb-5 uppercase">View All Before & Afters</Button>
+	</a>
+	<div class="flex justify-center">
+		<Carousel.Root
+			opts={{
+				active: true,
+				align: 'center',
+				loop: true
+			}}
+			class="w-full"
+			plugins={[autoplay]}
+			on:mouseenter={handleMouseEnter}
+			on:mouseleave={handleMouseLeave}
+		>
+			<Carousel.Content class="flex items-center p-5 md:p-0">
+				{#each results as result}
+					<Carousel.Item class="sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+						<a href="/results">
+							<Card.Root class="transition-all duration-200 md:hover:scale-[98%]">
+								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">
 									<img
 										src={result.image}
 										alt={result.title}
-										class="h-full w-full rounded-lg object-cover"
+										class="rounded-lg shadow-lg brightness-110"
 									/>
 								</Card.Content>
 							</Card.Root>
-						</div>
-					</a>
-				</Carousel.Item>
-			{/each}
-		</Carousel.Content>
-		<Carousel.Previous />
-		<Carousel.Next />
-	</Carousel.Root>
+						</a>
+					</Carousel.Item>
+				{/each}
+			</Carousel.Content>
+		</Carousel.Root>
+	</div>
 </div>
