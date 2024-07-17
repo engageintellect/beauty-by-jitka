@@ -21,11 +21,13 @@ export const actions: Actions = {
     }
 
     // Prepare the payload for the Google Form
+
     const payload = new URLSearchParams({
       'entry.452429752': form.data.firstName,
+      'entry.1233853460': form.data.lastName,
+      'emailAddress': form.data.email,
       'entry.479393351': form.data.phone,
       'entry.352214429': form.data.message,
-      'emailAddress': form.data.email,
     });
 
     // Submit the form data to the Google Form
@@ -46,6 +48,7 @@ export const actions: Actions = {
     }
 
 
+      console.log('RESPONSE FROM /CONTACT');
     return {
       form,
       success: 'Form submitted successfully!',

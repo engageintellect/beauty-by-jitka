@@ -13,6 +13,8 @@
 	import { onDestroy, onMount, tick } from 'svelte';
 
 	export let data: SuperValidated<Infer<FormSchema>>;
+	let formAction = '';
+	let isSubmitting = false;
 
 	const form = superForm(data, {
 		validators: zodClient(formSchema)
@@ -20,17 +22,25 @@
 
 	const { form: formData } = form;
 
+	onMount(() => {
+		formAction = window.location.pathname; // Ensure form action is set to the current path
+	});
+
 	async function handleSubmit(event: SubmitEvent) {
+		if (isSubmitting) return; // Prevent multiple submissions
+		isSubmitting = true;
+
 		event.preventDefault();
 		const formElement = event.currentTarget as HTMLFormElement;
 		const data = new FormData(formElement);
 
-		const response = await fetch(formElement.action, {
+		const response = await fetch(formAction, {
 			method: 'POST',
 			body: data
 		});
 
 		const result = await response.json();
+		isSubmitting = false;
 
 		if (result.type === 'success') {
 			toast.success('Form Submitted Successfully!', {
@@ -140,7 +150,13 @@
 </div>
 
 <div class="mx-auto w-full max-w-md">
-	<form method="POST" use:enhance on:submit|preventDefault={handleSubmit} class="contact-form">
+	<form
+		method="POST"
+		action={formAction}
+		use:enhance
+		on:submit|preventDefault={handleSubmit}
+		class="contact-form"
+	>
 		<div class="mb-2 flex items-center gap-5">
 			<Form.Field {form} name="firstName" class="w-full">
 				<Form.Control let:attrs>

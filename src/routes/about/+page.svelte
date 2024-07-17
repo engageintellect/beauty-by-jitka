@@ -110,7 +110,7 @@
 </script>
 
 <a href="javascript:history.back()">
-	<Button size="lg" variant="outline" class="flex items-center gap-2">
+	<Button variant="outline" class="flex items-center gap-2">
 		<Icon icon="akar-icons:arrow-left" class="" />
 		<div class="uppercase">Back</div>
 	</Button>

@@ -6,6 +6,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
 	import { services } from '$lib/data';
+	import Input from '$lib/components/ui/input/input.svelte';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -36,22 +37,45 @@
 			ease: 'power2.out'
 		});
 	});
+
+	let searchFiler = '';
 </script>
 
 <div>
-	<a href={'javascript:history.back()'}>
-		<Button size="lg" variant="outline" class="flex items-center gap-2">
-			<Icon icon="akar-icons:arrow-left" class="" />
-			<div class="uppercase">Back</div>
-		</Button>
-	</a>
+	<div class="flex items-center justify-between gap-5">
+		<a href={'javascript:history.back()'}>
+			<Button variant="outline" class="flex items-center gap-2">
+				<Icon icon="akar-icons:arrow-left" class="" />
+				<div class="uppercase">Back</div>
+			</Button>
+		</a>
+
+		<Input bind:value={searchFiler} placeholder="Filter Services" class="w-full max-w-lg" />
+
+		<!-- <a href={'javascript:history.back()'}>
+			<Button size="lg" variant="outline" class="flex items-center gap-2">
+				<Icon icon="akar-icons:arrow-left" class="" />
+				<div class="uppercase">Back</div>
+			</Button>
+		</a> -->
+	</div>
 
 	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5">
-		{#each services as service}
-			<a href="/contact">
-				<ServiceCard name={service.name} description={service.description} img={service.img} />
-			</a>
-		{/each}
+		{#if searchFiler === ''}
+			{#each services as service}
+				<a href="/contact">
+					<ServiceCard name={service.name} description={service.description} img={service.img} />
+				</a>
+			{/each}
+		{:else}
+			{#each services as service}
+				{#if service.name.toLowerCase().includes(searchFiler.toLowerCase())}
+					<a href="/contact">
+						<ServiceCard name={service.name} description={service.description} img={service.img} />
+					</a>
+				{/if}
+			{/each}
+		{/if}
 	</div>
 
 	{#if showModal}
