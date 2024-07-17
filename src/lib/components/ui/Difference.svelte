@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Image from '$lib/assets/images/results/result-29.png';
+	import { Button } from '$lib/components/ui/button/index.js';
 
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
@@ -56,20 +57,28 @@
 	});
 </script>
 
-<a href="/results">
+<div>
 	<div class="text-section flex flex-col gap-5">
 		<div class="text-5xl font-bold uppercase">See the difference</div>
 		<div class="text-2xl font-thin">
 			See the stunning results of our treatments with real before and after photos from our clients.
 		</div>
+
+		<a href="/results">
+			<Button variant="outline" size="lg" class="mb-5 w-fit uppercase"
+				>View All Before & Afters</Button
+			>
+		</a>
 	</div>
-	<div
-		class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"
-	>
-		<div class="relative">
-			<img src={Image} alt="Difference" class="rounded-lg shadow-lg" />
-			<div class="absolute left-5 top-5 text-lg text-white drop-shadow">before</div>
-			<div class="absolute right-5 top-5 text-lg text-white drop-shadow">after</div>
+	<a href="/results">
+		<div
+			class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"
+		>
+			<div class="relative">
+				<img src={Image} alt="Difference" class="rounded-lg shadow-lg" />
+				<div class="absolute left-5 top-5 text-lg text-white drop-shadow">before</div>
+				<div class="absolute right-5 top-5 text-lg text-white drop-shadow">after</div>
+			</div>
 		</div>
-	</div>
-</a>
+	</a>
+</div>

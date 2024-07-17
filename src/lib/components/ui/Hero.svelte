@@ -76,8 +76,8 @@
 	<div
 		class="flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl"
 	>
-		<div class="flex w-full max-w-lg flex-col gap-2 md:gap-5 md:p-5">
-			<div class="flex w-fit flex-col justify-center gap-5 md:items-center">
+		<div class="flex w-full flex-col rounded-l-lg p-5 md:max-w-lg md:p-10">
+			<div class="mx-auto flex w-fit flex-col items-center gap-5">
 				<div class="animate-logo h-16 w-16">
 					<Icon
 						icon="material-symbols-light:syringe-outline"
@@ -89,13 +89,17 @@
 				</div>
 			</div>
 
-			<div class="animate-subtitle text-3xl text-foreground/80 md:text-4xl">
-				Transform Your Look with Confidence and Precision.
-			</div>
+			<div
+				class="mx-auto flex w-full max-w-sm flex-col items-center justify-center text-center md:max-w-md"
+			>
+				<!-- <div class="animate-subtitle text-3xl text-foreground/80 md:text-4xl">
+					Transform Your Look with Confidence and Precision.
+				</div> -->
 
-			<div class="animate-hero-text text-2xl font-thin md:text-3xl">
-				Offering a comprehensive range of customizable treatments tailored to align with your
-				individual objectives, beauty preferences, and personal style.
+				<div class="animate-hero-text text-2xl font-thin md:text-3xl">
+					Offering a comprehensive range of customizable treatments tailored to align with your
+					individual objectives, preferences, and personal style.
+				</div>
 			</div>
 
 			<div class="animate-buttons mt-5 flex items-center gap-2">
@@ -109,9 +113,9 @@
 					</Button>
 				</a>
 
-				<a href="/about" class="group/bookingsButton w-full">
+				<a href="/services" class="group/bookingsButton w-full">
 					<Button size="lg" variant="outline" class="flex w-full items-center gap-2 text-xl">
-						<div class="uppercase">About</div>
+						<div class="uppercase">menu</div>
 						<Icon
 							icon="akar-icons:arrow-right"
 							class="h-7 w-7 transition-transform duration-300 lg:group-hover/bookingsButton:translate-x-1"
@@ -141,8 +145,8 @@
 			<Icon icon="akar-icons:arrow-down" class="h-6 w-6" />
 		</Button> -->
 
-		<button on:click={scrollToAnchor}>
+		<!-- <button on:click={scrollToAnchor}>
 			<Icon icon="mdi:chevron-down" class="animate-down-button h-16 w-16 animate-pulse" />
-		</button>
+		</button> -->
 	</div>
 </div>

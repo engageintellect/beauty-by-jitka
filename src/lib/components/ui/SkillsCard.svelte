@@ -14,6 +14,7 @@
 
 	const initializeAnimations = () => {
 		tick();
+
 		gsapInstance.from('.card1', {
 			duration: 1,
 			opacity: 0,
@@ -38,54 +39,103 @@
 			}
 		});
 
-		gsapInstance.from('.card3', {
-			duration: 1,
-			opacity: 0,
-			x: -50,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.card3',
-				start: 'top 90%',
-				toggleActions: 'play none none none'
-			}
-		});
+		const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
 
-		gsapInstance.from('.card4', {
-			duration: 1,
-			opacity: 0,
-			x: 50,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.card4',
-				start: 'top 90%',
-				toggleActions: 'play none none none'
-			}
-		});
+		if (isLargeScreen) {
+			gsapInstance.from('.card3', {
+				duration: 1,
+				opacity: 0,
+				x: -50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card3',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+			gsapInstance.from('.card4', {
+				duration: 1,
+				opacity: 0,
+				x: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card4',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
 
-		gsapInstance.from('.card5', {
-			duration: 1,
-			opacity: 0,
-			scale: 0.8,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.card5',
-				start: 'top 90%',
-				toggleActions: 'play none none none'
-			}
-		});
+			gsapInstance.from('.card5', {
+				duration: 1,
+				opacity: 0,
+				scale: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card5',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
 
-		gsapInstance.from('.card6', {
-			duration: 1,
-			opacity: 0,
-			// rotation: 10,
-			y: 50,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.card6',
-				start: 'top 90%',
-				toggleActions: 'play none none none'
-			}
-		});
+			gsapInstance.from('.card6', {
+				duration: 1,
+				opacity: 0,
+				y: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card6',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+		} else {
+			gsapInstance.from('.card3', {
+				duration: 1,
+				opacity: 0,
+				y: -50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card3',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+			gsapInstance.from('.card4', {
+				duration: 1,
+				opacity: 0,
+				y: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card4',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+
+			gsapInstance.from('.card5', {
+				duration: 1,
+				opacity: 0,
+				y: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card5',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+
+			gsapInstance.from('.card6', {
+				duration: 1,
+				opacity: 0,
+				y: -50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.card6',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+		}
 	};
 
 	onMount(() => {
@@ -109,7 +159,9 @@
 	});
 </script>
 
-<div class="my-20 grid w-full grid-cols-1 gap-10 md:grid-cols-2 md:gap-10">
+<div
+	class="mt-20 grid w-full grid-cols-1 gap-10 sm:rounded-lg sm:border sm:p-5 sm:shadow-lg md:grid-cols-2"
+>
 	<!-- CARD 1 -->
 	<div
 		class="card1 relative order-1 flex h-full min-h-[500px] w-full rounded-lg bg-rose-300 text-white shadow-lg dark:bg-rose-500"
@@ -129,8 +181,7 @@
 		<div class="z-20 flex w-full flex-col gap-5 p-2 md:p-5">
 			<div class="w-full text-3xl font-bold uppercase">services</div>
 			<div class="text-2xl font-thin">
-				Offering a range of cosmetic injections to address your unique beauty goals. Our services
-				include:
+				Offering a range of cosmetic injections to address your unique beauty goals.
 			</div>
 			<ul class="flex flex-col gap-2 text-xl font-thin">
 				<li>
@@ -141,19 +192,16 @@
 				<li><strong>Skin Rejuvenation:</strong> Revitalize your skin for a fresh, radiant glow.</li>
 			</ul>
 			<div class="flex items-center gap-2">
-				<a href="/contact">
+				<a href="/services">
 					<Button
 						size="lg"
 						variant="default"
 						class="bg-rose-300 uppercase transition-all duration-300 hover:bg-rose-500 dark:bg-rose-500 dark:hover:bg-rose-300"
-						>Consultation</Button
+						>service menu</Button
 					>
 				</a>
-				<a href="tel:9499935222">
-					<Button size="lg" variant="outline" class="w-fit uppercase">Call</Button>
-				</a>
-				<a href="sms:9499935222">
-					<Button size="lg" variant="outline" class="w-fit uppercase">Text</Button>
+				<a href="/contact">
+					<Button size="lg" variant="outline" class="w-fit uppercase">book consultation</Button>
 				</a>
 			</div>
 		</div>

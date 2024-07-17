@@ -133,19 +133,21 @@
 			class="jitka-section-photo mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="mr-5 flex-1 text-2xl font-thin">
+			<div class="mr-5 flex-1 text-xl font-thin">
 				<p>
-					Jitka Zavadilova is a certified nurse injector and registered nurse with extensive
-					credentials and experience both in the United States and Europe. Her practice brings a
-					unique blend of expertise and artistry to the field of aesthetics.
+					Jitka is a certified nurse injector and registered nurse, licensed in both the USA and
+					Europe. Originally from the Czech Republic, Jitka began her nursing career at 18, working
+					on a med-surg floor for six years before moving to the United States. Her passion for
+					aesthetics blossomed while working under a top Cosmetic Dermatologist and Plastic Surgeon
+					in Beverly Hills. She has since honed her skills with numerous certifications, including
+					Juvederm, Restylane, Botox, and Dysport.
 				</p>
 
 				<p class="mt-5">
-					Originally from the Czech Republic, Jitka began her nursing career at the age of 18,
-					gaining valuable experience on the med-surg floor for six years. Her journey has since
-					brought her to the United States, where she continues to pursue her passion for enhancing
-					beauty with a meticulous touch. Discover the seamless integration of European finesse and
-					American precision at Beauty by Jitka.
+					Jitka excels in blending fillers with skincare rituals, believing in their harmonious
+					pairing to maintain youthful and authentic skin. She is dedicated to recognizing and
+					enhancing each person's unique beauty, creating individualized plans to achieve a look
+					that best suits their natural features.
 				</p>
 			</div>
 		</div>
@@ -153,12 +155,12 @@
 		<div class="my-5">
 			<div class="flex flex-col items-center gap-2 md:flex-row">
 				<a href="/results" class="w-full md:w-fit">
-					<Button size="lg" variant="default" class="w-full text-xl md:w-fit"
+					<Button size="lg" variant="default" class="w-full text-xl uppercase md:w-fit"
 						>Patient Gallery</Button
 					>
 				</a>
 				<a href="/contact" class="w-full md:w-fit">
-					<Button size="lg" variant="outline" class="w-full text-xl md:w-fit"
+					<Button size="lg" variant="outline" class="w-full text-xl uppercase md:w-fit"
 						>Schedule Appointment</Button
 					>
 				</a>
@@ -241,7 +243,7 @@
 </div>
 
 <!-- BOOKING -->
-<div class="booking-section mb-20 mt-20 w-full p-2 md:p-5">
+<div class="booking-section my-40 flex w-full flex-col items-center p-2 md:p-5">
 	<div class="mb-5 text-5xl font-bold md:text-7xl">Booking</div>
 	<a href="/contact">
 		<Button size="lg" variant="default" class="flex w-full items-center gap-2 text-xl md:w-fit">

@@ -19,9 +19,6 @@
 </script>
 
 <div>
-	<a href="/results">
-		<Button variant="outline" size="lg" class="mb-5 uppercase">View All Before & Afters</Button>
-	</a>
 	<div class="flex justify-center">
 		<Carousel.Root
 			opts={{

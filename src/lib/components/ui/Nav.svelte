@@ -10,7 +10,7 @@
 		<a href="/" class="rotate-90 text-2xl font-bold">
 			<Icon
 				icon="pepicons-pencil:syringe"
-				class="h-12 w-12 rotate-45 rounded-full border border-foreground p-2"
+				class="h-10 w-10 rotate-45 rounded-full border border-foreground p-2 md:h-12 md:w-12"
 			/>
 			<!-- <img
 				src={bbjLogo}

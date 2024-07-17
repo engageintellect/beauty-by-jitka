@@ -8,12 +8,14 @@
 	import Difference from '$lib/components/ui/Difference.svelte';
 	import SocialLinks from '$lib/components/ui/SocialLinks.svelte';
 	import Carousel from '$lib/components/ui/Carousel.svelte';
+	import Quote from '$lib/components/ui/Quote.svelte';
 </script>
 
 <div class="flex flex-col gap-10 md:gap-20">
 	<Hero />
 	<AboutCard />
 	<SkillsCard />
+	<Quote />
 	<Difference />
 	<Carousel />
 	<SocialLinks />
