@@ -26,7 +26,7 @@
 		gsap.from(images, {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			stagger: 0.1,
 			ease: 'power2.out'
 		});
@@ -34,7 +34,7 @@
 		gsap.from('.animate-title', {
 			duration: 0.5,
 			opacity: 0,
-			x: 50,
+			x: 20,
 			ease: 'power2.out'
 		});
 	});
