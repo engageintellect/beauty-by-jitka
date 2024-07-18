@@ -8,7 +8,7 @@
 
 	function scrollToAnchor() {
 		const element = document.getElementById('anchorLink');
-		console.log(element);
+		// console.log(element);
 		if (element) {
 			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}

@@ -50,7 +50,6 @@ export const actions: Actions = {
     }
 
 
-      console.log('RESPONSE FROM /CONTACT');
     return {
       form,
       success: 'Form submitted successfully!',
