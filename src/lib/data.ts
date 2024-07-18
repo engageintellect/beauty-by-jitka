@@ -29,13 +29,13 @@ export const companyInfo = {
 	},
 
 	locations: {
-		"Corona Del Mar": {
-			address: "1234 Elm St, Corona Del Mar, CA 92625",
+		"coronaDelMar": {
+			address: "2711 East Coast Hwy, Suite #1 Corona Del Mar, CA 92625",
 			phone: "+1234567890"
 		},
 
-		"Newport Beach": {
-			address: "1234 Elm St, Newport Beach, CA 92660",
+		"longBeach": {
+			address: "5865 E. Naples Plaza Long Beach, CA 90803",
 			phone: "+1234567890"
 		}	
 	}
@@ -91,7 +91,7 @@ export const services = [
 		name: "Juvederm Vollure XC",
 		img: juvedermVollureImage,
 		coming_soon: false,
-		description: "Juvederm Vollure XC is a hyaluronic acid filler that is used to add volume and fullness to the skin to correct moderate to severe facial wrinkles and folds, such as the lines from your nose to the corners of your mouth (nasolabial folds).	",	
+		description: "A long-lasting dermal filler that smooths moderate to severe facial wrinkles and folds for a natural, youthful appearance.",	
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -109,7 +109,7 @@ export const services = [
 		name: "Restylane Contour",
 		img: restylaneContourImage,
 		coming_soon: false,
-		description: "Restylane Contour is a hyaluronic acid filler that is used to add volume and fullness to the skin to correct moderate to severe facial wrinkles and folds, such as the lines from your nose to the corners of your mouth (nasolabial folds).",
+		description: "A hyaluronic acid filler specifically designed to enhance cheek definition and restore midface volume with natural-looking results.",
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -124,7 +124,7 @@ export const services = [
 		name: "Restylane Lyft",
 		img: restylaneLyftImage,
 		coming_soon: false,
-		description: "Restylane Lyft is a hyaluronic acid filler that is used to add volume and fullness to the skin to correct moderate to severe facial wrinkles and folds, such as the lines from your nose to the corners of your mouth (nasolabial folds).",	
+		description: "A versatile filler that provides lift and volume to the cheeks and corrects moderate to severe facial wrinkles and folds.",	
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -139,7 +139,7 @@ export const services = [
 		name: "Restylane Refyne",
 		img: restylaneRefyneImage,
 		coming_soon: false,
-		description: "Restylane Refyne is a hyaluronic acid filler that is used to add volume and fullness to the skin to correct moderate to severe facial wrinkles and folds, such as the lines from your nose to the corners of your mouth (nasolabial folds).",
+		description: "A dermal filler that softens mild to moderate laugh lines, allowing for natural movement and expressions.",
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -154,7 +154,7 @@ export const services = [
 		name: "Restylane Defyne",
 		img: restylaneDefyneImage,
 		coming_soon: false,
-		description: "Restylane Defyne is a hyaluronic acid filler that is used to add volume and fullness to the skin to correct moderate to severe facial wrinkles and folds, such as the lines from your nose to the corners of your mouth (nasolabial folds).",	
+		description: "A flexible filler that smooths out deep laugh lines and enhances facial contours while maintaining natural expressions.",	
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -170,7 +170,7 @@ export const services = [
 		name: "PRP (Platelet-Rich Plasma)",
 		img: prpImage,
 		coming_soon: true,
-		description: "PRP is a high concentration of platelets surrounded in its own plasma. A small amount of blood is drawn and the red cells are isolated from the platelet-rich plasma. Plasma is the liquid portion of whole blood. It is composed largely of water and proteins, and it provides a medium for red blood cells, white blood cells and platelets to circulate through the body. Platelets, also called thrombocytes, are blood cells that cause blood clots and other necessary growth healing functions.	",	
+		description: "Platelet-Rich Plasma therapy uses your own blood's growth factors to rejuvenate skin, promote healing, and enhance overall complexion.",	
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",
@@ -186,7 +186,7 @@ export const services = [
 		name: "Stem Cells",
 		img: stemCellImage,
 		coming_soon: true,
-		description: "Stem cell treatment is a type of regenerative medicine that promotes the repair response of diseased, dysfunctional or injured tissue using stem cells or their derivatives. It is the next chapter in organ transplantation and uses cells instead of donor organs, which are limited in supply.		",	
+		description: "An advanced treatment that uses stem cells to repair, regenerate, and rejuvenate tissues for improved skin health and appearance.",	
 		use_cases: [
 			"Temporary smoothing of facial wrinkles and improving your appearance",
 			"Severe underarm sweating",

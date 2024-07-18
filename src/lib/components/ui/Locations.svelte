@@ -2,6 +2,7 @@
 	import LocationCard from '$lib/components/ui/LocationCard.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
+	import { companyInfo } from '$lib/data';
 
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
@@ -73,42 +74,36 @@
 	<div class="flex flex-col items-center gap-5 sm:flex-row">
 		<div class="w-full">
 			<div class="w-full text-xl font-thin">Corona Del Mar</div>
-			<div class="w-full text-lg">2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625</div>
-			<a
-				href={getDirectionsUrl('2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625')}
-				target="_blank"
-			>
+			<div class="w-full text-lg">{companyInfo.locations.coronaDelMar.address}</div>
+			<a href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)} target="_blank">
 				<Button variant="outline" class="flex items-center gap-2">
 					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
 			<div class="mt-2">
-				<a
-					href={getDirectionsUrl('2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625')}
-					target="_blank"
-				>
+				<a href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)} target="_blank">
 					<LocationCard
 						center={[-117.8725, 33.6007]}
-						name="2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625"
+						name={companyInfo.locations.coronaDelMar.address}
 					/>
 				</a>
 			</div>
 		</div>
 		<div class="w-full">
 			<div class="w-full text-xl font-thin">Long Beach</div>
-			<div class="w-full text-lg">5865 E. Naples Plaza Long Beach, CA 90803</div>
-			<a href={getDirectionsUrl('5865 E. Naples Plaza Long Beach, CA 90803')} target="_blank">
+			<div class="w-full text-lg">{companyInfo.locations.longBeach.address}</div>
+			<a href={getDirectionsUrl(companyInfo.locations.longBeach.address)} target="_blank">
 				<Button variant="outline" class="flex items-center gap-2">
 					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
 			<div class="mt-2">
-				<a href={getDirectionsUrl('5865 E. Naples Plaza Long Beach, CA 90803')} target="_blank">
+				<a href={getDirectionsUrl(companyInfo.locations.longBeach.address)} target="_blank">
 					<LocationCard
 						center={[-118.1229, 33.7562]}
-						name="5865 E. Naples Plaza Long Beach, CA 90803"
+						name={companyInfo.locations.longBeach.address}
 					/>
 				</a>
 			</div>
