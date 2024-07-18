@@ -267,7 +267,7 @@
 			<Form.FieldErrors />
 		</Form.Field>
 
-		<Form.Button disabled={isSubmitting} size="lg" class="group/sendButton w-full">
+		<Form.Button disabled={isSubmitting} size="lg" class="group/sendButton mt-5 w-full">
 			<div class="flex items-center gap-2 text-xl">
 				<div class="uppercase">Send</div>
 				<Icon
