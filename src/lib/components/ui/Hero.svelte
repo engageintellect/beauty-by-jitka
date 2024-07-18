@@ -150,6 +150,7 @@
 			on:click={scrollToAnchor}
 			name="scrollDownButton"
 			class="transition-all duration-300 md:group-hover/scrollDownButton:scale-[102%]"
+			aria-label="Scroll down"
 		>
 			<Icon
 				icon="material-symbols:arrow-drop-down"

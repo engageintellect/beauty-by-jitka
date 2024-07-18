@@ -64,18 +64,6 @@
 			}
 		});
 
-		gsapInstance.from('.locations-section', {
-			duration: 1,
-			opacity: 0,
-			y: 50,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.locations-section',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			}
-		});
-
 		gsapInstance.from('.booking-section', {
 			duration: 1,
 			opacity: 0,
