@@ -20,7 +20,7 @@
 		gsapInstance.from('.card1', {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.card1',
@@ -32,7 +32,7 @@
 		gsapInstance.from('.card2', {
 			duration: 1,
 			opacity: 0,
-			y: -50,
+			y: -20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.card2',
@@ -47,7 +47,7 @@
 			gsapInstance.from('.card3', {
 				duration: 1,
 				opacity: 0,
-				x: -50,
+				x: -20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card3',
@@ -58,7 +58,7 @@
 			gsapInstance.from('.card4', {
 				duration: 1,
 				opacity: 0,
-				x: 50,
+				x: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card4',
@@ -70,7 +70,7 @@
 			gsapInstance.from('.card5', {
 				duration: 1,
 				opacity: 0,
-				scale: 0.8,
+				scale: 0.9,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card5',
@@ -82,7 +82,7 @@
 			gsapInstance.from('.card6', {
 				duration: 1,
 				opacity: 0,
-				y: 50,
+				y: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card6',
@@ -94,7 +94,7 @@
 			gsapInstance.from('.card3', {
 				duration: 1,
 				opacity: 0,
-				y: -50,
+				y: -20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card3',
@@ -105,7 +105,7 @@
 			gsapInstance.from('.card4', {
 				duration: 1,
 				opacity: 0,
-				y: 50,
+				y: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card4',
@@ -117,7 +117,7 @@
 			gsapInstance.from('.card5', {
 				duration: 1,
 				opacity: 0,
-				y: 50,
+				y: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card5',
@@ -129,7 +129,7 @@
 			gsapInstance.from('.card6', {
 				duration: 1,
 				opacity: 0,
-				y: -50,
+				y: -20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.card6',

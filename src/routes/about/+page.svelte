@@ -5,7 +5,6 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Locations from '$lib/components/ui/Locations.svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
-	import { get } from 'svelte/store';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -19,7 +18,7 @@
 		gsapInstance.from('.jitka-section', {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.jitka-section',
@@ -31,7 +30,7 @@
 		gsapInstance.from('.jitka-section-photo', {
 			duration: 1,
 			opacity: 0,
-			x: 20,
+			x: 10,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.jitka-section',
@@ -43,7 +42,7 @@
 		gsapInstance.from('.doctor-section', {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.doctor-section',
@@ -55,10 +54,22 @@
 		gsapInstance.from('.doctor-section-photo', {
 			duration: 1,
 			opacity: 0,
-			x: -20,
+			x: -10,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.doctor-section',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+
+		gsapInstance.from('.locations-section', {
+			duration: 1,
+			opacity: 0,
+			y: 50,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.locations-section',
 				start: 'top 80%',
 				toggleActions: 'play none none none'
 			}
@@ -149,8 +160,8 @@
 					>
 				</a>
 				<a href="/contact" class="w-full md:w-fit">
-					<Button size="lg" variant="default" class="w-full text-xl uppercase md:w-fit"
-						>Free Consultation</Button
+					<Button size="lg" variant="outline" class="w-full text-xl uppercase md:w-fit"
+						>Schedule Appointment</Button
 					>
 				</a>
 			</div>

@@ -16,7 +16,7 @@
 		gsapInstance.from('.text-section', {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			// y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.text-section',
@@ -28,7 +28,7 @@
 		gsapInstance.from('.image-section', {
 			duration: 1,
 			opacity: 0,
-			scale: 0.9,
+			scale: 0.95,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.image-section',

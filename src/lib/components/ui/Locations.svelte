@@ -18,7 +18,7 @@
 			gsapInstance.from('.animate-locations', {
 				duration: 1,
 				opacity: 0,
-				y: 50,
+				y: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.animate-locations',
@@ -30,7 +30,7 @@
 			gsapInstance.from('.animate-locations', {
 				duration: 1,
 				opacity: 0,
-				y: 50,
+				y: 20,
 				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: '.animate-locations',

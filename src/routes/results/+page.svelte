@@ -25,7 +25,7 @@
 		gsap.from(images, {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			stagger: 0.1,
 			ease: 'power2.out'
 		});
