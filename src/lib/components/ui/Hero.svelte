@@ -145,14 +145,12 @@
 			/>
 		</div>
 	</div>
-	<div id="anchorLink" class="mt-5 flex w-full justify-center">
-		<!-- Button to scroll to the anchor -->
-		<!-- <Button on:click={scrollToAnchor}>
-			<Icon icon="akar-icons:arrow-down" class="h-6 w-6" />
-		</Button> -->
-
-		<!-- <button on:click={scrollToAnchor}>
-			<Icon icon="mdi:chevron-down" class="animate-down-button h-16 w-16 animate-pulse" />
-		</button> -->
+	<div id="anchorLink" class="group/scrollDownButton mt-5 hidden w-full justify-center md:flex">
+		<button
+			on:click={scrollToAnchor}
+			class="transition-all duration-300 md:group-hover/scrollDownButton:scale-[102%]"
+		>
+			<Icon icon="mdi:arrow-down" class="animate-down-button h-12 w-12 animate-pulse" />
+		</button>
 	</div>
 </div>

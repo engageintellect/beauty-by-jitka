@@ -25,7 +25,7 @@
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section1',
-				start: 'top 80%',
+				start: 'top 75%',
 				toggleActions: 'play none none none'
 			}
 		});
@@ -37,7 +37,7 @@
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section2',
-				start: 'top 80%',
+				start: 'top 75%',
 				toggleActions: 'play none none none'
 			}
 		});
