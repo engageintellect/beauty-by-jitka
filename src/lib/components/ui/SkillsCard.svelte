@@ -8,6 +8,7 @@
 	import Icon from '@iconify/svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
+	import LazyImage from './LazyImage.svelte';
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
@@ -166,10 +167,10 @@
 	<div
 		class="card1 relative order-1 flex h-full min-h-[500px] w-full rounded-lg bg-rose-300 text-white shadow-lg dark:bg-rose-500"
 	>
-		<img
+		<LazyImage
 			src={girl4Image}
 			alt="Jitka"
-			class="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
+			imgClass="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
 		/>
 		<div class="z-20 flex w-1/2 flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold uppercase drop-shadow">Revitalize Refresh Renew</div>
@@ -228,10 +229,10 @@
 	<div
 		class="card4 relative order-3 flex h-full min-h-[500px] w-full rounded-lg bg-neutral-300 text-white shadow-lg dark:bg-neutral-500 md:order-4"
 	>
-		<img
+		<LazyImage
 			src={girl5Image}
 			alt="Jitka"
-			class="absolute bottom-0 right-0 h-[550px] scale-x-[-1] rounded-lg object-cover"
+			imgClass="absolute bottom-0 right-0 h-[550px] scale-x-[-1] rounded-lg object-cover"
 		/>
 		<div class="absolute bottom-0 right-0 z-20 flex w-full flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold drop-shadow">SAFE & EFFECTIVE</div>
@@ -242,10 +243,10 @@
 	<div
 		class="card5 relative order-5 flex h-full min-h-[500px] w-full rounded-lg bg-sky-300 text-white shadow-lg dark:bg-sky-500"
 	>
-		<img
+		<LazyImage
 			src={girl2Image}
 			alt="Jitka"
-			class="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
+			imgClass="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
 		/>
 		<div class="z-20 flex w-2/3 flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold uppercase drop-shadow">Where Science Meets Beauty</div>

@@ -5,6 +5,7 @@
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
 	import Carousel from './Carousel.svelte';
+	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
@@ -58,7 +59,7 @@
 	});
 </script>
 
-<div>
+<div class="md:rounded-lg md:border md:p-5 md:shadow-lg">
 	<div class="text-section flex flex-col gap-5">
 		<div class="text-5xl font-bold uppercase">See the difference</div>
 		<div class="text-2xl font-thin">

@@ -4,6 +4,7 @@
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import Autoplay from 'embla-carousel-autoplay';
 	import { results } from '$lib/carousel-images';
+	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 
 	let autoplay = Autoplay({ delay: 2000, stopOnInteraction: false });
 
@@ -74,10 +75,10 @@
 						<a href="/results">
 							<Card.Root class="shadow-lg  transition-all duration-200 md:hover:scale-[99%]">
 								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">
-									<img
+									<LazyImage
 										src={result.image}
 										alt={result.title}
-										class="rounded-lg shadow-lg brightness-110"
+										imgClass="rounded-lg shadow-lg brightness-110"
 									/>
 								</Card.Content>
 							</Card.Root>

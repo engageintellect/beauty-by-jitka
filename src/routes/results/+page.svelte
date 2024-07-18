@@ -5,6 +5,8 @@
 	import { onMount } from 'svelte';
 	import Modal from '$lib/components/ui/Modal.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
+	import LazyImage from '$lib/components/ui/LazyImage.svelte';
+	import { companyInfo } from '$lib/data';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -37,6 +39,14 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Before & Afters : {companyInfo.name}</title>
+	<meta
+		name="description"
+		content={`${companyInfo.name} "Before & After" results from our clients.`}
+	/>
+</svelte:head>
+
 <div>
 	<a href={'javascript:history.back()'}>
 		<Button size="lg" variant="outline" class="flex items-center gap-2">
@@ -57,7 +67,11 @@
 					on:click={() => openModal(result.image)}
 					on:keydown={(e) => e.key === 'Enter' && openModal(result.image)}
 				>
-					<img src={result.image} alt="result" class="h-full w-full rounded-lg object-cover" />
+					<LazyImage
+						src={result.image}
+						alt="result"
+						imgClass="h-full w-full rounded-lg object-cover"
+					/>
 				</button>
 			</div>
 		{/each}

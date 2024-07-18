@@ -1,7 +1,5 @@
 <script lang="ts">
-	import lipInjecttionImage from '$lib/assets/images/lip-injection.png';
 	import heroImage from '$lib/assets/images/hero.png';
-	import logoImage from '$lib/assets/images/bbj-logo.png';
 	import { Button } from './button/index.js';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
@@ -72,6 +70,10 @@
 	});
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href={heroImage} />
+</svelte:head>
+
 <div class="mb-10 md:my-5 md:mb-20">
 	<div
 		class="flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl"
@@ -119,7 +121,7 @@
 
 				<a href="/services" class="group/bookingsButton w-full">
 					<Button size="lg" variant="outline" class="flex w-full items-center gap-2 text-xl">
-						<div class="uppercase">menu</div>
+						<div class="uppercase">services</div>
 						<Icon
 							icon="akar-icons:arrow-right"
 							class="h-7 w-7 transition-transform duration-300 lg:group-hover/bookingsButton:translate-x-1"

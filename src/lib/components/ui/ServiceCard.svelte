@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card/index.js';
+	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 
 	export let name: string;
 	export let description: string;
@@ -12,10 +13,10 @@
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
 	<Card.Content>
-		<img
+		<LazyImage
 			src={img}
 			alt={name}
-			class="h-48 w-full rounded-lg object-contain transition-all duration-300 md:group-hover/serviceItem:scale-[102%]"
+			imgClass="h-48 w-full rounded-lg object-contain transition-all duration-300 md:group-hover/serviceItem:scale-[102%]"
 		/>
 	</Card.Content>
 	<!-- <Card.Footer class="flex justify-between">

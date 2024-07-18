@@ -3,7 +3,7 @@
 	import drReynoldsImage from '$lib/assets/images/dr-reynolds.png';
 	import Icon from '@iconify/svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import Location from '$lib/components/ui/Location.svelte';
+	import Locations from '$lib/components/ui/Locations.svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
 
 	function getDirectionsUrl(address: string) {
@@ -117,7 +117,7 @@
 </a>
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
-	<div class="jitka-section mb-5 text-5xl font-bold md:text-7xl">ABOUT</div>
+	<div class="jitka-section mb-5 text-5xl font-thin md:text-7xl">ABOUT</div>
 	<div
 		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
 	>
@@ -203,43 +203,8 @@
 	</div>
 </div>
 
-<!-- LOCATIONS SECTION -->
-<div class="locations-section mt-20 w-full rounded-lg p-2 shadow-lg md:p-5 lg:mt-48">
-	<div class="mb-5 text-5xl font-bold md:text-7xl">Locations</div>
-	<div class="flex flex-col items-center gap-5 md:flex-row">
-		<div class="w-full">
-			<div class="w-full text-xl font-thin">Corona Del Mar</div>
-			<div class="w-full text-lg">2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625</div>
-			<a
-				href={getDirectionsUrl('2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625')}
-				target="_blank"
-			>
-				<Button variant="outline" class="flex items-center gap-2">
-					<div class="uppercase">Directions</div>
-					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
-				</Button>
-			</a>
-			<div class="mt-2">
-				<Location
-					center={[-117.8725, 33.6007]}
-					name="2711 East Coast Highway, Suite #1 Corona Del Mar, CA 92625"
-				/>
-			</div>
-		</div>
-		<div class="w-full">
-			<div class="w-full text-xl font-thin">Long Beach</div>
-			<div class="w-full text-lg">5865 E. Naples Plaza Long Beach, CA 90803</div>
-			<a href={getDirectionsUrl('5865 E. Naples Plaza Long Beach, CA 90803')} target="_blank">
-				<Button variant="outline" class="flex items-center gap-2">
-					<div class="uppercase">Directions</div>
-					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
-				</Button>
-			</a>
-			<div class="mt-2">
-				<Location center={[-118.1229, 33.7562]} name="5865 E. Naples Plaza Long Beach, CA 90803" />
-			</div>
-		</div>
-	</div>
+<div class="md: mt-20 mt-48">
+	<Locations />
 </div>
 
 <!-- BOOKING -->

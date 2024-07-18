@@ -9,8 +9,11 @@
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
+	let imageContainer: HTMLDivElement;
+	let section1Container: HTMLDivElement;
 
 	import TikTokStats from './TikTokStats.svelte';
+	import { companyInfo } from '$lib/data.js';
 
 	const initializeAnimations = () => {
 		tick();
@@ -18,11 +21,11 @@
 		gsapInstance.from('.section1', {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section1',
-				start: 'top 95%',
+				start: 'top 80%',
 				toggleActions: 'play none none none'
 			}
 		});
@@ -31,7 +34,6 @@
 			duration: 1,
 			opacity: 0,
 			scale: 0.9,
-			// y: 20,
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section2',
@@ -39,6 +41,31 @@
 				toggleActions: 'play none none none'
 			}
 		});
+	};
+
+	const initializeObserver = () => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+						entry.target.classList.remove('invisible');
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (imageContainer) {
+			observer.observe(imageContainer);
+		}
+
+		if (section1Container) {
+			observer.observe(section1Container);
+		}
 	};
 
 	onMount(() => {
@@ -52,6 +79,8 @@
 					ScrollTriggerInstance.refresh();
 				});
 			});
+
+			initializeObserver();
 		}
 	});
 
@@ -62,11 +91,19 @@
 	});
 </script>
 
+<svelte:head>
+	<title>About Us : {companyInfo.name}</title>
+	<meta
+		name="description"
+		content={`${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
+	/>
+</svelte:head>
+
 <div
 	id="about"
 	class="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 rounded-lg transition-all duration-300 md:flex-row md:gap-0"
 >
-	<div class="section1 flex w-full justify-center">
+	<div class="section1 invisible relative flex w-full justify-center" bind:this={section1Container}>
 		<div class="flex w-full max-w-md flex-col gap-5 text-center lg:p-5">
 			<div class="w-full text-4xl font-bold">JITKA ZAVADILOVA, RN</div>
 			<div class="text-xl font-thin md:text-2xl">
@@ -93,11 +130,14 @@
 	</div>
 
 	<div class="section2 relative flex w-full justify-end">
-		<div class="relative mx-auto h-80 w-64 md:h-[450px] md:w-2/3">
+		<div
+			class="invisible relative mx-auto h-80 w-64 transition-opacity duration-500 ease-in-out md:h-[450px] md:w-2/3"
+			bind:this={imageContainer}
+		>
 			<img
 				src={jitkaImage}
 				alt="Jitka"
-				class="h-full w-full rounded-full bg-pink-200 object-cover object-top transition-all duration-300 md:rounded-lg md:bg-pink-100"
+				class="h-full w-full rounded-full bg-pink-200 object-cover object-top md:rounded-lg md:bg-pink-100"
 			/>
 			<div class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full md:bg-fade-down"></div>
 		</div>

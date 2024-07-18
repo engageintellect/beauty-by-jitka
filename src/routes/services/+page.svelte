@@ -7,6 +7,7 @@
 	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
 	import { services } from '$lib/data';
 	import Input from '$lib/components/ui/input/input.svelte';
+	import { companyInfo } from '$lib/data';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -40,6 +41,11 @@
 
 	let searchFiler = '';
 </script>
+
+<svelte:head>
+	<title>Services : {companyInfo.name}</title>
+	<meta name="description" content={`${companyInfo.name} services menu.`} />
+</svelte:head>
 
 <div>
 	<div class="flex items-center justify-between gap-5">
