@@ -192,12 +192,12 @@
 			<Form.FieldErrors />
 		</Form.Field>
 
-		<Form.Button size="lg" class="group/sendButton w-full">
+		<Form.Button disabled={isSubmitting} size="lg" class="group/sendButton w-full">
 			<div class="flex items-center gap-2 text-xl">
 				<div class="uppercase">Send</div>
 				<Icon
-					icon="bi:arrow-right"
-					class="h-5 w-5 transition-transform duration-300 lg:group-hover/sendButton:translate-x-1"
+					icon={`${isSubmitting ? 'mingcute:loading-fill' : 'bi:arrow-right'}`}
+					class={`${isSubmitting ? 'animate-spin' : ''} h-7 w-7 transition-transform duration-300 lg:group-hover/sendButton:translate-x-1`}
 				/>
 			</div>
 		</Form.Button>
