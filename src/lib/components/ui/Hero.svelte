@@ -148,6 +148,7 @@
 	<div id="anchorLink" class="group/scrollDownButton mt-5 hidden w-full justify-center md:flex">
 		<button
 			on:click={scrollToAnchor}
+			name="scrollDownButton"
 			class="transition-all duration-300 md:group-hover/scrollDownButton:scale-[102%]"
 		>
 			<Icon

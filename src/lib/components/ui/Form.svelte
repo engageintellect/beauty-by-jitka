@@ -200,6 +200,7 @@
 				<Form.Control let:attrs>
 					<Form.Label>Message Type</Form.Label>
 					<Select.Root
+						name="messageType"
 						selected={selectedType}
 						onSelectedChange={(v) => {
 							v && ($formData.type = v.value);
@@ -228,6 +229,7 @@
 				<Form.Control let:attrs>
 					<Form.Label>Best Location</Form.Label>
 					<Select.Root
+						name="location"
 						selected={selectedLocation}
 						onSelectedChange={(v) => {
 							v && ($formData.location = v.value);
