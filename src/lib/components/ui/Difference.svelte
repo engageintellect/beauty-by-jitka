@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Image from '$lib/assets/images/results/result-29.png';
+	import Image from '$lib/assets/images/results/result-29.png?enhanced';
 	import { Button } from '$lib/components/ui/button/index.js';
 
 	import { onDestroy, onMount, tick } from 'svelte';
@@ -77,7 +77,7 @@
 			class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"
 		>
 			<div class="relative">
-				<img src={Image} alt="Difference" class="rounded-lg shadow-lg" />
+				<enhanced:img src={Image} alt="Difference" class="rounded-lg shadow-lg"></enhanced:img>
 				<div class="absolute left-5 top-5 text-lg text-white drop-shadow">before</div>
 				<div class="absolute right-5 top-5 text-lg text-white drop-shadow">after</div>
 			</div>

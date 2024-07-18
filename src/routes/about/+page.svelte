@@ -1,6 +1,6 @@
 <script lang="ts">
-	import jitkaImage from '$lib/assets/images/jitka.png';
-	import drReynoldsImage from '$lib/assets/images/dr-reynolds.png';
+	import jitkaImage from '$lib/assets/images/jitka.png?enhanced';
+	import drReynoldsImage from '$lib/assets/images/dr-reynolds.png?enhanced';
 	import Icon from '@iconify/svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Locations from '$lib/components/ui/Locations.svelte';
@@ -127,11 +127,11 @@
 			Serving patients in Orange County and Los Angeles, California.
 		</div>
 
-		<img
+		<enhanced:img
 			src={jitkaImage}
 			alt="Jitka Zavadilova"
 			class="jitka-section-photo mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
-		/>
+		></enhanced:img>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
 			<div class="mr-5 flex-1 text-xl font-thin">
 				<p>
@@ -178,11 +178,11 @@
 			Serving patients in Corona Del Mar and Long Beach, California.
 		</div>
 
-		<img
+		<enhanced:img
 			src={drReynoldsImage}
 			alt="Dr. Steven Reynolds"
 			class="doctor-section-photo mt-5 w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
-		/>
+		></enhanced:img>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
 			<div class="ml-5 flex-1 text-xl font-thin">
 				<p>

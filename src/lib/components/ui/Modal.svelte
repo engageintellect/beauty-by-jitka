@@ -51,7 +51,7 @@
 			bind:this={modalElement}
 			class="relative z-50 max-h-full max-w-4xl overflow-auto rounded-lg"
 		>
-			<img
+			<enhanced:img
 				src={imageSrc}
 				alt="Enlarged"
 				class="h-auto max-h-[80vh] max-w-full rounded-lg object-contain"

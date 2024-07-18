@@ -1,6 +1,6 @@
 <script lang="ts">
-	import jitkaImage from '$lib/assets/images/jitka.png';
-	import bbjLogo from '$lib/assets/images/bbj-logo.png';
+	import jitkaImage from '$lib/assets/images/jitka.png?enhanced';
+	import bbjLogo from '$lib/assets/images/bbj-logo.png?enhanced';
 	import { Button } from './button/index.js';
 	import Icon from '@iconify/svelte';
 
@@ -134,11 +134,11 @@
 			class="invisible relative mx-auto h-80 w-64 transition-opacity duration-500 ease-in-out md:h-[450px] md:w-2/3"
 			bind:this={imageContainer}
 		>
-			<img
+			<enhanced:img
 				src={jitkaImage}
 				alt="Jitka"
 				class="h-full w-full rounded-full bg-pink-200 object-cover object-top md:rounded-lg md:bg-pink-100"
-			/>
+			></enhanced:img>
 			<div class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full md:bg-fade-down"></div>
 		</div>
 	</div>

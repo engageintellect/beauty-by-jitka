@@ -67,11 +67,11 @@
 					on:click={() => openModal(result.image)}
 					on:keydown={(e) => e.key === 'Enter' && openModal(result.image)}
 				>
-					<LazyImage
+					<enhanced:img
 						src={result.image}
 						alt="result"
-						imgClass="h-full w-full rounded-lg object-cover"
-					/>
+						class="h-full w-full rounded-lg object-cover"
+					></enhanced:img>
 				</button>
 			</div>
 		{/each}
