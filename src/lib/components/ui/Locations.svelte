@@ -3,6 +3,64 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 
+	import { onDestroy, onMount, tick } from 'svelte';
+	import * as Avatar from '$lib/components/ui/avatar/index.js';
+
+	let gsapInstance: any;
+	let ScrollTriggerInstance: any;
+
+	const initializeAnimations = () => {
+		tick();
+
+		const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
+
+		if (isLargeScreen) {
+			gsapInstance.from('.animate-locations', {
+				duration: 1,
+				opacity: 0,
+				y: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.animate-locations',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+		} else {
+			gsapInstance.from('.animate-locations', {
+				duration: 1,
+				opacity: 0,
+				y: 50,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: '.animate-locations',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			});
+		}
+	};
+
+	onMount(() => {
+		if (typeof window !== 'undefined') {
+			import('gsap').then(({ gsap }) => {
+				import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
+					gsap.registerPlugin(ScrollTrigger);
+					gsapInstance = gsap;
+					ScrollTriggerInstance = ScrollTrigger;
+					initializeAnimations();
+					ScrollTriggerInstance.refresh();
+				});
+			});
+		}
+	});
+
+	onDestroy(() => {
+		if (typeof window !== 'undefined' && ScrollTriggerInstance) {
+			ScrollTriggerInstance.getAll().forEach((trigger: any) => trigger.kill());
+		}
+	});
+
 	// Function to generate Google Maps directions URL
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -10,7 +68,7 @@
 </script>
 
 <!-- LOCATIONS SECTION -->
-<div class="locations-section z-0 w-full rounded-lg border p-2 shadow-lg md:p-5">
+<div class="animate-locations locations-section z-0 w-full rounded-lg border p-2 shadow-lg md:p-5">
 	<div class="mb-5 text-5xl font-bold uppercase">Locations</div>
 	<div class="flex flex-col items-center gap-5 sm:flex-row">
 		<div class="w-full">

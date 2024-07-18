@@ -184,7 +184,7 @@
 			class="doctor-section-photo mt-5 mt-5 w-full w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="ml-5 flex-1 text-2xl font-thin">
+			<div class="ml-5 flex-1 text-xl font-thin">
 				<p>
 					Discover unparalleled healthcare with Dr. Reynolds, a seasoned Board Certified Family
 					Medicine Specialist based in vibrant Long Beach, California. With over 29 years of

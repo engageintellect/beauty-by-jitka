@@ -268,7 +268,7 @@
 						size="lg"
 						variant="default"
 						class="bg-sky-300 uppercase hover:bg-sky-500 dark:bg-sky-500 dark:hover:bg-sky-300"
-						>Before & After Gallery</Button
+						>View Before & After Gallery</Button
 					>
 				</a>
 			</div>
