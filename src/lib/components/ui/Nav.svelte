@@ -14,15 +14,15 @@
 
 <nav class="sticky top-0 -z-[-1] border-b bg-background p-2">
 	<div class="mx-auto flex w-full max-w-5xl items-center justify-between">
-		<a href="/" class="nav-logo rotate-90 text-2xl font-bold">
+		<a href="/" class="nav-logo rotate-90 text-2xl font-bold" aria-label="Home">
 			<Icon
 				icon="pepicons-pencil:syringe"
 				class="h-10 w-10 rotate-45 rounded-full border border-foreground p-2"
 			/>
 			<!-- <img
-				src={bbjLogo}
-				alt="Jitka"
-				class="h-10 w-10 rounded-full border transition-all duration-300 hover:shadow md:h-12 md:w-12"
+					src={bbjLogo}
+					alt="Jitka"
+					class="h-10 w-10 rounded-full border transition-all duration-300 hover:shadow md:h-12 md:w-12"
 			/> -->
 		</a>
 
