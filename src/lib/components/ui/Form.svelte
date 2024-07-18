@@ -26,41 +26,6 @@
 		formAction = window.location.pathname; // Ensure form action is set to the current path
 	});
 
-	async function handleSubmit(event: SubmitEvent) {
-		if (isSubmitting) return; // Prevent multiple submissions
-		isSubmitting = true;
-
-		event.preventDefault();
-		const formElement = event.currentTarget as HTMLFormElement;
-		const data = new FormData(formElement);
-
-		const response = await fetch(formAction, {
-			method: 'POST',
-			body: data
-		});
-
-		const result = await response.json();
-		isSubmitting = false;
-
-		if (result.type === 'success') {
-			toast.success('Form Submitted Successfully!', {
-				description: "We'll get back to you as soon as possible."
-			});
-
-			await invalidateAll();
-		} else {
-			toast.error('Failed to Submit Form', {
-				description: 'Please check your input and try again.',
-				action: {
-					label: 'Undo',
-					onClick: () => invalidateAll()
-				}
-			});
-		}
-
-		applyAction(result);
-	}
-
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
 
@@ -153,9 +118,30 @@
 	<form
 		method="POST"
 		action={formAction}
-		use:enhance
-		on:submit|preventDefault={handleSubmit}
 		class="contact-form"
+		use:enhance={({ cancel }) => {
+			if (isSubmitting) return cancel(); // Prevent multiple submissions
+			isSubmitting = true;
+
+			return async ({ result, update }) => {
+				if (result.type === 'success') {
+					toast.success('Form Submitted Successfully!', {
+						description: "We'll get back to you as soon as possible."
+					});
+				} else {
+					toast.error('Failed to Submit Form', {
+						description: 'Please check your input and try again.',
+						action: {
+							label: 'Undo',
+							onClick: () => invalidateAll()
+						}
+					});
+				}
+
+				await update();
+				isSubmitting = false;
+			};
+		}}
 	>
 		<div class="mb-2 flex items-center gap-5">
 			<Form.Field {form} name="firstName" class="w-full">
