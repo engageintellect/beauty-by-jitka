@@ -150,7 +150,10 @@
 			on:click={scrollToAnchor}
 			class="transition-all duration-300 md:group-hover/scrollDownButton:scale-[102%]"
 		>
-			<Icon icon="mdi:arrow-down" class="animate-down-button h-12 w-12 animate-pulse" />
+			<Icon
+				icon="material-symbols:arrow-drop-down"
+				class="animate-down-button h-16 w-16 animate-pulse"
+			/>
 		</button>
 	</div>
 </div>
