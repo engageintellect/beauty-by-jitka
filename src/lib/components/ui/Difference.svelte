@@ -4,6 +4,7 @@
 
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
+	import Carousel from './Carousel.svelte';
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
@@ -70,6 +71,8 @@
 			>
 		</a>
 	</div>
+
+	<Carousel />
 	<a href="/results">
 		<div
 			class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"

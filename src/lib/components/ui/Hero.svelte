@@ -55,7 +55,7 @@
 
 		gsap.from('.animate-buttons', {
 			duration: 1,
-			y: -100,
+			y: -10,
 			opacity: 0,
 			ease: 'power4.out',
 			delay: 0
@@ -64,7 +64,7 @@
 		gsap.from('.animate-down-button', {
 			duration: 3,
 			opacity: 0,
-			y: -20,
+			y: -10,
 			scale: 0.0,
 			ease: 'power4.out',
 			delay: 0
@@ -84,7 +84,9 @@
 						class="h-full w-full rotate-45 rounded-full border border-foreground p-2"
 					/>
 				</div>
-				<div class="animate-title text-5xl font-bold uppercase tracking-tight lg:text-[3.75rem]">
+				<div
+					class="animate-title text-5xl font-bold uppercase tracking-tight transition-all lg:text-[3.75rem]"
+				>
 					{companyInfo.name}
 				</div>
 			</div>
@@ -96,13 +98,15 @@
 					Transform Your Look with Confidence and Precision.
 				</div> -->
 
-				<div class="animate-hero-text text-2xl font-thin md:text-3xl">
+				<div
+					class="animate-hero-text w-full max-w-xs text-2xl font-thin transition-all md:text-3xl lg:max-w-md"
+				>
 					Offering a comprehensive range of customizable treatments tailored to align with your
 					individual objectives, preferences, and personal style.
 				</div>
 			</div>
 
-			<div class="animate-buttons mt-5 flex items-center gap-2">
+			<div class="animate-buttons mt-10 flex items-center gap-2">
 				<a href="/contact" class="group/bookingsButton w-full">
 					<Button size="lg" class="flex w-full items-center gap-2 text-xl">
 						<div class="uppercase">Booking</div>

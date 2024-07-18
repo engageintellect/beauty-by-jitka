@@ -7,7 +7,6 @@
 	import SkillsCard from '$lib/components/ui/SkillsCard.svelte';
 	import Difference from '$lib/components/ui/Difference.svelte';
 	import SocialLinks from '$lib/components/ui/SocialLinks.svelte';
-	import Carousel from '$lib/components/ui/Carousel.svelte';
 	import Quote from '$lib/components/ui/Quote.svelte';
 </script>
 
@@ -17,7 +16,6 @@
 	<SkillsCard />
 	<Quote />
 	<Difference />
-	<Carousel />
 	<SocialLinks />
 	<div
 		class="mb-5 flex h-full w-full flex-col justify-center gap-5 rounded-lg p-5 transition-all duration-500 sm:min-h-full md:mb-20 md:flex-row md:justify-center md:border md:shadow-lg"

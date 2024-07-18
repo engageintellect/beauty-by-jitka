@@ -6,7 +6,7 @@
 	export let img: string;
 </script>
 
-<Card.Root class="flex h-full w-full flex-col justify-between">
+<Card.Root class="group/serviceItem flex h-full w-full flex-col justify-between">
 	<Card.Header>
 		<Card.Title>{name}</Card.Title>
 		<Card.Description>{description}</Card.Description>
@@ -15,7 +15,7 @@
 		<img
 			src={img}
 			alt={name}
-			class="h-48 w-full rounded-lg object-contain transition-all duration-300 md:hover:scale-[102%]"
+			class="h-48 w-full rounded-lg object-contain transition-all duration-300 md:group-hover/serviceItem:scale-[102%]"
 		/>
 	</Card.Content>
 	<!-- <Card.Footer class="flex justify-between">

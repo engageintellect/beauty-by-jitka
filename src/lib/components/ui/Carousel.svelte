@@ -1,16 +1,9 @@
 <script lang="ts">
-	import Image from '$lib/assets/images/results/result-29.png';
-	import { Button } from '$lib/components/ui/button/index.js';
-
 	import { onDestroy, onMount, tick } from 'svelte';
-	import * as Avatar from '$lib/components/ui/avatar/index.js';
-
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import Autoplay from 'embla-carousel-autoplay';
 	import { results } from '$lib/carousel-images';
-	import CarouselNext from './carousel/carousel-next.svelte';
-	import CarouselPrevious from './carousel/carousel-previous.svelte';
 
 	let autoplay = Autoplay({ delay: 2000, stopOnInteraction: false });
 
@@ -29,7 +22,7 @@
 		tick();
 
 		gsapInstance.from('.gsap-carousel', {
-			duration: 5,
+			duration: 3,
 			opacity: 0,
 			// y: 50,
 			ease: 'power2.out',
@@ -70,16 +63,16 @@
 				align: 'center',
 				loop: true
 			}}
-			class="w-full"
+			class="w-full py-5"
 			plugins={[autoplay]}
 			on:mouseenter={handleMouseEnter}
 			on:mouseleave={handleMouseLeave}
 		>
 			<Carousel.Content class="flex items-center p-5 md:p-0">
 				{#each results as result}
-					<Carousel.Item class="sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+					<Carousel.Item class="py-5 sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
 						<a href="/results">
-							<Card.Root class="transition-all duration-200 md:hover:scale-[98%]">
+							<Card.Root class="shadow-lg  transition-all duration-200 md:hover:scale-[99%]">
 								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">
 									<img
 										src={result.image}
