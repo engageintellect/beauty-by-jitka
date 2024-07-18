@@ -75,10 +75,10 @@
 						<a href="/results">
 							<Card.Root class="shadow-lg  transition-all duration-200 md:hover:scale-[99%]">
 								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">
-									<LazyImage
+									<img
 										src={result.image}
 										alt={result.title}
-										imgClass="rounded-lg shadow-lg brightness-110"
+										class="rounded-lg shadow-lg brightness-110"
 									/>
 								</Card.Content>
 							</Card.Root>

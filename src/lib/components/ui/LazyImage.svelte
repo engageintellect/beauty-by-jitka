@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	export let src: string;
 	export let imgClass: string = '';
@@ -44,4 +45,4 @@
 	});
 </script>
 
-<img bind:this={image} data-src={src} {alt} class={imgClass} />
+<img in:fade bind:this={image} data-src={src} {alt} class={imgClass} />"
