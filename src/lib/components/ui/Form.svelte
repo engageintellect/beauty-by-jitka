@@ -14,7 +14,6 @@
 	import * as Select from '$lib/components/ui/select';
 
 	export let data: SuperValidated<Infer<FormSchema>>;
-	let formAction = '';
 	let isSubmitting = false;
 
 	$: selectedType = $formData.type
@@ -36,10 +35,6 @@
 	});
 
 	const { form: formData } = form;
-
-	onMount(() => {
-		formAction = window.location.pathname; // Ensure form action is set to the current path
-	});
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
@@ -132,7 +127,7 @@
 <div class="mx-auto w-full max-w-md">
 	<form
 		method="POST"
-		action={formAction}
+		action="/contact?"
 		class="contact-form"
 		use:enhance={({ cancel }) => {
 			if (isSubmitting) return cancel(); // Prevent multiple submissions

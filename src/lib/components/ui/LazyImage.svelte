@@ -45,4 +45,4 @@
 	});
 </script>
 
-<img in:fade bind:this={image} data-src={src} {alt} class={imgClass} />"
+<img in:fade bind:this={image} data-src={src} {alt} class={imgClass} />

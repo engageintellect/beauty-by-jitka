@@ -27,13 +27,13 @@
 		</a>
 
 		<div class="flex items-center gap-2">
-			<a href="/contact" class="hidden md:flex">
+			<a href="/contact" class="">
 				<Button class="uppercase" variant="default">free consultation</Button>
 			</a>
-			<a href={`tel:${companyInfo.phone}`} class="">
+			<a href={`tel:${companyInfo.phone}`} class="hidden md:flex">
 				<Button class="uppercase" variant="outline">call</Button>
 			</a>
-			<a href={`sms:${companyInfo.phone}`} class="">
+			<a href={`sms:${companyInfo.phone}`} class="hidden md:flex">
 				<Button class="uppercase" variant="outline">text</Button>
 			</a>
 			<ThemeToggle />

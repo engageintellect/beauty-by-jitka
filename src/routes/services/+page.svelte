@@ -70,14 +70,24 @@
 		{#if searchFiler === ''}
 			{#each services as service}
 				<a href="/contact">
-					<ServiceCard name={service.name} description={service.description} img={service.img} />
+					<ServiceCard
+						name={service.name}
+						description={service.description}
+						img={service.img}
+						comingSoon={service.coming_soon}
+					/>
 				</a>
 			{/each}
 		{:else}
 			{#each services as service}
 				{#if service.name.toLowerCase().includes(searchFiler.toLowerCase())}
 					<a href="/contact">
-						<ServiceCard name={service.name} description={service.description} img={service.img} />
+						<ServiceCard
+							name={service.name}
+							description={service.description}
+							img={service.img}
+							comingSoon={service.coming_soon}
+						/>
 					</a>
 				{/if}
 			{/each}
