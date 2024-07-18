@@ -11,7 +11,7 @@ import restylaneDefyneImage from "$lib/assets/images/services/restylane-defyne.p
 
 export const companyInfo = {
 	name: "Beauty by Jitka",
-	phone: "3333333333",
+	phone: "9499935222",
 	email: "info@beautybyjitka.com",
 	
 	socials: {
