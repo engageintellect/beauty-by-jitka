@@ -3,7 +3,7 @@
 	import { companyInfo } from '$lib/data';
 </script>
 
-<div class="my-5 flex flex-col items-center justify-center gap-10 lg:flex-row">
+<div class="my-5 flex flex-col items-center justify-center gap-5 md:flex-row md:gap-10">
 	<a href={companyInfo.socials.tiktok.url} class="flex items-center justify-center gap-2">
 		<Icon icon="skill-icons:instagram" class="h-12 w-12" />
 		<div class="text-3xl font-thin">{companyInfo.socials.tiktok.username}</div>

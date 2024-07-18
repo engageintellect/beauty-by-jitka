@@ -11,10 +11,25 @@
 	import { toast } from 'svelte-sonner';
 	import Logo from '$lib/assets/images/bbj-logo.png';
 	import { onDestroy, onMount, tick } from 'svelte';
+	import * as Select from '$lib/components/ui/select';
 
 	export let data: SuperValidated<Infer<FormSchema>>;
 	let formAction = '';
 	let isSubmitting = false;
+
+	$: selectedType = $formData.type
+		? {
+				label: $formData.type,
+				value: $formData.type
+			}
+		: undefined;
+
+	$: selectedLocation = $formData.location
+		? {
+				label: $formData.location,
+				value: $formData.location
+			}
+		: undefined;
 
 	const form = superForm(data, {
 		validators: zodClient(formSchema)
@@ -105,7 +120,7 @@
 				Have a question, or would like to schedule a consultation or appointment? Fill out the form,
 				we'll get back to you soon.
 			</div>
-			<div class="text-xl font-thin">
+			<div class="mb-5 text-xl font-thin md:mb-0">
 				Or, give us a call at <span class="text-2xl font-bold"
 					><a href="tel:9499935222" class="ml-2">949.993.5222</a></span
 				>.
@@ -130,11 +145,7 @@
 					});
 				} else {
 					toast.error('Failed to Submit Form', {
-						description: 'Please check your input and try again.',
-						action: {
-							label: 'Undo',
-							onClick: () => invalidateAll()
-						}
+						description: 'Please check your input and try again.'
 					});
 				}
 
@@ -143,7 +154,7 @@
 			};
 		}}
 	>
-		<div class="mb-2 flex items-center gap-5">
+		<div class="mb-2 flex items-center gap-2 md:gap-5">
 			<Form.Field {form} name="firstName" class="w-full">
 				<Form.Control let:attrs>
 					<Form.Label>First Name</Form.Label>
@@ -159,7 +170,7 @@
 			</Form.Field>
 		</div>
 
-		<div class="flex items-center gap-5">
+		<div class="flex items-center gap-2 md:gap-5">
 			<Form.Field {form} name="firstName" class="w-full">
 				<Form.FieldErrors />
 			</Form.Field>
@@ -183,6 +194,70 @@
 			</Form.Control>
 			<Form.FieldErrors />
 		</Form.Field>
+
+		<div class="mb-2 flex items-center gap-2 md:gap-5">
+			<Form.Field {form} name="type" class="w-full">
+				<Form.Control let:attrs>
+					<Form.Label>Message Type</Form.Label>
+					<Select.Root
+						selected={selectedType}
+						onSelectedChange={(v) => {
+							v && ($formData.type = v.value);
+						}}
+					>
+						<Select.Trigger {...attrs} class="w-full">
+							<Select.Value class="text-lg" placeholder="Select Type" />
+						</Select.Trigger>
+						<Select.Content>
+							<Select.Item class="text-lg" label="Consultation" value="Consultation"
+								>Consultation</Select.Item
+							>
+							<Select.Item class="text-lg" label="Appointment" value="Appointment"
+								>Appointment</Select.Item
+							>
+							<Select.Item class="text-lg" label="General Question" value="General Question del mar"
+								>General Question</Select.Item
+							>
+						</Select.Content>
+					</Select.Root>
+					<input hidden bind:value={$formData.type} name={attrs.name} />
+				</Form.Control>
+			</Form.Field>
+
+			<Form.Field {form} name="location" class="w-full">
+				<Form.Control let:attrs>
+					<Form.Label>Best Location</Form.Label>
+					<Select.Root
+						selected={selectedLocation}
+						onSelectedChange={(v) => {
+							v && ($formData.location = v.value);
+						}}
+					>
+						<Select.Trigger {...attrs} class="w-full">
+							<Select.Value class="text-lg" placeholder="Select Location" />
+						</Select.Trigger>
+						<Select.Content>
+							<Select.Item class="text-lg" label="Corona Del Mar" value="Corona Del Mar"
+								>Corona Del Mar</Select.Item
+							>
+							<Select.Item class="text-lg" label="Long Beach" value="Long Beach"
+								>Long Beach</Select.Item
+							>
+						</Select.Content>
+					</Select.Root>
+					<input hidden bind:value={$formData.location} name={attrs.name} />
+				</Form.Control>
+			</Form.Field>
+		</div>
+
+		<div class="flex items-center gap-2 md:gap-5">
+			<Form.Field {form} name="type" class="w-full">
+				<Form.FieldErrors />
+			</Form.Field>
+			<Form.Field {form} name="location" class="w-full">
+				<Form.FieldErrors />
+			</Form.Field>
+		</div>
 
 		<Form.Field {form} name="message">
 			<Form.Control let:attrs>

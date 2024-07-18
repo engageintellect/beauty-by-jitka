@@ -4,6 +4,7 @@
 	import girl3Image from '$lib/assets/images/girl3.png?enhanced';
 	import girl4Image from '$lib/assets/images/girl4.png?enhanced';
 	import girl5Image from '$lib/assets/images/girl5.png?enhanced';
+	import womanBotoxImage from '$lib/assets/images/womanBotox.png?enhanced';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
@@ -170,7 +171,7 @@
 		<enhanced:img
 			src={girl4Image}
 			alt="Jitka"
-			class="absolute bottom-0 right-0 h-[550px] rounded-lg object-cover"
+			class="absolute bottom-0 left-0 h-[550px] rounded-lg object-cover"
 		></enhanced:img>
 		<div class="z-20 flex w-1/2 flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold uppercase drop-shadow">Revitalize Refresh Renew</div>
@@ -230,9 +231,9 @@
 		class="card4 relative order-3 flex h-full min-h-[500px] w-full rounded-lg bg-neutral-300 text-white shadow-lg dark:bg-neutral-500 md:order-4"
 	>
 		<enhanced:img
-			src={girl5Image}
+			src={womanBotoxImage}
 			alt="Jitka"
-			class="absolute bottom-0 right-0 h-[550px] scale-x-[-1] rounded-lg object-cover"
+			class="absolute bottom-0 right-0 h-full rounded-lg object-cover"
 		></enhanced:img>
 		<div class="absolute bottom-0 right-0 z-20 flex w-full flex-col gap-5 p-5">
 			<div class="w-full text-5xl font-bold drop-shadow">SAFE & EFFECTIVE</div>

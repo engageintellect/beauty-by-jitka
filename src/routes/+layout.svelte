@@ -1,13 +1,9 @@
 <script>
 	import '../app.css';
-	import { goto, invalidate } from '$app/navigation';
 	import { ModeWatcher } from 'mode-watcher';
-	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
-	import { Button } from '$lib/components/ui/button';
 	import Nav from '$lib/components/ui/Nav.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
-	import Icon from '@iconify/svelte';
 
 	const { data: propsData, children } = $props();
 
@@ -30,7 +26,7 @@
 </script>
 
 <ModeWatcher />
-<Toaster position="bottom-right" richColors={true} />
+<Toaster position="top-right" richColors={true} />
 
 <div class="flex min-h-screen flex-col">
 	<Nav />

@@ -75,7 +75,8 @@
 						<a href="/results">
 							<Card.Root class="shadow-lg  transition-all duration-200 md:hover:scale-[99%]">
 								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">
-									<enhanced:img src={result.image} alt={result.title} />
+									<enhanced:img src={result.image} alt={result.title} class="rounded-lg shadow-lg"
+									></enhanced:img>
 								</Card.Content>
 							</Card.Root>
 						</a>

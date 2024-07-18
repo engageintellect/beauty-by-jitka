@@ -4,14 +4,20 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 	import { companyInfo } from '$lib/data';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+
+	onMount(() => {
+		gsap.from('.nav-logo', { opacity: 0, duration: 0.5 });
+	});
 </script>
 
 <nav class="sticky top-0 -z-[-1] border-b bg-background p-2">
 	<div class="mx-auto flex w-full max-w-5xl items-center justify-between">
-		<a href="/" class="rotate-90 text-2xl font-bold">
+		<a href="/" class="nav-logo rotate-90 text-2xl font-bold">
 			<Icon
 				icon="pepicons-pencil:syringe"
-				class="h-10 w-10 rotate-45 rounded-full border border-foreground p-2 md:h-12 md:w-12"
+				class="h-10 w-10 rotate-45 rounded-full border border-foreground p-2"
 			/>
 			<!-- <img
 				src={bbjLogo}

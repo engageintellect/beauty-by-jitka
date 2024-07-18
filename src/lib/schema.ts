@@ -12,6 +12,12 @@ export const formSchema = z.object({
     .max(15, { message: "Phone number must be at most 15 characters" }),
   email: z.string()
     .email({ message: "Invalid email address" }),
+  type: z.string()
+    .min(2, { message: "Message type must be selected" })
+    .max(50, { message: "Message type must be selected" }),
+  location: z.string()
+    .min(2, { message: "Location must be selected" })
+    .max(50, { message: "Location must be selected" }),
   message: z.string()
     .min(10, { message: "Message must be at least 10 characters" })
     .max(500, { message: "Message must be at most 500 characters" }),

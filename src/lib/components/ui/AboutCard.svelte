@@ -25,7 +25,7 @@
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section1',
-				start: 'top 75%',
+				start: 'top 70%',
 				toggleActions: 'play none none none'
 			}
 		});
@@ -37,7 +37,7 @@
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.section2',
-				start: 'top 75%',
+				start: 'top 70%',
 				toggleActions: 'play none none none'
 			}
 		});
@@ -55,7 +55,7 @@
 				});
 			},
 			{
-				threshold: 0.1
+				threshold: 0.5
 			}
 		);
 
@@ -134,11 +134,13 @@
 			class="invisible relative mx-auto h-80 w-64 transition-opacity duration-500 ease-in-out md:h-[450px] md:w-2/3"
 			bind:this={imageContainer}
 		>
-			<enhanced:img
-				src={jitkaImage}
-				alt="Jitka"
-				class="h-full w-full rounded-full bg-pink-200 object-cover object-top md:rounded-lg md:bg-pink-100"
-			></enhanced:img>
+			<a href="/about">
+				<enhanced:img
+					src={jitkaImage}
+					alt="Jitka"
+					class="h-full w-full rounded-full bg-pink-200 object-cover object-top md:rounded-lg md:bg-pink-100"
+				></enhanced:img>
+			</a>
 			<div class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full md:bg-fade-down"></div>
 		</div>
 	</div>

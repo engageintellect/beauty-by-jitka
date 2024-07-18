@@ -5,6 +5,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Locations from '$lib/components/ui/Locations.svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
+	import { get } from 'svelte/store';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -160,8 +161,8 @@
 					>
 				</a>
 				<a href="/contact" class="w-full md:w-fit">
-					<Button size="lg" variant="outline" class="w-full text-xl uppercase md:w-fit"
-						>Schedule Appointment</Button
+					<Button size="lg" variant="default" class="w-full text-xl uppercase md:w-fit"
+						>Free Consultation</Button
 					>
 				</a>
 			</div>
