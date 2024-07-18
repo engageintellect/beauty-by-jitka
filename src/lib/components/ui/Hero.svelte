@@ -78,7 +78,7 @@
 	<div
 		class="flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl"
 	>
-		<div class="flex w-full flex-col rounded-l-lg p-5 md:max-w-lg md:p-10">
+		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-fit flex-col items-center gap-5">
 				<div class="animate-logo h-16 w-16">
 					<Icon
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 
-			<div class="animate-buttons mt-10 flex items-center gap-2">
+			<div class="animate-buttons mx-auto mt-10 flex w-full max-w-lg items-center gap-2">
 				<a href="/contact" class="group/bookingsButton w-full">
 					<Button size="lg" class="flex w-full items-center gap-2 text-xl">
 						<div class="uppercase">Booking</div>

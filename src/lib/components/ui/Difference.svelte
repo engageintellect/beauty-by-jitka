@@ -67,9 +67,7 @@
 		</div>
 
 		<a href="/results">
-			<Button variant="outline" size="lg" class="mb-5 w-fit uppercase"
-				>View All Before & Afters</Button
-			>
+			<Button variant="outline" size="lg" class="w-fit uppercase">View All Before & Afters</Button>
 		</a>
 	</div>
 

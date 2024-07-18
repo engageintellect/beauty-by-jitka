@@ -181,7 +181,7 @@
 		<img
 			src={drReynoldsImage}
 			alt="Dr. Steven Reynolds"
-			class="doctor-section-photo mt-5 mt-5 w-full w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
+			class="doctor-section-photo mt-5 w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
 		/>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
 			<div class="ml-5 flex-1 text-xl font-thin">
@@ -203,7 +203,7 @@
 	</div>
 </div>
 
-<div class="md: mt-20 mt-48">
+<div class="mt-20 md:mt-48">
 	<Locations />
 </div>
 

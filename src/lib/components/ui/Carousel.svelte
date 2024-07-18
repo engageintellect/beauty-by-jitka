@@ -64,7 +64,7 @@
 				align: 'center',
 				loop: true
 			}}
-			class="w-full py-5"
+			class="w-full"
 			plugins={[autoplay]}
 			on:mouseenter={handleMouseEnter}
 			on:mouseleave={handleMouseLeave}

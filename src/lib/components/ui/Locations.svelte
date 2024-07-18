@@ -68,7 +68,7 @@
 </script>
 
 <!-- LOCATIONS SECTION -->
-<div class="animate-locations locations-section z-0 w-full rounded-lg border p-2 shadow-lg md:p-5">
+<div class="animate-locations z-0 w-full rounded-lg border p-2 shadow-lg md:p-5">
 	<div class="mb-5 text-5xl font-bold uppercase">Locations</div>
 	<div class="flex flex-col items-center gap-5 sm:flex-row">
 		<div class="w-full">
