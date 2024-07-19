@@ -122,7 +122,7 @@
 		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
 	>
 		<div class="w-full text-5xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
-		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Owner</div>
+		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Founder</div>
 		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
 			Serving patients in Orange County and Los Angeles, California.
 		</div>
