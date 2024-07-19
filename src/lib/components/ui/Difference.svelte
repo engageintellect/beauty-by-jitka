@@ -72,7 +72,7 @@
 	</div>
 
 	<Carousel />
-	<a href="/results">
+	<!-- <a href="/results">
 		<div
 			class="image-section mt-5 rounded-lg bg-gradient-to-b from-emerald-100 to-lime-100 p-2 shadow-lg dark:bg-gradient-to-b dark:from-emerald-500 dark:to-lime-700 md:p-10"
 		>
@@ -82,5 +82,5 @@
 				<div class="absolute right-5 top-5 text-lg text-white drop-shadow">after</div>
 			</div>
 		</div>
-	</a>
+	</a> -->
 </div>

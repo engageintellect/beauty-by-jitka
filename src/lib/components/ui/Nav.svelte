@@ -28,7 +28,7 @@
 
 		<div class="flex items-center gap-2">
 			<a href="/contact" class="">
-				<Button class="uppercase" variant="default">free consultation</Button>
+				<Button class="uppercase" variant="default">book appointment</Button>
 			</a>
 			<a href={`tel:${companyInfo.phone}`} class="hidden md:flex">
 				<Button class="uppercase" variant="outline">call</Button>

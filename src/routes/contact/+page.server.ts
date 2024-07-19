@@ -4,6 +4,7 @@ import { superValidate } from "sveltekit-superforms";
 import { zod } from "sveltekit-superforms/adapters";
 import { formSchema } from "$lib/schema";
 import type { Action } from '@sveltejs/kit';
+import { GOOGLE_FORM_URL } from "$env/static/private";
 
 export const load: PageServerLoad = async () => {
   return {
@@ -23,17 +24,27 @@ export const actions: Actions = {
     // Prepare the payload for the Google Form
 
     const payload = new URLSearchParams({
-      'entry.452429752': form.data.firstName,
-      'entry.1233853460': form.data.lastName,
-      'entry.479393351': form.data.phone,
-      'entry.2067168320': form.data.type,
-      'entry.766034406': form.data.location,
-      'entry.352214429': form.data.message,
+      // DEV
+      // 'entry.452429752': form.data.firstName,
+      // 'entry.1233853460': form.data.lastName,
+      // 'entry.479393351': form.data.phone,
+      // 'entry.2067168320': form.data.type,
+      // 'entry.766034406': form.data.location,
+      // 'entry.352214429': form.data.message,
+      // 'emailAddress': form.data.email,
+
+      // PROD
+      'entry.338449011': form.data.firstName,
+      'entry.1660020640': form.data.lastName,
+      'entry.884000418': form.data.phone,
+      'entry.1985756330': form.data.type,
+      'entry.470355550': form.data.location,
+      'entry.2106913208': form.data.message,
       'emailAddress': form.data.email,
     });
 
     // Submit the form data to the Google Form
-    const response = await fetch('https://docs.google.com/forms/d/e/1FAIpQLSeXEPyQ13TyKZ1eMjHA_aZotlNUUKBgHnH3cd1pZBEox1qXoA/formResponse', {
+    const response = await fetch(`${GOOGLE_FORM_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

@@ -13,8 +13,19 @@ import result12 from '$lib/assets/images/results/result-12.png?enhanced';
 import result13 from '$lib/assets/images/results/result-13.png?enhanced';
 import result14 from '$lib/assets/images/results/result-14.png?enhanced';
 import result15 from '$lib/assets/images/results/result-15.png?enhanced';
-import result16 from '$lib/assets/images/results/result-29.png?enhanced';
-
+import result16 from '$lib/assets/images/results/result-16.png?enhanced';
+import result17 from '$lib/assets/images/results/result-17.png?enhanced';
+import result18 from '$lib/assets/images/results/result-18.png?enhanced';
+import result19 from '$lib/assets/images/results/result-19.png?enhanced';
+import result20 from '$lib/assets/images/results/result-20.png?enhanced';
+import result21 from '$lib/assets/images/results/result-21.png?enhanced';
+import result22 from '$lib/assets/images/results/result-22.png?enhanced';
+import result23 from '$lib/assets/images/results/result-23.png?enhanced';
+import result24 from '$lib/assets/images/results/result-24.png?enhanced';
+import result25 from '$lib/assets/images/results/result-25.png?enhanced';
+import result26 from '$lib/assets/images/results/result-26.png?enhanced';
+import result27 from '$lib/assets/images/results/result-27.png?enhanced';
+import result28 from '$lib/assets/images/results/result-28.png?enhanced';
 
 
 export const results = [
@@ -113,5 +124,130 @@ export const results = [
 		title: 'carousel image',
 		url: 'https://instagram.com/beautybyjitka',
 		description: 'carousel image'
-	}	
-];
+	},
+	{
+		image: result17,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result18,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result19,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result20,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result21,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result22,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result23,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result24,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result25,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result26,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result27,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result28,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

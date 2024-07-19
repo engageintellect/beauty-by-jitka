@@ -7,6 +7,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 	import { companyInfo } from '$lib/data';
+	console.log(results);
 
 	let showModal = false;
 	let modalImageSrc = '';
