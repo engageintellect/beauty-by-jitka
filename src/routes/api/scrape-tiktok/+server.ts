@@ -1,8 +1,9 @@
 import type { RequestHandler } from '@sveltejs/kit';
+import {TIKTOK_SCRAPER_URL} from '$env/static/private'
 
 export const GET: RequestHandler = async () => {
     try {
-        const response = await fetch('https://engage-dev.com/beautybyjitka/api/scrape-tiktok');
+        const response = await fetch(TIKTOK_SCRAPER_URL);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch data: ${response.statusText}`);
