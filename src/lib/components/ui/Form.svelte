@@ -114,7 +114,7 @@
 			</div>
 			<div class="text-2xl font-thin">
 				Have a question, or would like to schedule a consultation or appointment? Fill out the form,
-				we'll get back to you soon.
+				we'll get back to you shortly.
 			</div>
 
 			<div class="mt-5 flex items-center text-xl">
@@ -141,7 +141,7 @@
 			return async ({ result, update }) => {
 				if (result.type === 'success') {
 					toast.success('Form Submitted Successfully!', {
-						description: "We'll get back to you as soon as possible."
+						description: "We'll get back to you as soon as possible, typically within 24 hours."
 					});
 				} else {
 					toast.error('Failed to Submit Form', {
@@ -216,7 +216,7 @@
 							<Select.Item class="text-lg" label="Appointment" value="Appointment"
 								>Appointment</Select.Item
 							>
-							<Select.Item class="text-lg" label="General Question" value="General Question del mar"
+							<Select.Item class="text-lg" label="General Question" value="General Question"
 								>General Question</Select.Item
 							>
 						</Select.Content>

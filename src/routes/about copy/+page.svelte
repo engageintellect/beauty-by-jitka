@@ -121,30 +121,19 @@
 	<div
 		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
 	>
-		<div class="w-full text-4xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
+		<div class="w-full text-5xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Founder</div>
-
-		<!-- MOBILE IMAGE -->
-		<div class="mt-2 flex items-start">
-			<enhanced:img
-				src={jitkaImage}
-				alt="Jitka Zavadilova"
-				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-pink-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
-			></enhanced:img>
-
-			<div class="flex-1 text-3xl text-foreground/70 md:mt-5">
-				Serving patients in Orange County and Los Angeles, California.
-			</div>
+		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
+			Serving patients in Orange County and Los Angeles, California.
 		</div>
 
-		<!-- DESKTOP IMAGE -->
 		<enhanced:img
 			src={jitkaImage}
 			alt="Jitka Zavadilova"
-			class="jitka-section-photo mt-5 hidden w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:flex md:w-1/3"
+			class="jitka-section-photo mt-5 w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:w-1/3"
 		></enhanced:img>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="mr-5 flex-1 p-2 text-xl font-thin">
+			<div class="mr-5 flex-1 text-xl font-thin">
 				<p>
 					Jitka is a certified nurse injector and registered nurse, licensed in both the USA and
 					Europe. Originally from the Czech Republic, Jitka began her nursing career at 18, working
@@ -164,14 +153,14 @@
 		</div>
 
 		<div class="my-5">
-			<div class="flex flex-col items-center gap-2 sm:flex-row">
-				<a href="/results" class="w-full sm:w-fit">
-					<Button size="lg" variant="default" class="w-full uppercase md:w-fit"
+			<div class="flex flex-col items-center gap-2 md:flex-row">
+				<a href="/results" class="w-full md:w-fit">
+					<Button size="lg" variant="default" class="w-full text-xl uppercase md:w-fit"
 						>Patient Gallery</Button
 					>
 				</a>
-				<a href="/contact" class="w-full sm:w-fit">
-					<Button size="lg" variant="outline" class="w-full uppercase md:w-fit"
+				<a href="/contact" class="w-full md:w-fit">
+					<Button size="lg" variant="outline" class="w-full text-xl uppercase md:w-fit"
 						>Schedule Appointment</Button
 					>
 				</a>
@@ -185,27 +174,17 @@
 	>
 		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, DO</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Medical Director</div>
-		<!-- MOBILE IMAGE -->
-		<div class="mt-2 flex items-start">
-			<enhanced:img
-				src={drReynoldsImage}
-				alt="Dr. Steven Reynolds"
-				class="jitka-section-photo mr-5 h-40 w-32 scale-x-[-1] rounded-lg bg-teal-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
-			></enhanced:img>
-
-			<div class="flex-1 text-3xl text-foreground/70 md:mt-5">
-				Serving patients in Long Beach, California.
-			</div>
+		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
+			Serving patients in Long Beach, California.
 		</div>
 
-		<!-- DESKTOP IMAGE -->
 		<enhanced:img
 			src={drReynoldsImage}
 			alt="Dr. Steven Reynolds"
-			class="doctor-section-photo mr-5 mt-5 hidden w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:flex md:w-1/3"
+			class="doctor-section-photo mt-5 w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:w-1/3"
 		></enhanced:img>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="flex-1 p-2 text-xl font-thin">
+			<div class="ml-5 flex-1 text-xl font-thin">
 				<p>
 					Discover unparalleled healthcare with Dr. Reynolds, a seasoned Board Certified Family
 					Medicine Specialist based in vibrant Long Beach, California. With over 29 years of
