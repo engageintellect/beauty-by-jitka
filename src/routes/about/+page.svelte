@@ -172,7 +172,7 @@
 	<div
 		class="doctor-section mt-20 h-full rounded-lg bg-teal-50 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5"
 	>
-		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, MO</div>
+		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, DO</div>
 		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Medical Director</div>
 		<div class="mt-2 text-3xl text-foreground/70 md:mt-5">
 			Serving patients in Long Beach, California.
