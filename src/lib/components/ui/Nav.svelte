@@ -30,10 +30,10 @@
 			<a href="/contact" class="">
 				<Button class="uppercase" variant="default">book appointment</Button>
 			</a>
-			<a href={`tel:${companyInfo.phone}`} class="hidden md:flex">
+			<!-- <a href={`tel:${companyInfo.phone}`} class="hidden md:flex">
 				<Button class="uppercase" variant="outline">call</Button>
-			</a>
-			<a href={`sms:${companyInfo.phone}`} class="hidden md:flex">
+			</a> -->
+			<a href={`sms:${companyInfo.phone}`} class="">
 				<Button class="uppercase" variant="outline">text</Button>
 			</a>
 			<ThemeToggle />

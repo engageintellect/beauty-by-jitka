@@ -12,6 +12,7 @@
 	import Logo from '$lib/assets/images/bbj-logo.png';
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Select from '$lib/components/ui/select';
+	import Button from './button/button.svelte';
 
 	export let data: SuperValidated<Infer<FormSchema>>;
 	let isSubmitting = false;
@@ -115,10 +116,14 @@
 				Have a question, or would like to schedule a consultation or appointment? Fill out the form,
 				we'll get back to you soon.
 			</div>
-			<div class="mb-5 text-xl font-thin md:mb-0">
-				Or, give us a call at <span class="text-2xl font-bold"
-					><a href="tel:9499935222" class="ml-2">949.993.5222</a></span
-				>.
+
+			<div class="mt-5 flex items-center text-xl">
+				<div>Or, send us a</div>
+				<a href="sms:9499935222" class="ml-2">
+					<Button variant="outline" class="flex items-center gap-2 uppercase">
+						<div>text message</div>
+					</Button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -174,18 +179,18 @@
 			</Form.Field>
 		</div>
 
-		<Form.Field {form} name="phone">
-			<Form.Control let:attrs>
-				<Form.Label>Phone</Form.Label>
-				<Input {...attrs} bind:value={$formData.phone} />
-			</Form.Control>
-			<Form.FieldErrors />
-		</Form.Field>
-
 		<Form.Field {form} name="email">
 			<Form.Control let:attrs>
 				<Form.Label>Email</Form.Label>
 				<Input {...attrs} bind:value={$formData.email} />
+			</Form.Control>
+			<Form.FieldErrors />
+		</Form.Field>
+
+		<Form.Field {form} name="phone">
+			<Form.Control let:attrs>
+				<Form.Label>Phone</Form.Label>
+				<Input {...attrs} bind:value={$formData.phone} />
 			</Form.Control>
 			<Form.FieldErrors />
 		</Form.Field>
