@@ -25,17 +25,17 @@
 			}
 		});
 
-		gsapInstance.from('.image-section', {
-			duration: 1,
-			opacity: 0,
-			scale: 0.95,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.image-section',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			}
-		});
+		// gsapInstance.from('.image-section', {
+		// 	duration: 1,
+		// 	opacity: 0,
+		// 	scale: 0.95,
+		// 	ease: 'power2.out',
+		// 	scrollTrigger: {
+		// 		trigger: '.image-section',
+		// 		start: 'top 80%',
+		// 		toggleActions: 'play none none none'
+		// 	}
+		// });
 	};
 
 	onMount(() => {

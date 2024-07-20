@@ -37,12 +37,12 @@
 			delay: 0
 		});
 
-		gsap.from('.animate-subtitle', {
-			duration: 3.0,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
+		// gsap.from('.animate-subtitle', {
+		// 	duration: 3.0,
+		// 	opacity: 0,
+		// 	ease: 'power4.out',
+		// 	delay: 0
+		// });
 
 		gsap.from('.animate-hero-text', {
 			duration: 7,
@@ -71,6 +71,7 @@
 </script>
 
 <!-- TODO: Debug as to why this works, but throws an error -->
+
 <!-- <svelte:head>
 	<link rel="preload" as="image" href={heroImage} />
 </svelte:head> -->
