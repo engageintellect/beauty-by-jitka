@@ -27,8 +27,8 @@
 		<SkillsCard />
 		<Quote />
 		<Difference />
-		<SocialLinks />
 		<Locations />
+		<SocialLinks />
 		<div
 			class="mb-5 flex h-full w-full flex-col justify-center gap-5 rounded-lg p-5 transition-all duration-500 sm:min-h-full md:mb-20 md:flex-row md:justify-center md:border md:shadow-lg"
 		>

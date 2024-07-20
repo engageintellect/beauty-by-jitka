@@ -138,10 +138,12 @@
 				<enhanced:img
 					src={jitkaImage}
 					alt="Jitka"
-					class="h-full w-full rounded-full bg-pink-200 object-cover object-top md:rounded-lg md:bg-pink-100"
+					class="h-full w-full rounded-full bg-pink-200 object-cover object-top transition-shadow duration-300 hover:shadow-lg md:rounded-lg md:bg-pink-100"
 				></enhanced:img>
 			</a>
-			<div class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full md:bg-fade-down"></div>
+			<div
+				class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full rounded-full md:rounded-lg md:bg-fade-down"
+			></div>
 		</div>
 	</div>
 </div>

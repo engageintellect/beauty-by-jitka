@@ -8,11 +8,13 @@
 	import { gsap } from 'gsap';
 
 	onMount(() => {
-		gsap.from('.nav-logo', { opacity: 0, duration: 0.5 });
+		gsap.from('.nav-logo', { delay: 0.5, opacity: 0, duration: 1 });
+		gsap.from('.buttons', { delay: 0.5, opacity: 0, duration: 2 });
+		gsap.from('.nav', { delay: 0.25, opacity: 0, duration: 0.75 });
 	});
 </script>
 
-<nav class="sticky top-0 -z-[-1] border-b bg-background p-2">
+<nav class="nav sticky top-0 -z-[-1] border-b bg-background p-2">
 	<div class="mx-auto flex w-full max-w-5xl items-center justify-between">
 		<a href="/" class="nav-logo rotate-90 text-2xl font-bold" aria-label="Home">
 			<Icon
@@ -26,7 +28,7 @@
 			/> -->
 		</a>
 
-		<div class="flex items-center gap-2">
+		<div class="buttons flex items-center gap-2">
 			<a href="/contact" class="">
 				<Button class="uppercase" variant="default">book appointment</Button>
 			</a>

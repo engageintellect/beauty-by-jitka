@@ -52,7 +52,7 @@
 		});
 
 		gsap.from('.animate-buttons', {
-			duration: 1,
+			duration: 0.5,
 			y: -10,
 			opacity: 0,
 			ease: 'power4.out',
@@ -87,7 +87,7 @@
 					/>
 				</div>
 				<div
-					class="animate-title text-5xl font-bold uppercase tracking-tight transition-all lg:text-[3.75rem]"
+					class="animate-title text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
 				>
 					{companyInfo.name}
 				</div>
@@ -101,19 +101,21 @@
 				</div> -->
 
 				<div
-					class="animate-hero-text w-full max-w-xs text-2xl font-thin transition-all md:text-3xl lg:max-w-md"
+					class="animate-hero-text w-full max-w-xs text-2xl font-thin transition-transform md:text-3xl lg:max-w-md"
 				>
 					Offering a comprehensive range of customizable treatments tailored to align with your
 					individual objectives, preferences, and personal style.
 				</div>
 			</div>
 
-			<div class="animate-buttons mx-auto mt-10 flex w-full max-w-lg items-center gap-2">
+			<div
+				class="animate-buttons mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg"
+			>
 				<a href="/contact" class="group/bookingsButton w-full">
 					<Button size="lg" class="flex w-full items-center gap-2 text-xl">
 						<div class="uppercase">Booking</div>
 						<Icon
-							icon="ri:calendar-schedule-line"
+							icon="teenyicons:appointments-outline"
 							class="h-7 w-7 transition-transform duration-300 lg:group-hover/bookingsButton:translate-x-1"
 						/>
 					</Button>

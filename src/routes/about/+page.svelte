@@ -141,10 +141,37 @@
 		<enhanced:img
 			src={jitkaImage}
 			alt="Jitka Zavadilova"
-			class="jitka-section-photo mt-5 hidden w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:flex md:w-1/3"
+			class="jitka-section-photo ml-5 mt-5 hidden w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:flex md:w-1/3"
 		></enhanced:img>
+
+		<div class="my-5">
+			<div class="flex items-center gap-2">
+				<a href="/services" class="w-full sm:w-fit">
+					<Button
+						size="sm"
+						variant="outline"
+						class="flex w-full items-center gap-2 uppercase md:w-fit"
+					>
+						<div>Services</div>
+						<Icon icon="bx:plus-medical" class="h-5 w-5" />
+					</Button>
+				</a>
+
+				<a href="/results" class="w-full sm:w-fit">
+					<Button
+						size="sm"
+						variant="outline"
+						class="flex w-full items-center gap-2 uppercase md:w-fit"
+					>
+						<div>Patient Gallery</div>
+						<Icon icon="lucide:gallery-vertical-end" class="h-5 w-5" />
+					</Button>
+				</a>
+			</div>
+		</div>
+
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="mr-5 flex-1 p-2 text-xl font-thin">
+			<div class=" flex-1 p-2 text-xl font-light">
 				<p>
 					Jitka is a certified nurse injector and registered nurse, licensed in both the USA and
 					Europe. Originally from the Czech Republic, Jitka began her nursing career at 18, working
@@ -160,21 +187,6 @@
 					enhancing each person's unique beauty, creating individualized plans to achieve a look
 					that best suits their natural features.
 				</p>
-			</div>
-		</div>
-
-		<div class="my-5">
-			<div class="flex flex-col items-center gap-2 sm:flex-row">
-				<a href="/results" class="w-full sm:w-fit">
-					<Button size="lg" variant="default" class="w-full uppercase md:w-fit"
-						>Patient Gallery</Button
-					>
-				</a>
-				<a href="/contact" class="w-full sm:w-fit">
-					<Button size="lg" variant="outline" class="w-full uppercase md:w-fit"
-						>Schedule Appointment</Button
-					>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -205,7 +217,7 @@
 			class="doctor-section-photo mr-5 mt-5 hidden w-full scale-x-[-1] rounded-lg bg-teal-300 object-cover shadow-xl md:float-left md:mt-5 md:flex md:w-1/3"
 		></enhanced:img>
 		<div class="mt-5 flex flex-col md:flex-row md:items-start">
-			<div class="flex-1 p-2 text-xl font-thin">
+			<div class="flex-1 p-2 text-xl font-light">
 				<p>
 					Discover unparalleled healthcare with Dr. Reynolds, a seasoned Board Certified Family
 					Medicine Specialist based in vibrant Long Beach, California. With over 29 years of
