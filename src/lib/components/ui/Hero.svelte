@@ -70,9 +70,10 @@
 	});
 </script>
 
-<svelte:head>
+<!-- TODO: Debug as to why this works, but throws an error -->
+<!-- <svelte:head>
 	<link rel="preload" as="image" href={heroImage} />
-</svelte:head>
+</svelte:head> -->
 
 <div class="mb-10 md:my-5 md:mb-20">
 	<div
