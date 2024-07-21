@@ -66,7 +66,7 @@
 		<h2 class="mb-2 text-2xl font-semibold">7. Contact Us</h2>
 		<p>
 			If you have any questions about these terms, please contact us at <a
-				href={companyInfo.email}
+				href={`mailto:${companyInfo.email}`}
 				class="underline">{companyInfo.email}</a
 			>.
 		</p>

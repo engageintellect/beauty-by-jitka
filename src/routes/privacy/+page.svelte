@@ -115,7 +115,7 @@
 		<h2 class="mb-2 text-2xl font-semibold">8. Contact Us</h2>
 		<p>
 			If you have questions or comments about this Privacy Policy, please contact us at <a
-				href={companyInfo.email}
+				href={`mailto:${companyInfo.email}`}
 				class="underline">{companyInfo.email}</a
 			>.
 		</p>
