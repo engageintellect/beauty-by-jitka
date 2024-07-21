@@ -91,14 +91,6 @@
 	});
 </script>
 
-<svelte:head>
-	<title>About Us : {companyInfo.name}</title>
-	<meta
-		name="description"
-		content={`${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
-	/>
-</svelte:head>
-
 <div
 	id="about"
 	class="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 rounded-lg transition-all duration-300 md:flex-row md:gap-0"

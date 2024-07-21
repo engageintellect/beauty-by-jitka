@@ -5,6 +5,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Locations from '$lib/components/ui/Locations.svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
+	import { companyInfo } from '$lib/data';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -109,6 +110,13 @@
 	});
 </script>
 
+<svelte:head>
+	<title>About : {companyInfo.name}</title>
+	<meta
+		name="description"
+		content={`Our story and team, and locations. ${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
+	/>
+</svelte:head>
 <a href="javascript:history.back()">
 	<Button variant="outline" class="flex items-center gap-2">
 		<Icon icon="akar-icons:arrow-left" class="" />

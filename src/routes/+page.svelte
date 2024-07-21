@@ -10,7 +10,16 @@
 	import SocialLinks from '$lib/components/ui/SocialLinks.svelte';
 	import Quote from '$lib/components/ui/Quote.svelte';
 	import Locations from '$lib/components/ui/Locations.svelte';
+	import { companyInfo } from '$lib/data.js';
 </script>
+
+<svelte:head>
+	<title>Home : {companyInfo.name}</title>
+	<meta
+		name="description"
+		content={`${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
+	/>
+</svelte:head>
 
 <div class="flex flex-col gap-10 md:gap-20">
 	<Hero />
