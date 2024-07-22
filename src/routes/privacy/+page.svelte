@@ -99,7 +99,7 @@
 			learn that we have collected personal information from a child under age 18 without
 			verification of parental consent, we will delete that information as quickly as possible. If
 			you believe we might have any information from or about a child under 18, please contact us at
-			[Your Contact Information].
+			<a href={`mailto:${companyInfo.email}`} class="underline">{companyInfo.email}</a>
 		</p>
 	</section>
 
