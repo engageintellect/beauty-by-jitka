@@ -81,29 +81,32 @@
 		class="flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl"
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
-			<div class="mx-auto flex w-fit flex-col items-center gap-5">
+			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
 				<div class="animate-logo h-16 w-16">
 					<Icon
 						icon="material-symbols-light:syringe-outline"
 						class="h-full w-full rotate-45 rounded-full border border-foreground p-2"
 					/>
 				</div>
-				<div
-					class="animate-title text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
-				>
-					{companyInfo.name}
+				<div class="flex flex-col">
+					<div
+						class="animate-title text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
+					>
+						{companyInfo.name}
+					</div>
+					<div class="animate-title text-sm text-foreground/50">
+						An S.Reynolds Medical Corporation
+					</div>
 				</div>
 			</div>
 
-			<div
-				class="mx-auto flex w-full max-w-sm flex-col items-center justify-center text-center md:max-w-md"
-			>
+			<div class="mx-auto flex w-full max-w-sm flex-col items-center justify-center md:max-w-md">
 				<!-- <div class="animate-subtitle text-3xl text-foreground/80 md:text-4xl">
 					Transform Your Look with Confidence and Precision.
 				</div> -->
 
 				<div
-					class="animate-hero-text w-full max-w-xs text-2xl font-thin transition-transform md:text-3xl lg:max-w-md"
+					class="animate-hero-text mt-2 w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
 				>
 					Offering a comprehensive range of customizable treatments tailored to align with your
 					individual objectives, preferences, and personal style.
