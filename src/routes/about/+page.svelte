@@ -6,6 +6,7 @@
 	import Locations from '$lib/components/ui/Locations.svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
 	import { companyInfo } from '$lib/data';
+	import { goBack } from '$lib/utils';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -117,12 +118,10 @@
 		content={`Our story and team, and locations. ${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
 	/>
 </svelte:head>
-<a href="javascript:history.back()">
-	<Button variant="outline" class="flex items-center gap-2">
-		<Icon icon="akar-icons:arrow-left" class="" />
-		<div class="uppercase">Back</div>
-	</Button>
-</a>
+<Button on:click={goBack} variant="outline" class="flex items-center gap-2">
+	<Icon icon="akar-icons:arrow-left" class="" />
+	<div class="uppercase">Back</div>
+</Button>
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
 	<div class="jitka-section mb-5 text-5xl font-thin md:text-7xl">ABOUT</div>

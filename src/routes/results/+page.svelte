@@ -7,6 +7,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 	import { companyInfo } from '$lib/data';
+	import { goBack } from '$lib/utils';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -48,12 +49,10 @@
 </svelte:head>
 
 <div>
-	<a href={'javascript:history.back()'}>
-		<Button size="lg" variant="outline" class="flex items-center gap-2">
-			<Icon icon="akar-icons:arrow-left" class="" />
-			<div class="uppercase">Back</div>
-		</Button>
-	</a>
+	<Button on:click={goBack} size="lg" variant="outline" class="flex items-center gap-2">
+		<Icon icon="akar-icons:arrow-left" class="" />
+		<div class="uppercase">Back</div>
+	</Button>
 	<!-- <div class="animate-title mt-5 flex items-center gap-5">
 		<div class="text-5xl font-bold md:text-7xl">Gallery</div>
 		<Icon icon="ri:gallery-view-2" class="text-5xl md:text-7xl" />

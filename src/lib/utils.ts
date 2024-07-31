@@ -60,3 +60,8 @@ export const flyAndScale = (
 		easing: cubicOut
 	};
 };
+
+
+export const goBack = () => {
+	history.back();
+};
