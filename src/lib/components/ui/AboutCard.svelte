@@ -15,6 +15,8 @@
 	import TikTokStats from './TikTokStats.svelte';
 	import { companyInfo } from '$lib/data.js';
 
+	let hidden = true;
+
 	const initializeAnimations = () => {
 		tick();
 
@@ -27,6 +29,9 @@
 				trigger: '.section1',
 				start: 'top 70%',
 				toggleActions: 'play none none none'
+			},
+			onStart: () => {
+				hidden = false;
 			}
 		});
 
@@ -93,7 +98,7 @@
 
 <div
 	id="about"
-	class="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 rounded-lg transition-all duration-300 md:flex-row md:gap-0"
+	class={`mx-auto flex w-full max-w-4xl flex-col items-center gap-5 rounded-lg transition-all duration-300 md:flex-row md:gap-0 ${hidden ? 'opacity-0' : ''}`}
 >
 	<div class="section1 invisible relative flex w-full justify-center" bind:this={section1Container}>
 		<div class="flex w-full max-w-md flex-col gap-5 text-center lg:p-5">

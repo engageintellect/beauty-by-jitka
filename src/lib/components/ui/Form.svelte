@@ -149,7 +149,9 @@
 					});
 				}
 
-				await update();
+				// await update();
+				applyAction(result);
+
 				isSubmitting = false;
 			};
 		}}

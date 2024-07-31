@@ -8,77 +8,86 @@
 
 	function scrollToAnchor() {
 		const element = document.getElementById('anchorLink');
-		// console.log(element);
 		if (element) {
 			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	}
 
+	let hidden = true;
+
 	onMount(() => {
-		gsap.from('.animate-logo', {
-			duration: 2,
-			// x: '100%',
-			scale: 0.5,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
-
-		gsap.from('.animate-title', {
-			duration: 2,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
-		gsap.from('.animate-photo', {
-			duration: 7,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
-
-		// gsap.from('.animate-subtitle', {
-		// 	duration: 3.0,
-		// 	opacity: 0,
-		// 	ease: 'power4.out',
-		// 	delay: 0
-		// });
-
-		gsap.from('.animate-hero-text', {
-			duration: 7,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
-
-		gsap.from('.animate-buttons', {
-			duration: 0.5,
-			y: -10,
-			opacity: 0,
-			ease: 'power4.out',
-			delay: 0
-		});
-
-		gsap.from('.animate-down-button', {
-			duration: 3,
-			opacity: 0,
-			y: -10,
-			scale: 0.0,
-			ease: 'power4.out',
-			delay: 0
-		});
+		gsap
+			.timeline({
+				onStart: () => {
+					hidden = false;
+				}
+			})
+			.from('.animate-logo', {
+				duration: 2,
+				scale: 0.5,
+				opacity: 0,
+				ease: 'power4.out',
+				delay: 0
+			})
+			.from(
+				'.animate-title',
+				{
+					duration: 2,
+					opacity: 0,
+					ease: 'power4.out',
+					delay: 0
+				},
+				'-=1.75'
+			)
+			.from(
+				'.animate-photo',
+				{
+					duration: 7,
+					opacity: 0,
+					ease: 'power4.out',
+					delay: 0
+				},
+				'-=5'
+			)
+			.from(
+				'.animate-hero-text',
+				{
+					duration: 7,
+					opacity: 0,
+					ease: 'power4.out',
+					delay: 0
+				},
+				'-=6.5'
+			)
+			.from(
+				'.animate-buttons',
+				{
+					duration: 0.5,
+					y: -10,
+					opacity: 0,
+					ease: 'power4.out',
+					delay: 0
+				},
+				'-=6'
+			)
+			.from(
+				'.animate-down-button',
+				{
+					duration: 3,
+					opacity: 0,
+					y: -10,
+					scale: 0.0,
+					ease: 'power4.out',
+					delay: 0
+				},
+				'-=5.5'
+			);
 	});
 </script>
 
-<!-- TODO: Debug as to why this works, but throws an error -->
-
-<!-- <svelte:head>
-	<link rel="preload" as="image" href={heroImage} />
-</svelte:head> -->
-
 <div class="mb-10 md:my-5 md:mb-20">
 	<div
-		class="flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl"
+		class={`flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
@@ -101,10 +110,6 @@
 			</div>
 
 			<div class="mx-auto flex w-full max-w-sm flex-col items-center justify-center md:max-w-md">
-				<!-- <div class="animate-subtitle text-3xl text-foreground/80 md:text-4xl">
-					Transform Your Look with Confidence and Precision.
-				</div> -->
-
 				<div
 					class="animate-hero-text mt-2 w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
 				>
@@ -152,7 +157,10 @@
 			></enhanced:img>
 		</div>
 	</div>
-	<div id="anchorLink" class="group/scrollDownButton mt-5 hidden w-full justify-center md:flex">
+	<div
+		id="anchorLink"
+		class={`group/scrollDownButton mt-5 ${hidden ? 'hidden' : 'flex'} w-full justify-center md:flex`}
+	>
 		<button
 			on:click={scrollToAnchor}
 			class="transition-all duration-300 md:group-hover/scrollDownButton:scale-[102%]"

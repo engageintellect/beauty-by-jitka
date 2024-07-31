@@ -7,14 +7,22 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 
+	let navHidden = true;
+
 	onMount(() => {
-		gsap.from('.nav-logo', { delay: 0.5, opacity: 0, duration: 1 });
-		gsap.from('.buttons', { delay: 0.5, opacity: 0, duration: 2 });
-		gsap.from('.nav', { delay: 0.25, opacity: 0, duration: 0.75 });
+		gsap
+			.timeline({
+				onStart: () => {
+					navHidden = false;
+				}
+			})
+			.from('.nav', { opacity: 0, duration: 0.75 })
+			.from('.nav-logo', { opacity: 0, duration: 1 }, '-=0.5')
+			.from('.buttons', { opacity: 0, duration: 2 }, '-=1');
 	});
 </script>
 
-<nav class="nav sticky top-0 -z-[-1] border-b bg-background p-2">
+<nav class="nav sticky top-0 -z-[-1] border-b bg-background p-2 {navHidden ? 'invisible' : ''}">
 	<div class="mx-auto flex w-full max-w-5xl items-center justify-between">
 		<a href="/" class="nav-logo rotate-90 text-2xl font-bold" aria-label="Home">
 			<Icon
