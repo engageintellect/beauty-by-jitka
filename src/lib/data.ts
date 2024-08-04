@@ -182,24 +182,6 @@ export const services = [
 		},
 
 
-	{
-		name: "Stem Cells",
-		img: stemCellImage,
-		coming_soon: true,
-		description: "An advanced treatment that uses stem cells to repair, regenerate, and rejuvenate tissues for improved skin health and appearance.",	
-		use_cases: [
-			"Temporary smoothing of facial wrinkles and improving your appearance",
-			"Severe underarm sweating",
-			"Cervical dystonia",
-			"Eye twitching",
-			"Chronic migraines",
-			"Overactive bladder"
-		]	
-		},
-
-
-	
-
 
 ]
 
