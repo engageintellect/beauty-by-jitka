@@ -5,6 +5,7 @@
 	import { gsap } from 'gsap';
 	import Icon from '@iconify/svelte';
 	import { companyInfo } from '$lib/data';
+	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 
 	function scrollToAnchor() {
 		const element = document.getElementById('anchorLink');
@@ -111,7 +112,7 @@
 
 			<div class="mx-auto flex w-full max-w-sm flex-col items-center justify-center md:max-w-md">
 				<div
-					class="animate-hero-text mt-2 w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
+					class="animate-hero-text mt-5 w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
 				>
 					Offering a comprehensive range of customizable treatments tailored to align with your
 					individual objectives, preferences, and personal style.
@@ -121,7 +122,7 @@
 			<div
 				class="animate-buttons mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg"
 			>
-				<a href="/contact" class="group/bookingsButton w-full">
+				<a href={PUBLIC_BOOKING_LINK} class="group/bookingsButton w-full">
 					<Button size="lg" class="flex w-full items-center gap-2 text-xl">
 						<div class="uppercase">Booking</div>
 						<Icon

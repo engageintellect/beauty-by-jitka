@@ -7,6 +7,7 @@
 	import { onDestroy, onMount, tick } from 'svelte';
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
+	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -118,6 +119,7 @@
 		content={`Our story and team, and locations. ${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
 	/>
 </svelte:head>
+
 <Button on:click={goBack} variant="outline" class="flex items-center gap-2">
 	<Icon icon="akar-icons:arrow-left" class="" />
 	<div class="uppercase">Back</div>
@@ -128,8 +130,10 @@
 	<div
 		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
 	>
-		<div class="w-full text-4xl font-bold md:text-7xl">JITKA ZAVADILOVA, RN</div>
-		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Founder</div>
+		<div class="w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
+		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
+			Registered Nurse / Co-founder
+		</div>
 
 		<!-- MOBILE IMAGE -->
 		<div class="mt-2 flex items-start">
@@ -139,8 +143,8 @@
 				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-pink-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
-			<div class="flex-1 text-3xl text-foreground/70 md:mt-5">
-				Serving patients in Orange County and Los Angeles, California.
+			<div class="flex-1 text-2xl text-foreground/70 md:mt-5">
+				Based in Orange County and Los Angeles, California.
 			</div>
 		</div>
 
@@ -202,8 +206,10 @@
 	<div
 		class="doctor-section mt-20 h-full rounded-lg bg-teal-50 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5"
 	>
-		<div class="w-full text-5xl font-bold md:text-7xl">STEVEN REYNOLDS, DO</div>
-		<div class="mt-2 w-full text-3xl font-thin md:mt-5 md:text-5xl">Medical Director</div>
+		<div class="w-full text-3xl font-bold md:text-5xl">DR. STEVEN REYNOLDS</div>
+		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
+			Medical Director / Co-founder
+		</div>
 		<!-- MOBILE IMAGE -->
 		<div class="mt-2 flex items-start">
 			<enhanced:img
@@ -212,9 +218,7 @@
 				class="jitka-section-photo mr-5 h-40 w-32 scale-x-[-1] rounded-lg bg-teal-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
-			<div class="flex-1 text-3xl text-foreground/70 md:mt-5">
-				Serving patients in Long Beach, California.
-			</div>
+			<div class="flex-1 text-2xl text-foreground/70 md:mt-5">Based in Long Beach, California.</div>
 		</div>
 
 		<!-- DESKTOP IMAGE -->
@@ -250,7 +254,7 @@
 <!-- BOOKING -->
 <div class="booking-section my-40 flex w-full flex-col items-center p-2 md:p-5">
 	<div class="mb-5 text-5xl font-bold md:text-7xl">Booking</div>
-	<a href="/contact">
+	<a href={PUBLIC_BOOKING_LINK}>
 		<Button size="lg" variant="default" class="flex w-full items-center gap-2 text-xl md:w-fit">
 			<div class="uppercase">Schedule a Consultation</div>
 			<Icon icon="akar-icons:arrow-right" class="h-5 w-5" />

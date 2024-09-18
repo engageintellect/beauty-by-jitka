@@ -1,15 +1,13 @@
 <script lang="ts">
-	import girlImage from '$lib/assets/images/girl1.png?enhanced';
 	import girl2Image from '$lib/assets/images/girl2.png?enhanced';
-	import girl3Image from '$lib/assets/images/girl3.png?enhanced';
 	import girl4Image from '$lib/assets/images/girl4.png?enhanced';
-	import girl5Image from '$lib/assets/images/girl5.png?enhanced';
 	import womanBotoxImage from '$lib/assets/images/womanBotox.png?enhanced';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
 	import LazyImage from './LazyImage.svelte';
+	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 
 	let gsapInstance: any;
 	let ScrollTriggerInstance: any;
@@ -202,7 +200,7 @@
 						>service menu</Button
 					>
 				</a>
-				<a href="/contact">
+				<a href={PUBLIC_BOOKING_LINK}>
 					<Button size="lg" variant="outline" class="w-fit uppercase">book consultation</Button>
 				</a>
 			</div>

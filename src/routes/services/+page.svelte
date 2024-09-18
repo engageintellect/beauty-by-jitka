@@ -9,6 +9,7 @@
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
+	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -68,7 +69,7 @@
 	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5">
 		{#if searchFiler === ''}
 			{#each services as service}
-				<a href="/contact">
+				<a href={PUBLIC_BOOKING_LINK}>
 					<ServiceCard
 						name={service.name}
 						description={service.description}
@@ -80,7 +81,7 @@
 		{:else}
 			{#each services as service}
 				{#if service.name.toLowerCase().includes(searchFiler.toLowerCase())}
-					<a href="/contact">
+					<a href={PUBLIC_BOOKING_LINK}>
 						<ServiceCard
 							name={service.name}
 							description={service.description}

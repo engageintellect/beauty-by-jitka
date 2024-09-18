@@ -49,7 +49,7 @@
 </svelte:head>
 
 <div>
-	<Button on:click={goBack} size="lg" variant="outline" class="flex items-center gap-2">
+	<Button on:click={goBack} variant="outline" class="flex items-center gap-2">
 		<Icon icon="akar-icons:arrow-left" class="" />
 		<div class="uppercase">Back</div>
 	</Button>
