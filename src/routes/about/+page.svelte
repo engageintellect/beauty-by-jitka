@@ -35,6 +35,7 @@
 			opacity: 0,
 			x: 10,
 			ease: 'power2.out',
+			delay: 0.25,
 			scrollTrigger: {
 				trigger: '.jitka-section',
 				start: 'top 80%',
@@ -57,6 +58,7 @@
 		gsapInstance.from('.doctor-section-photo', {
 			duration: 1,
 			opacity: 0,
+			delay: 0.25,
 			x: -10,
 			ease: 'power2.out',
 			scrollTrigger: {

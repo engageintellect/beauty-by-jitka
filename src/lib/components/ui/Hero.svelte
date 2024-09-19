@@ -104,7 +104,7 @@
 					>
 						{companyInfo.name}
 					</div>
-					<div class="animate-title text-sm text-foreground/50">
+					<div class="animate-title mt-2 text-sm text-foreground/50">
 						An S.Reynolds Medical Corporation
 					</div>
 				</div>

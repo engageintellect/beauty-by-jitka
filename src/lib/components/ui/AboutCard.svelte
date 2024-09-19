@@ -114,7 +114,7 @@
 						class="group/readMoreButton flex w-full items-center gap-2 text-xl uppercase md:w-fit"
 						variant="ghost"
 					>
-						<div>Read More</div>
+						<div>About Me</div>
 						<Icon
 							icon="akar-icons:arrow-right"
 							class="h-5 w-5 transition-transform duration-300 lg:group-hover/readMoreButton:translate-x-1"
@@ -122,7 +122,9 @@
 					</Button>
 				</a>
 			</div>
-			<TikTokStats />
+			<div class="hidden md:flex">
+				<TikTokStats />
+			</div>
 		</div>
 	</div>
 
@@ -142,5 +144,9 @@
 				class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full rounded-full md:rounded-lg md:bg-fade-down"
 			></div>
 		</div>
+	</div>
+
+	<div class="mt-2 md:hidden">
+		<TikTokStats />
 	</div>
 </div>
