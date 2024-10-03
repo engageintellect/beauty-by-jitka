@@ -47,7 +47,7 @@
 		<div class="text-base uppercase">Back</div>
 	</Button>
 
-	<Input bind:value={searchFiler} placeholder="Filter Services" class="w-full max-w-lg text-base" />
+	<!-- <Input bind:value={searchFiler} placeholder="Filter Services" class="w-full max-w-lg text-base" /> -->
 </div>
 
 <div class="px-4 md:px-0">
