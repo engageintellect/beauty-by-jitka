@@ -5,11 +5,12 @@
 	import Modal from '$lib/components/ui/Modal.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
-	import { services } from '$lib/data';
+	import { services, serviceCategories } from '$lib/data';
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
+	import { slugify } from '$lib/utils';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -56,7 +57,7 @@
 			<div class="uppercase">Back</div>
 		</Button>
 
-		<Input bind:value={searchFiler} placeholder="Filter Services" class="w-full max-w-lg" />
+		<Input bind:value={searchFiler} placeholder="Filter Category" class="w-full max-w-lg" />
 
 		<!-- <a href={'javascript:history.back()'}>
 			<Button size="lg" variant="outline" class="flex items-center gap-2">
@@ -68,25 +69,25 @@
 
 	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5">
 		{#if searchFiler === ''}
-			{#each services as service}
-				<a href={PUBLIC_BOOKING_LINK}>
+			{#each serviceCategories as category}
+				<a href={`/services/${slugify(category.name)}`}>
 					<ServiceCard
-						name={service.name}
-						description={service.description}
-						img={service.img}
-						comingSoon={service.coming_soon}
+						name={category.name}
+						description={category.description}
+						img={category.img}
+						comingSoon={category.coming_soon}
 					/>
 				</a>
 			{/each}
 		{:else}
-			{#each services as service}
-				{#if service.name.toLowerCase().includes(searchFiler.toLowerCase())}
-					<a href={PUBLIC_BOOKING_LINK}>
+			{#each serviceCategories as category}
+				{#if category.name.toLowerCase().includes(searchFiler.toLowerCase())}
+					<a href={`/services/${slugify(category.name)}`}>
 						<ServiceCard
-							name={service.name}
-							description={service.description}
-							img={service.img}
-							comingSoon={service.coming_soon}
+							name={category.name}
+							description={category.description}
+							img={category.img}
+							comingSoon={category.coming_soon}
 						/>
 					</a>
 				{/if}

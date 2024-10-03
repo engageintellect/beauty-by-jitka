@@ -19,6 +19,10 @@
 		name="description"
 		content={`${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
 	/>
+	<meta
+		name="keywords"
+		content="Naples Plaza Medspa, Corona Del Mar Medical Spa, Beauty by Jitka"
+	/>
 </svelte:head>
 
 <div class="flex flex-col gap-10 md:gap-20">
