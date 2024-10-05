@@ -12,7 +12,7 @@
 	{#each data as { heading, context, index }}
 		<div class="flex flex-col gap-1 border-b p-2">
 			<div class="text-xl font-semibold">{heading}</div>
-			<div class="text-lg font-thin">{context}</div>
+			<div class="text-muted-foreground">{context}</div>
 		</div>
 	{/each}
 </div>

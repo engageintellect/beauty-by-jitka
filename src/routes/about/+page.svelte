@@ -128,7 +128,6 @@
 </Button>
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
-	<div class="jitka-section mb-5 text-5xl font-thin md:text-7xl">ABOUT</div>
 	<div
 		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
 	>

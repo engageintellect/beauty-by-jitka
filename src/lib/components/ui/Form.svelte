@@ -2,6 +2,7 @@
 	import { invalidateAll } from '$app/navigation';
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
+	import { fade, slide } from 'svelte/transition';
 	import { Textarea } from '$lib/components/ui/textarea';
 	import { formSchema, type FormSchema } from '$lib/schema';
 	import { type SuperValidated, type Infer, superForm } from 'sveltekit-superforms';
@@ -11,6 +12,7 @@
 	import { toast } from 'svelte-sonner';
 	import Logo from '$lib/assets/images/bbj-logo.png';
 	import { onDestroy, onMount, tick } from 'svelte';
+	import { companyInfo } from '$lib/data';
 	import * as Select from '$lib/components/ui/select';
 	import Button from './button/button.svelte';
 
@@ -281,7 +283,17 @@
 			</div>
 		</Form.Button>
 
-		<p class="mt-5 text-center text-sm text-muted-foreground">
+		{#if $formData.phone}
+			<p transition:slide class="mt-5 text-center text-xs text-muted-foreground">
+				*By providing your phone number via paper/digital intake forms and/or website submissions,
+				you consent to receive calls and text messages regarding appointments, marketing, and other
+				information. No purchase is required. Message and data rates may apply. ${companyInfo.name} will
+				send approximately 4 texts a month (maximum) offering special discounts and text-only deals.
+				You may opt out at any time by replying STOP to the text message."
+			</p>
+		{/if}
+
+		<p class="mt-5 text-center text-xs text-muted-foreground">
 			By clicking continue, you agree to our
 			<a href="/terms" class="underline underline-offset-4 hover:text-primary">
 				Terms of Service

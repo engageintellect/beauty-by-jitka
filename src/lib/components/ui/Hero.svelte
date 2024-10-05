@@ -6,6 +6,7 @@
 	import Icon from '@iconify/svelte';
 	import { companyInfo } from '$lib/data';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
+	import logo from '$lib/assets/images/logos/new-logo.png';
 
 	function scrollToAnchor() {
 		const element = document.getElementById('anchorLink');
@@ -93,10 +94,7 @@
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
 				<div class="animate-logo h-16 w-16">
-					<Icon
-						icon="material-symbols-light:syringe-outline"
-						class="h-full w-full rotate-45 rounded-full border border-foreground p-2"
-					/>
+					<img src={logo} alt="logo" class="h-16 w-16" />
 				</div>
 				<div class="flex flex-col">
 					<div
