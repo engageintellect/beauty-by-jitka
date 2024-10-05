@@ -31,7 +31,7 @@
 	<div class="mx-auto flex w-full max-w-5xl items-center justify-between">
 		<div class="flex gap-5">
 			<a href="/" class="nav-logo text-2xl font-bold" aria-label="Home">
-				<img src={logo} alt="Jitka" class="h-10 w-10 transition-all duration-300 md:h-12 md:w-12" />
+				<img src={logo} alt="Jitka" class="h-10 w-10 transition-all duration-300" />
 			</a>
 
 			<div class="hidden items-center gap-5 text-lg md:flex">

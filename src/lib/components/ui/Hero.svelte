@@ -152,7 +152,7 @@
 			<enhanced:img
 				src={heroImage}
 				alt="logo"
-				class="rounded-lg object-cover md:h-full md:rounded-none md:rounded-r-lg md:border-l"
+				class="w-full rounded-lg object-cover md:h-full md:rounded-none md:rounded-r-lg md:border-l"
 			></enhanced:img>
 		</div>
 	</div>

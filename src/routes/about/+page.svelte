@@ -129,7 +129,7 @@
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
 	<div
-		class="jitka-section h-full w-full rounded-lg bg-pink-50 p-2 shadow-lg dark:bg-pink-500 md:p-5"
+		class="jitka-section h-full w-full rounded-lg bg-fuchsia-50 p-2 shadow-lg dark:bg-fuchsia-500 md:p-5"
 	>
 		<div class="w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
 		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
@@ -141,7 +141,7 @@
 			<enhanced:img
 				src={jitkaImage}
 				alt="Jitka Zavadilova"
-				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-pink-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
+				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-fuchsia-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
 			<div class="flex-1 text-2xl text-foreground/70 md:mt-5">
@@ -153,7 +153,7 @@
 		<enhanced:img
 			src={jitkaImage}
 			alt="Jitka Zavadilova"
-			class="jitka-section-photo ml-5 mt-5 hidden w-full rounded-lg bg-pink-300 object-cover shadow-xl md:float-right md:mt-5 md:flex md:w-1/3"
+			class="jitka-section-photo ml-5 mt-5 hidden w-full rounded-lg bg-fuchsia-300 object-cover shadow-xl md:float-right md:mt-5 md:flex md:w-1/3"
 		></enhanced:img>
 
 		<div class="my-5">
