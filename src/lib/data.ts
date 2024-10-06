@@ -298,6 +298,120 @@ export const serviceCategories = [
 			content:
 				'Dermal fillers provide a non-surgical option that may help enhance your facial features, restore volume, and reduce the appearance of wrinkles. With typically minimal downtime and results that can last several months, fillers offer a convenient choice for those looking to achieve their aesthetic goals. Contact us today to schedule a consultation and explore how dermal fillers might help you achieve your desired look.'
 		}
+	},
+
+	{
+		name: 'prp',
+		description:
+			"Platelet-Rich Plasma therapy uses your own blood's growth factors to rejuvenate skin, promote healing, and enhance overall complexion.",
+		whatIsIt:
+			'Neurotoxins are an FDA-approved treatment that has been used medically since the 1970s. Safe and highly effective, neurotoxin treatments like Botox®, Dysport®, and Xeomin® give the skin a smooth, renewed appearance that looks natural. These treatments require zero downtime and are quick to administer.',
+		howItWorks:
+			'Neurotoxins target the underlying causes of wrinkles and frown lines by blocking the nerve signals that cause muscle movement. This action allows wrinkles to soften and prevents new wrinkles from forming, leading to a more youthful appearance.',
+		whatToExpect:
+			'The treatment is quick and can typically be completed with a few tiny injections in less than 30 minutes. Noticeable results are generally observed 5-7 days after treatment, with full results visible 14 days post-treatment.',
+
+		img: prpImage,
+		coming_soon: true,
+		faq: [
+			{
+				index: 'q1',
+				q: 'How much treatment will I need?',
+				a: 'The amount of treatment needed depends on several factors, including the area(s) being treated (such as 11s, forehead, crow’s feet), the strength of your facial muscles, and the depth of your existing lines. A complimentary consultation with our practitioners will help create a personalized plan for you.'
+			},
+			{
+				index: 'q2',
+				q: 'Does it hurt?',
+				a: 'Most clients describe the sensation as a tiny pinch. The needle used is quite small, goes in smoothly, and the neurotoxin is injected quickly, resulting in minimal pain. Numbing agents are not typically used for this treatment.'
+			},
+			{
+				index: 'q3',
+				q: 'What is the downtime?',
+				a: 'There is virtually zero downtime with neurotoxin treatments. Often referred to as a “lunchtime procedure,” most patients can return to work or normal activities immediately. Some redness and swelling may occur at the injection sites but usually subside within a few hours. Minor bruising is rare.'
+			},
+			{
+				index: 'q4',
+				q: 'How long do results last?',
+				a: 'Results typically last around 3-6 months, depending on the treatment location, your muscle activity, and your body’s response.'
+			},
+			{
+				index: 'q5',
+				q: 'Are Botox and Dysport the same?',
+				a: 'While Botox®, Dysport®, and Xeomin® are all neurotoxin injectables used to treat and prevent wrinkles, their chemical compositions slightly differ. Our practitioners will explain the differences and help you choose the best product for your needs.'
+			},
+			{
+				index: 'q6',
+				q: 'Are there any side effects?',
+				a: 'Neurotoxin injections are very common and low-risk procedures. The most reported side effects include headaches, minor bruising, and swelling at the injection site, although these are rare. Your nurse injector will cover all potential risks before treatment.'
+			}
+		],
+		preTreatmentInstructions: [
+			{
+				index: '1',
+				heading: 'Avoid Makeup',
+				context:
+					'Do not wear makeup to your appointment so our injectors can see your fine lines and wrinkles clearly.'
+			},
+			{
+				index: '2',
+				heading: 'Timing',
+				context: 'Schedule your appointment at least two weeks before any important event.'
+			},
+			{
+				index: '3',
+				heading: 'Alcohol',
+				context: 'Avoid drinking alcohol for 24 hours before the injection.'
+			},
+			{
+				index: '4',
+				heading: 'Skincare Products',
+				context: 'Avoid Retin-A, Tretinoin, and Retinoids for three days prior to the injection.'
+			},
+			{
+				index: '5',
+				heading: 'Skin Cleanliness',
+				context: 'Arrive with clean, makeup-free skin for proper assessment and injection planning.'
+			},
+			{
+				index: '6',
+				heading: 'Eligibility',
+				context: 'Clients who are pregnant or nursing are not eligible for neurotoxin treatment.'
+			}
+		],
+
+		postTreatmentInstructions: [
+			{
+				index: '1',
+				heading: 'No Makeup',
+				context: 'Avoid applying makeup immediately after treatment.'
+			},
+			{
+				index: '2',
+				heading: 'Stay Upright',
+				context: 'Do not lie down for 4 hours.'
+			},
+			{
+				index: '3',
+				heading: 'Excercise',
+				context: 'Avoid exercise for 24 hours; walking is okay.'
+			},
+			{
+				index: '4',
+				heading: 'Alchohol',
+				context: 'Avoid drinking alcohol for 24 hours after the injection.'
+			},
+			{
+				index: '5',
+				heading: 'Avoid Massaging',
+				context:
+					'Do not massage the area, including heavy application of serums or moisturizers, for 4-6 hours.'
+			},
+			{
+				index: '6',
+				heading: 'Avoid Facials',
+				context: 'Avoid facials for one week.'
+			}
+		]
 	}
 ];
 

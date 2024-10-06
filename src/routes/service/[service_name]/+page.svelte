@@ -11,6 +11,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { goBack } from '$lib/utils';
 	import Icon from '@iconify/svelte';
+	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
 
 	let service: any;
 

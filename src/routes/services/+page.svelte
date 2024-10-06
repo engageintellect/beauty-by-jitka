@@ -11,6 +11,7 @@
 	import { goBack } from '$lib/utils';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import { slugify } from '$lib/utils';
+	import { animateMainStagger } from '$lib/animations';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -26,6 +27,7 @@
 
 	onMount(() => {
 		const images = document.querySelectorAll('.animate-results');
+		animateMainStagger();
 		gsap.from(images, {
 			duration: 1,
 			opacity: 0,
@@ -67,10 +69,13 @@
 		</a> -->
 	</div>
 
-	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5">
+	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
-				<a href={`/services/${slugify(category.name)}`}>
+				<a
+					class="animate-item"
+					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '#'}`}
+				>
 					<ServiceCard
 						name={category.name}
 						description={category.description}

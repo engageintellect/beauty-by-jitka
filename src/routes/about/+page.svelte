@@ -35,7 +35,6 @@
 			opacity: 0,
 			x: 10,
 			ease: 'power2.out',
-			delay: 0.25,
 			scrollTrigger: {
 				trigger: '.jitka-section',
 				start: 'top 80%',
@@ -58,7 +57,6 @@
 		gsapInstance.from('.doctor-section-photo', {
 			duration: 1,
 			opacity: 0,
-			delay: 0.25,
 			x: -10,
 			ease: 'power2.out',
 			scrollTrigger: {
@@ -128,9 +126,7 @@
 </Button>
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
-	<div
-		class="jitka-section h-full w-full rounded-lg bg-fuchsia-50 p-2 shadow-lg dark:bg-fuchsia-500 md:p-5"
-	>
+	<div class="jitka-section h-full w-full rounded-lg bg-background p-2 shadow-lg md:border md:p-5">
 		<div class="w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
 		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
 			Registered Nurse / Co-founder
@@ -158,23 +154,15 @@
 
 		<div class="my-5">
 			<div class="flex items-center gap-2">
-				<a href="/services" class="w-full sm:w-fit">
-					<Button
-						size="sm"
-						variant="outline"
-						class="flex w-full items-center gap-2 uppercase md:w-fit"
-					>
+				<a href="/services" class="w-full">
+					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
 						<div>Services</div>
 						<Icon icon="bx:plus-medical" class="h-5 w-5" />
 					</Button>
 				</a>
 
-				<a href="/results" class="w-full sm:w-fit">
-					<Button
-						size="sm"
-						variant="outline"
-						class="flex w-full items-center gap-2 uppercase md:w-fit"
-					>
+				<a href="/results" class="w-full">
+					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
 						<div>Patient Gallery</div>
 						<Icon icon="lucide:gallery-vertical-end" class="h-5 w-5" />
 					</Button>
@@ -204,9 +192,7 @@
 	</div>
 
 	<!-- DOCTOR SECTION -->
-	<div
-		class="doctor-section mt-20 h-full rounded-lg bg-teal-50 p-2 shadow-lg dark:bg-teal-500 md:mt-36 md:p-5"
-	>
+	<div class="doctor-section mt-20 h-full rounded-lg p-2 shadow-lg md:mt-36 md:border md:p-5">
 		<div class="w-full text-3xl font-bold md:text-5xl">DR. STEVEN REYNOLDS</div>
 		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
 			Medical Director / Co-founder

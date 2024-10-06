@@ -89,7 +89,7 @@
 
 <div class="mb-10 md:my-5 md:mb-20">
 	<div
-		class={`flex w-full flex-col gap-2 rounded-lg transition-all duration-300 md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
+		class={`flex w-full flex-col gap-2 rounded-lg md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">

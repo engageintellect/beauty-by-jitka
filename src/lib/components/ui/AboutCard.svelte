@@ -137,7 +137,7 @@
 				<enhanced:img
 					src={jitkaImage}
 					alt="Jitka"
-					class="h-full w-full rounded-full bg-fuchsia-200 object-cover object-top transition-shadow duration-300 hover:shadow-lg md:rounded-lg md:bg-fuchsia-100"
+					class="h-full w-full rounded-full bg-fuchsia-300 object-cover object-top transition-shadow duration-300 hover:shadow-lg md:rounded-lg"
 				></enhanced:img>
 			</a>
 			<div
