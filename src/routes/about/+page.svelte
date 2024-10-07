@@ -8,6 +8,8 @@
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
+	import { animateMainStagger } from '$lib/animations';
+	import SocialLinks from '$lib/components/ui/SocialLinks.svelte';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -102,6 +104,7 @@
 					ScrollTriggerInstance.refresh();
 				});
 			});
+			animateMainStagger();
 		}
 	});
 
@@ -127,8 +130,8 @@
 <div class="mt-5 w-full">
 	<!-- JITKA SECTION -->
 	<div class="jitka-section h-full w-full rounded-lg bg-background p-2 shadow-lg md:border md:p-5">
-		<div class="w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
-		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
+		<div class="animate-item w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
+		<div class="animate-item mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
 			Registered Nurse / Co-founder
 		</div>
 
@@ -140,7 +143,7 @@
 				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-fuchsia-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
-			<div class="flex-1 text-2xl text-foreground/70 md:mt-5">
+			<div class="animate-item flex-1 text-xl text-muted-foreground md:mt-5">
 				Based in Orange County and Los Angeles, California.
 			</div>
 		</div>
@@ -154,15 +157,15 @@
 
 		<div class="my-5">
 			<div class="flex items-center gap-2">
-				<a href="/services" class="w-full">
-					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
+				<a href="/services" class="animate-item w-full">
+					<Button variant="default" class="flex w-full items-center gap-2 uppercase">
 						<div>Services</div>
 						<Icon icon="bx:plus-medical" class="h-5 w-5" />
 					</Button>
 				</a>
 
-				<a href="/results" class="w-full">
-					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
+				<a href="/results" class="animate-item w-full">
+					<Button variant="default" class="flex w-full items-center gap-2 uppercase">
 						<div>Patient Gallery</div>
 						<Icon icon="lucide:gallery-vertical-end" class="h-5 w-5" />
 					</Button>
@@ -170,7 +173,7 @@
 			</div>
 		</div>
 
-		<div class="mt-5 flex flex-col md:flex-row md:items-start">
+		<div class="animate-item mt-5 flex flex-col md:flex-row md:items-start">
 			<div class=" flex-1 p-2 text-xl font-light">
 				<p>
 					Jitka is a certified nurse injector and registered nurse, licensed in both the USA and
@@ -205,7 +208,9 @@
 				class="jitka-section-photo mr-5 h-40 w-32 scale-x-[-1] rounded-lg bg-teal-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
-			<div class="flex-1 text-2xl text-foreground/70 md:mt-5">Based in Long Beach, California.</div>
+			<div class="flex-1 text-xl text-muted-foreground md:mt-2">
+				Based in Long Beach, California.
+			</div>
 		</div>
 
 		<!-- DESKTOP IMAGE -->

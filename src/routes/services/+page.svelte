@@ -12,6 +12,7 @@
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import { slugify } from '$lib/utils';
 	import { animateMainStagger } from '$lib/animations';
+	import Alert from '$lib/components/ui/Alert.svelte';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -69,12 +70,12 @@
 		</a> -->
 	</div>
 
-	<div class="animate-results my-5 grid gap-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+	<div class="animate-results my-5 grid gap-2 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
 				<a
 					class="animate-item"
-					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '#'}`}
+					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
 				>
 					<ServiceCard
 						name={category.name}

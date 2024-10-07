@@ -42,7 +42,7 @@
 {#if service}
 	<div
 		in:fade
-		class="animate-item mx-auto mt-5 max-w-3xl rounded-lg px-4 md:mt-10 md:border md:p-10 md:shadow"
+		class="animate-item mx-auto mt-5 max-w-3xl rounded-lg px-2 md:mt-10 md:border md:p-10 md:shadow"
 	>
 		<div class="flex flex-col items-start justify-between gap-10 md:flex-row">
 			<div class="animate-item w-full">
@@ -53,7 +53,21 @@
 
 				<div class="flex items-center gap-2">
 					<Button class="w-full uppercase" href={PUBLIC_BOOKING_LINK}>book appointment</Button>
+					<Button variant="outline" class="w-full uppercase" href={`/results`}>gallery</Button>
 				</div>
+
+				<!-- 
+				<div class="mt-10">
+					{#each service.use_cases as use_case}
+						<div class="mt-2 flex items-center gap-2">
+							<div class="h-5 w-5">
+								<Icon icon="akar-icons:check" class="h-5 w-5 text-green-500" />
+							</div>
+							<div>{use_case}</div>
+						</div>
+					{/each}
+      </div>
+-->
 			</div>
 
 			<div class="animate-item flex h-full w-full justify-center">

@@ -7,6 +7,7 @@
 	import { companyInfo } from '$lib/data';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import logo from '$lib/assets/images/logos/new-logo.png';
+	import { animateMainStagger } from '$lib/animations';
 
 	function scrollToAnchor() {
 		const element = document.getElementById('anchorLink');
@@ -18,6 +19,7 @@
 	let hidden = true;
 
 	onMount(() => {
+		animateMainStagger();
 		gsap
 			.timeline({
 				onStart: () => {
@@ -87,41 +89,37 @@
 	});
 </script>
 
-<div class="mb-10 md:my-5 md:mb-20">
+<div class="animate-item mb-10 md:my-5 md:mb-20">
 	<div
-		class={`flex w-full flex-col gap-2 rounded-lg md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
+		class={`flex w-full flex-col gap-5 rounded-lg md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
-				<div class="animate-logo h-16 w-16">
+				<div class="animate-item h-16 w-16">
 					<img src={logo} alt="logo" class="h-16 w-16" />
 				</div>
-				<div class="flex flex-col">
+				<div class="animate-item flex flex-col">
 					<div
-						class="animate-title text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
+						class="text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
 					>
 						{companyInfo.name}
 					</div>
-					<div class="animate-title mt-2 text-sm text-foreground/50">
-						An S.Reynolds Medical Corporation
-					</div>
+					<div class=" mt-2 text-sm text-muted-foreground">An S.Reynolds Medical Corporation</div>
 				</div>
 			</div>
 
 			<div class="mx-auto flex w-full max-w-sm flex-col items-center justify-center md:max-w-md">
 				<div
-					class="animate-hero-text mt-5 w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
+					class="animate-item w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
 				>
 					Offering a comprehensive range of customizable treatments tailored to align with your
 					individual objectives, preferences, and personal style.
 				</div>
 			</div>
 
-			<div
-				class="animate-buttons mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg"
-			>
+			<div class="animate-item mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg">
 				<a href={PUBLIC_BOOKING_LINK} class="group/bookingsButton w-full">
-					<Button size="lg" class="flex w-full items-center gap-2 text-xl">
+					<Button size="lg" class="flex w-full items-center gap-2">
 						<div class="uppercase">Booking</div>
 						<Icon
 							icon="teenyicons:appointments-outline"
@@ -131,7 +129,7 @@
 				</a>
 
 				<a href="/services" class="group/bookingsButton w-full">
-					<Button size="lg" variant="outline" class="flex w-full items-center gap-2 text-xl">
+					<Button size="lg" variant="outline" class="flex w-full items-center gap-2">
 						<div class="uppercase">services</div>
 						<Icon
 							icon="akar-icons:arrow-right"
