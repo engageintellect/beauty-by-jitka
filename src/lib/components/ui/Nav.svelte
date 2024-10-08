@@ -106,7 +106,7 @@
 			<!-- Mobile Menu Toggle Button -->
 			<div class="md:hidden">
 				<Button variant="ghost" size="icon" on:click={toggleMenu} aria-label="Toggle Menu">
-					<Icon icon="mdi:menu" class="h-7 w-7" />
+					<Icon icon="material-symbols:menu-rounded" class="h-7 w-7" />
 				</Button>
 			</div>
 		</div>
@@ -135,7 +135,7 @@
 			on:click={toggleMenu}
 			aria-label="Toggle Menu"
 		>
-			<Icon icon="mdi:close" class="h-7 w-7" />
+			<Icon icon="material-symbols:close-rounded" class="h-7 w-7" />
 		</Button>
 	</div>
 </nav>
