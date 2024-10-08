@@ -119,7 +119,11 @@
 	>
 		<!-- Home link only visible on mobile -->
 
-		<div class="flex flex-col gap-5">
+		<div class="flex w-full flex-col items-center gap-5">
+			<a href="/" class="nav-logo text-2xl font-bold md:hidden" aria-label="Home">
+				<img src={logo} alt="Jitka" class="h-16 w-16 transition-all duration-300" />
+			</a>
+
 			<a href="/" class="md:hidden" on:click={navigateAndCloseMenu}>home</a>
 
 			<a href="/about" class="" on:click={navigateAndCloseMenu}>about</a>
