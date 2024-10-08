@@ -11,6 +11,7 @@
 	import { derived } from 'svelte/store';
 
 	let navHidden = true;
+	let menuOpen = false;
 
 	const currentRoute = derived(page, ($page) => $page.url.pathname);
 
@@ -25,6 +26,39 @@
 			.from('.nav-logo', { opacity: 0, duration: 1 }, '-=0.5')
 			.from('.buttons', { opacity: 0, duration: 2 }, '-=1');
 	});
+
+	function toggleMenu() {
+		if (!menuOpen) {
+			menuOpen = true;
+			gsap.fromTo(
+				'.mobile-menu',
+				{ opacity: 0, y: 0 },
+				{ opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }
+			);
+		} else {
+			gsap.to('.mobile-menu', {
+				opacity: 0,
+				y: 0,
+				duration: 0.25,
+				ease: 'power2.in',
+				onComplete: () => {
+					menuOpen = false;
+				}
+			});
+		}
+	}
+
+	function navigateAndCloseMenu() {
+		gsap.to('.mobile-menu', {
+			opacity: 0,
+			y: 0,
+			duration: 0.25,
+			ease: 'power2.in',
+			onComplete: () => {
+				menuOpen = false;
+			}
+		});
+	}
 </script>
 
 <nav class="nav sticky top-0 -z-[-1] border-b bg-background p-2 {navHidden ? 'invisible' : ''}">
@@ -63,16 +97,45 @@
 		</div>
 
 		<div class="buttons flex items-center gap-2">
-			<a href={PUBLIC_BOOKING_LINK} class="">
+			<a href={PUBLIC_BOOKING_LINK}>
 				<Button class="uppercase" variant="default">book appointment</Button>
 			</a>
 
-			<!--
-			<a href={`sms:${companyInfo.phone}`} class="">
-				<Button class="uppercase" variant="outline">text</Button>
-      </a>
--->
 			<ThemeToggle />
+
+			<!-- Mobile Menu Toggle Button -->
+			<div class="md:hidden">
+				<Button variant="ghost" size="icon" on:click={toggleMenu} aria-label="Toggle Menu">
+					<Icon icon="mdi:menu" class="h-7 w-7" />
+				</Button>
+			</div>
 		</div>
+	</div>
+
+	<!-- Mobile Fullscreen Dropdown Menu -->
+	<div
+		class="mobile-menu fixed inset-0 z-50 flex -translate-y-full transform flex-col items-start bg-background px-4 pt-10 text-2xl opacity-0"
+		style="display: {menuOpen ? 'flex' : 'none'};"
+	>
+		<!-- Home link only visible on mobile -->
+
+		<div class="flex flex-col gap-5">
+			<a href="/" class="md:hidden" on:click={navigateAndCloseMenu}>home</a>
+
+			<a href="/about" class="" on:click={navigateAndCloseMenu}>about</a>
+			<a href="/services" class="" on:click={navigateAndCloseMenu}>services</a>
+			<a href="/results" class="" on:click={navigateAndCloseMenu}>gallery</a>
+			<a href="/contact" class="" on:click={navigateAndCloseMenu}>contact</a>
+		</div>
+
+		<Button
+			class="absolute right-2 top-2"
+			variant="ghost"
+			size="icon"
+			on:click={toggleMenu}
+			aria-label="Toggle Menu"
+		>
+			<Icon icon="mdi:close" class="h-7 w-7" />
+		</Button>
 	</div>
 </nav>
