@@ -26,7 +26,9 @@ import result25 from '$lib/assets/images/results/result-25.png?enhanced';
 import result26 from '$lib/assets/images/results/result-26.png?enhanced';
 import result27 from '$lib/assets/images/results/result-27.png?enhanced';
 import result28 from '$lib/assets/images/results/result-28.png?enhanced';
-
+import result29 from '$lib/assets/images/results/result-29.png?enhanced';
+import result30 from '$lib/assets/images/results/result-30.png?enhanced';
+import result31 from '$lib/assets/images/results/result-31.png?enhanced';
 
 export const results = [
 	{
@@ -197,57 +199,22 @@ export const results = [
 		url: 'https://instagram.com/beautybyjitka',
 		description: 'carousel image'
 	},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]
+	{
+		image: result29,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result30,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	},
+	{
+		image: result31,
+		title: 'carousel image',
+		url: 'https://instagram.com/beautybyjitka',
+		description: 'carousel image'
+	}
+];

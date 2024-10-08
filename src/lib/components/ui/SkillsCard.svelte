@@ -160,7 +160,7 @@
 </script>
 
 <div
-	class="mt-20 grid w-full grid-cols-1 gap-10 sm:rounded-lg sm:border sm:p-5 sm:shadow-lg md:grid-cols-2"
+	class="mt-20 grid w-full grid-cols-1 gap-10 bg-background sm:rounded-lg sm:border sm:p-5 sm:shadow-lg md:grid-cols-2"
 >
 	<!-- CARD 1 -->
 	<div

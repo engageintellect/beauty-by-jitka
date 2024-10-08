@@ -87,7 +87,7 @@
 
 		<div class="animate-item">
 			<div class="text-3xl font-bold">About</div>
-			<div class="mt-5 flex flex-col gap-5 rounded-lg border p-5">
+			<div class="mt-5 flex flex-col gap-5 rounded-lg border bg-background p-5">
 				<div>
 					<div class="text-2xl font-semibold">
 						What are <span class="capitalize">{params.service_category.replace('-', ' ')}</span>?

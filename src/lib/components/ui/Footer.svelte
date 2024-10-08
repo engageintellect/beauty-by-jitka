@@ -15,15 +15,53 @@
 </script>
 
 {#if showFooter}
-	<footer class="w-full border-t py-5" in:fade={{ duration: 1000 }}>
-		<div class="mx-auto flex w-full max-w-5xl items-center justify-center">
-			<a href="#" class="text-sm">
-				&copy; {currentYear}
-				{companyInfo.name}. All rights reserved.
-			</a>
-		</div>
-		<div class="mx-auto flex w-full items-center justify-center text-xs">
-			An S.Reynolds Medical Corporation
+	<footer class="mx-auto w-full max-w-5xl border-t py-5" in:fade={{ duration: 1000 }}>
+		<!-- Mobile responsive layout -->
+		<div class="flex flex-col justify-between space-y-6 lg:flex-row lg:space-x-6 lg:space-y-0">
+			<div class="text-center lg:text-left">
+				<div
+					class="mx-auto flex w-full max-w-5xl items-center justify-center lg:mx-0 lg:justify-start"
+				>
+					<a href="#" class="text-sm">
+						&copy; {currentYear}
+						{companyInfo.name}. All rights reserved.
+					</a>
+				</div>
+
+				<div
+					class="mx-auto flex w-full items-center justify-center text-xs lg:mx-0 lg:justify-start"
+				>
+					An S.Reynolds Medical Corporation
+				</div>
+			</div>
+
+			<div class="text-center lg:text-left">
+				<h3 class="text-xl font-semibold">Locations:</h3>
+				<div class="mt-2">
+					<h4 class="font-semibold">Long Beach</h4>
+					<p class="text-muted-foreground">{companyInfo.locations.longBeach.address}</p>
+				</div>
+				<div class="mt-2">
+					<h4 class="font-semibold">Orange County</h4>
+					<p class="text-muted-foreground">{companyInfo.locations.coronaDelMar.address}</p>
+				</div>
+			</div>
+
+			<!-- Business Hours -->
+			<div class="text-center lg:text-left">
+				<h3 class="text-xl font-semibold">Hours :</h3>
+				<div class="mt-2">
+					<h4 class="font-semibold">Long Beach</h4>
+					<p class="text-muted-foreground">Thursday: 12:00 PM - 7:00 PM</p>
+					<p class="text-muted-foreground">Saturday: 10:00 AM - 5:00 PM</p>
+				</div>
+				<div class="mt-2">
+					<h4 class="font-semibold">Orange County</h4>
+					<p class="text-muted-foreground">Monday: 9:00 AM - 5:00 PM</p>
+					<p class="text-muted-foreground">Wednesday: 12:00 PM - 7:00 PM</p>
+					<p class="text-muted-foreground">Friday: 9:00 AM - 2:00 PM</p>
+				</div>
+			</div>
 		</div>
 	</footer>
 {/if}

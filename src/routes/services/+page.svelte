@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import Modal from '$lib/components/ui/Modal.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
+	import CategoryCard from '$lib/components/ui/CategoryCard.svelte';
 	import { services, serviceCategories } from '$lib/data';
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { companyInfo } from '$lib/data';
@@ -70,16 +70,18 @@
 		</a> -->
 	</div>
 
-	<div class="animate-results my-5 grid gap-2 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+	<div
+		class="animate-results my-5 mb-20 grid gap-2 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3"
+	>
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
 				<a
 					class="animate-item"
 					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
 				>
-					<ServiceCard
+					<CategoryCard
 						name={category.name}
-						description={category.description}
+						description={category.tagline}
 						img={category.img}
 						comingSoon={category.coming_soon}
 					/>
@@ -89,9 +91,9 @@
 			{#each serviceCategories as category}
 				{#if category.name.toLowerCase().includes(searchFiler.toLowerCase())}
 					<a href={`/services/${slugify(category.name)}`}>
-						<ServiceCard
+						<CategoryCard
 							name={category.name}
-							description={category.description}
+							description={category.tagline}
 							img={category.img}
 							comingSoon={category.coming_soon}
 						/>

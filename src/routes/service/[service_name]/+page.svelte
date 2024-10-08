@@ -39,24 +39,25 @@
 	</Button>
 </div>
 
-{#if service}
-	<div
-		in:fade
-		class="animate-item mx-auto mt-5 max-w-3xl rounded-lg px-2 md:mt-10 md:border md:p-10 md:shadow"
-	>
-		<div class="flex flex-col items-start justify-between gap-10 md:flex-row">
-			<div class="animate-item w-full">
-				<div class="text-3xl font-semibold uppercase">
-					{service.name}
-				</div>
-				<div class="my-5 text-base text-muted-foreground">{service.description}</div>
+<div class="pb-20">
+	{#if service}
+		<div
+			in:fade
+			class="animate-item mx-auto mt-5 max-w-3xl rounded-lg bg-background p-5 md:mt-10 md:border md:p-10 md:shadow"
+		>
+			<div class="flex flex-col items-start justify-between gap-10 md:flex-row">
+				<div class="animate-item w-full">
+					<div class="text-3xl font-semibold uppercase">
+						{service.name}
+					</div>
+					<div class="my-5 text-base text-muted-foreground">{service.description}</div>
 
-				<div class="flex items-center gap-2">
-					<Button class="w-full uppercase" href={PUBLIC_BOOKING_LINK}>book appointment</Button>
-					<Button variant="outline" class="w-full uppercase" href={`/results`}>gallery</Button>
-				</div>
+					<div class="flex items-center gap-2">
+						<Button class="w-full uppercase" href={PUBLIC_BOOKING_LINK}>book appointment</Button>
+						<Button variant="outline" class="w-full uppercase" href={`/results`}>gallery</Button>
+					</div>
 
-				<!-- 
+					<!-- 
 				<div class="mt-10">
 					{#each service.use_cases as use_case}
 						<div class="mt-2 flex items-center gap-2">
@@ -68,13 +69,14 @@
 					{/each}
       </div>
 -->
-			</div>
+				</div>
 
-			<div class="animate-item flex h-full w-full justify-center">
-				<img src={service.img} alt={service.name} class="object-cover" />
+				<div class="animate-item flex h-full w-full justify-center">
+					<img src={service.img} alt={service.name} class="object-cover" />
+				</div>
 			</div>
 		</div>
-	</div>
-{:else}
-	<p class="text-center">Service not found.</p>
-{/if}
+	{:else}
+		<p class="text-center">Service not found.</p>
+	{/if}
+</div>

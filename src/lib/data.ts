@@ -6,8 +6,11 @@ import restylaneLyftImage from '$lib/assets/images/services/restylane-lyft.png';
 import restylaneRefyneImage from '$lib/assets/images/services/restylane-refyne.png';
 import restylaneDefyneImage from '$lib/assets/images/services/restylane-defyne.png';
 import stemCellImage from '$lib/assets/images/services/stemcell.png';
-import prpImage from '$lib/assets/images/services/blood.png';
+import prpImage from '$lib/assets/images/services/prp.png';
 import juvedermVollureImage from '$lib/assets/images/services/juvederm-vollure.png';
+
+import categoryBotox from '$lib/assets/images/results/result-30.png';
+import categoryDermalFillers from '$lib/assets/images/results/result-31.png';
 
 export const companyInfo = {
 	name: 'Beauty by Jitka',
@@ -46,6 +49,8 @@ export const companyInfo = {
 export const serviceCategories = [
 	{
 		name: 'neurotoxins',
+		tagline:
+			'Achieve smooth, youthful skin with our expert neurotoxin treatments, designed to reduce fine lines and wrinkles for a refreshed look.',
 		description:
 			'Neurotoxins are a highly effective, FDA-approved treatment that reduces the appearance of lines and wrinkles, resulting in a smoother and more youthful look. By targeting the underlying causes of wrinkles, neurotoxins prevent new wrinkles from forming, offering long-lasting results with minimal discomfort and no downtime.',
 		whatIsIt:
@@ -55,7 +60,7 @@ export const serviceCategories = [
 		whatToExpect:
 			'The treatment is quick and can typically be completed with a few tiny injections in less than 30 minutes. Noticeable results are generally observed 5-7 days after treatment, with full results visible 14 days post-treatment.',
 
-		img: botoxImage,
+		img: categoryBotox,
 		coming_soon: false,
 		faq: [
 			{
@@ -160,6 +165,8 @@ export const serviceCategories = [
 
 	{
 		name: 'dermal fillers',
+		tagline:
+			'Enhance your natural beauty with our dermal filler treatments, restoring volume and contour for a youthful, rejuvenated appearance.',
 		description: `If you’re considering enhancing your facial features, dermal fillers offer a non-surgical option that may help restore volume and smooth fine lines and wrinkles. At ${companyInfo.name}, we provide a variety of dermal fillers tailored to target areas such as lips, cheeks, jawline, and nasolabial folds, helping you work towards a naturally youthful appearance with minimal downtime.`,
 		whatIsIt:
 			'Dermal fillers are injectable treatments made from hyaluronic acid, a substance naturally found in the skin known for its hydrating properties. These fillers can help to restore lost volume, enhance soft tissues, and reduce the appearance of fine lines and wrinkles, offering a fuller look to lips, cheeks, chin, and other facial areas.',
@@ -167,7 +174,7 @@ export const serviceCategories = [
 			'During your consultation, our experienced practitioners will assess your skin, facial structure, and aesthetic goals to help determine which dermal filler may be best suited for your needs. The selected filler is injected into the targeted areas, aiming to add volume and smooth lines and wrinkles. While individual results vary, many patients achieve a more refreshed appearance with minimal downtime.',
 		whatToExpect:
 			'The duration of the dermal filler procedure typically ranges from 30 minutes to 2 hours, depending on the areas being treated. Some mild swelling, bruising, or tenderness at the injection site is common but generally resolves within a few days. Results are often visible immediately, with improvements continuing over the next 2-3 weeks as the filler integrates with your skin. Depending on the type of filler used and the area treated, results can last between 6 to 24 months. For the best experience, follow all aftercare instructions provided by your practitioner.',
-		img: juvedermImage,
+		img: categoryDermalFillers,
 		coming_soon: false,
 
 		faq: [
@@ -302,6 +309,8 @@ export const serviceCategories = [
 
 	{
 		name: 'prp',
+		tagline:
+			'Revitalize your skin with PRP therapy, harnessing your body’s natural healing power for a radiant, youthful glow.',
 		description:
 			"Platelet-Rich Plasma therapy uses your own blood's growth factors to rejuvenate skin, promote healing, and enhance overall complexion.",
 		whatIsIt:

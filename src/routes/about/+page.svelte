@@ -195,7 +195,9 @@
 	</div>
 
 	<!-- DOCTOR SECTION -->
-	<div class="doctor-section mt-20 h-full rounded-lg p-2 shadow-lg md:mt-36 md:border md:p-5">
+	<div
+		class="doctor-section mt-20 h-full rounded-lg bg-background p-2 shadow-lg md:mt-36 md:border md:p-5"
+	>
 		<div class="w-full text-3xl font-bold md:text-5xl">DR. STEVEN REYNOLDS</div>
 		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
 			Medical Director / Co-founder

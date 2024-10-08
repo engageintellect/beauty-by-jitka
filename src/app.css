@@ -5,6 +5,7 @@
 @layer base {
 	:root {
 		--background: 0 0% 100%;
+		--secondaryBackground: 26 10% 86%;
 		--foreground: 0 0% 3.9%;
 
 		--muted: 0 0% 96.1%;
@@ -38,6 +39,7 @@
 
 	.dark {
 		--background: 0 0% 3.9%;
+		--secondaryBackground: 0 0% 3.9%;
 		--foreground: 0 0% 98%;
 
 		--muted: 0 0% 14.9%;

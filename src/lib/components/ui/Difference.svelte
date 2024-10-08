@@ -59,7 +59,7 @@
 	});
 </script>
 
-<div class="md:rounded-lg md:border md:p-5 md:shadow-lg">
+<div class="bg-background md:rounded-lg md:border md:p-5 md:shadow-lg">
 	<div class="text-section flex flex-col gap-5 p-2 md:p-0">
 		<div class="text-5xl font-bold uppercase">See the difference</div>
 		<div class="text-2xl font-thin">
@@ -67,7 +67,7 @@
 		</div>
 
 		<a href="/results">
-			<Button variant="outline" size="lg" class="w-fit uppercase">View All Before & Afters</Button>
+			<Button variant="default" size="lg" class="w-fit uppercase">View All Before & Afters</Button>
 		</a>
 	</div>
 

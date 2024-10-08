@@ -66,9 +66,12 @@
 			<a href={PUBLIC_BOOKING_LINK} class="">
 				<Button class="uppercase" variant="default">book appointment</Button>
 			</a>
+
+			<!--
 			<a href={`sms:${companyInfo.phone}`} class="">
 				<Button class="uppercase" variant="outline">text</Button>
-			</a>
+      </a>
+-->
 			<ThemeToggle />
 		</div>
 	</div>

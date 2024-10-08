@@ -1,5 +1,5 @@
 <script lang="ts">
-	import heroImage from '$lib/assets/images/hero.png?enhanced';
+	import heroImage from '$lib/assets/images/herolips5.png?enhanced';
 	import { Button } from './button/index.js';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
@@ -91,18 +91,18 @@
 
 <div class="animate-item mb-10 md:my-5 md:mb-20">
 	<div
-		class={`flex w-full flex-col gap-5 rounded-lg md:flex-row md:gap-5 md:border md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
+		class={`flex w-full flex-col gap-5 rounded-lg bg-background pt-5 dark:bg-background md:flex-row md:gap-5 md:border md:pt-0 md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
-				<div class="animate-item h-16 w-16">
-					<img src={logo} alt="logo" class="h-16 w-16" />
+				<div class="animate-item flex w-full justify-center">
+					<img src={logo} alt="logo" class="h-24 w-24" />
 				</div>
 				<div class="animate-item flex flex-col">
 					<div
 						class="text-5xl font-bold uppercase tracking-tight transition-transform lg:text-[3.75rem]"
 					>
-						{companyInfo.name}
+						Welcome to {companyInfo.name}
 					</div>
 					<div class=" mt-2 text-sm text-muted-foreground">An S.Reynolds Medical Corporation</div>
 				</div>
@@ -112,14 +112,14 @@
 				<div
 					class="animate-item w-full max-w-sm text-2xl font-thin transition-transform md:max-w-md md:text-3xl lg:max-w-md"
 				>
-					Offering a comprehensive range of customizable treatments tailored to align with your
+					Offering a comprehensive range of injection treatments tailored to align with your
 					individual objectives, preferences, and personal style.
 				</div>
 			</div>
 
 			<div class="animate-item mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg">
 				<a href={PUBLIC_BOOKING_LINK} class="group/bookingsButton w-full">
-					<Button size="lg" class="flex w-full items-center gap-2">
+					<Button size="lg" class="flex w-full items-center justify-between text-lg">
 						<div class="uppercase">Booking</div>
 						<Icon
 							icon="teenyicons:appointments-outline"
@@ -129,7 +129,11 @@
 				</a>
 
 				<a href="/services" class="group/bookingsButton w-full">
-					<Button size="lg" variant="outline" class="flex w-full items-center gap-2">
+					<Button
+						size="lg"
+						variant="outline"
+						class="flex w-full items-center justify-between gap-2 text-lg"
+					>
 						<div class="uppercase">services</div>
 						<Icon
 							icon="akar-icons:arrow-right"
@@ -147,6 +151,7 @@
 			<div
 				class="pointer-events-none absolute bottom-0 left-0 h-1/3 w-full bg-fade-down opacity-100 md:opacity-0"
 			></div>
+
 			<enhanced:img
 				src={heroImage}
 				alt="logo"

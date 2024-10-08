@@ -13,7 +13,7 @@
 	/>
 </svelte:head>
 <div
-	class="flex h-full w-full flex-col justify-center gap-5 rounded-lg p-5 sm:min-h-full md:flex-row md:justify-center md:border md:shadow-lg"
+	class="flex h-full w-full flex-col justify-center gap-5 rounded-lg bg-background p-5 sm:min-h-full md:flex-row md:justify-center md:border md:shadow-lg"
 >
 	<Form data={data.form} />
 </div>
