@@ -119,6 +119,8 @@
 				we'll get back to you shortly.
 			</div>
 
+			<!--
+
 			<div class="mt-5 flex items-center text-xl">
 				<div>Or, send us a</div>
 				<a href="sms:9499935222" class="ml-2">
@@ -126,7 +128,8 @@
 						<div>text message</div>
 					</Button>
 				</a>
-			</div>
+      </div>
+-->
 		</div>
 	</div>
 </div>

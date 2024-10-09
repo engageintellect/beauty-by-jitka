@@ -55,8 +55,8 @@
 				src={imageSrc}
 				alt="Enlarged"
 				class="h-auto max-h-[70vh] max-w-full rounded-lg object-cover"
-			/>
-			<Button class="absolute right-2 top-2" on:click={closeModal}>
+			></enhanced:img>
+			<Button size="icon" class="absolute right-2 top-2" on:click={closeModal}>
 				<div class="flex items-center gap-2">
 					<Icon icon="mdi:close" class="h-7 w-7" />
 				</div>

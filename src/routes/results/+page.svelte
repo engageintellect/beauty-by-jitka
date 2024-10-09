@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { results } from '$lib/carousel-images';
-	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
 	import Modal from '$lib/components/ui/Modal.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
+	import { animateTitle, animateMainStagger } from '$lib/animations';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -22,21 +22,8 @@
 	}
 
 	onMount(() => {
-		const images = document.querySelectorAll('.animate-results');
-		gsap.from(images, {
-			duration: 1,
-			opacity: 0,
-			y: 20,
-			stagger: 0.1,
-			ease: 'power2.out'
-		});
-
-		gsap.from('.animate-title', {
-			duration: 0.5,
-			opacity: 0,
-			x: 50,
-			ease: 'power2.out'
-		});
+		animateTitle();
+		animateMainStagger();
 	});
 </script>
 
@@ -53,14 +40,16 @@
 		<Icon icon="akar-icons:arrow-left" class="" />
 		<div class="uppercase">Back</div>
 	</Button>
-	<!-- <div class="animate-title mt-5 flex items-center gap-5">
-		<div class="text-5xl font-bold md:text-7xl">Gallery</div>
-		<Icon icon="ri:gallery-view-2" class="text-5xl md:text-7xl" />
-	</div> -->
+	<div class="animate-title mt-5 flex items-center gap-5 md:mt-10">
+		<div class="text-5xl font-bold uppercase">gallery</div>
+		<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
+	</div>
 
-	<div class="animate-results my-5 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
+	<div
+		class="animate-results my-5 grid grid-cols-2 gap-2 md:mt-10 md:grid-cols-3 md:gap-5 lg:grid-cols-4"
+	>
 		{#each results as result}
-			<div class="animate-results group">
+			<div class="animate-item group">
 				<button
 					class="h-full w-full cursor-pointer rounded-lg object-cover shadow-lg transition-all duration-300 md:group-hover:-translate-y-[1px] md:group-hover:saturate-[110%]"
 					on:click={() => openModal(result.image)}

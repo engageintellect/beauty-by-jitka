@@ -10,3 +10,15 @@ export const animateMainStagger = () => {
 		ease: 'power4.out'
 	});
 };
+
+export const animateTitle = () => {
+	gsap.from('.animate-title', {
+		opacity: 0,
+
+		x: 20,
+		duration: 1,
+		delay: 0.1,
+		stagger: 0.1,
+		ease: 'power4.out'
+	});
+};

@@ -87,6 +87,14 @@
 						? 'underline decoration-1 underline-offset-8'
 						: ''}>gallery</a
 				>
+
+				<a
+					href="/checkout/affirm"
+					class={$currentRoute.startsWith('/checkout/affirm')
+						? 'underline decoration-1 underline-offset-8'
+						: ''}>financing</a
+				>
+
 				<a
 					href="/contact"
 					class={$currentRoute.startsWith('/contact')
@@ -129,6 +137,7 @@
 			<a href="/about" class="" on:click={navigateAndCloseMenu}>about</a>
 			<a href="/services" class="" on:click={navigateAndCloseMenu}>services</a>
 			<a href="/results" class="" on:click={navigateAndCloseMenu}>gallery</a>
+			<a href="/checkout/affirm" class="" on:click={navigateAndCloseMenu}>financing</a>
 			<a href="/contact" class="" on:click={navigateAndCloseMenu}>contact</a>
 		</div>
 

@@ -69,3 +69,7 @@ export const slugify = (text: string) => {
 		.replace(/^-+/, '') // Trim - from start of text
 		.replace(/-+$/, ''); // Trim - from end of text
 };
+
+export function getDirectionsUrl(address: string) {
+	return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+}

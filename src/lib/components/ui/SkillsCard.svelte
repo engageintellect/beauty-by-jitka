@@ -1,7 +1,7 @@
 <script lang="ts">
 	import girl2Image from '$lib/assets/images/girl2.png?enhanced';
 	import girl4Image from '$lib/assets/images/girl4.png?enhanced';
-	import womanBotoxImage from '$lib/assets/images/womanBotox.png?enhanced';
+	import womanBotoxImage from '$lib/assets/images/herolips2.png?enhanced';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 	import { onDestroy, onMount, tick } from 'svelte';
@@ -185,7 +185,7 @@
 			</div>
 			<ul class="flex flex-col gap-2 text-xl font-thin">
 				<li>
-					<strong>Botox:</strong> Smooth out fine lines and wrinkles for a youthful appearance.
+					<strong>Neurotoxins:</strong> Smooth out fine lines and wrinkles for a youthful appearance.
 				</li>
 				<li><strong>Dermal Fillers:</strong> Add volume and definition to your facial features.</li>
 				<li><strong>Lip Enhancements:</strong> Achieve fuller, more defined lips.</li>
@@ -234,7 +234,7 @@
 			class="absolute bottom-0 right-0 h-full rounded-lg object-cover"
 		></enhanced:img>
 		<div class="absolute bottom-0 right-0 z-20 flex w-full flex-col gap-5 p-5">
-			<div class="w-full text-5xl font-bold drop-shadow">SAFE & EFFECTIVE</div>
+			<div class="w-full text-right text-5xl font-bold drop-shadow">SAFE & EFFECTIVE</div>
 		</div>
 	</div>
 

@@ -9,8 +9,8 @@ import stemCellImage from '$lib/assets/images/services/stemcell.png';
 import prpImage from '$lib/assets/images/services/prp.png';
 import juvedermVollureImage from '$lib/assets/images/services/juvederm-vollure.png';
 
-import categoryBotox from '$lib/assets/images/results/result-30.png';
-import categoryDermalFillers from '$lib/assets/images/results/result-31.png';
+import categoryNeurotoxins from '$lib/assets/images/results/result-30.png';
+import categoryDermalFillers from '$lib/assets/images/results/result-29.png';
 
 export const companyInfo = {
 	name: 'Beauty by Jitka',
@@ -60,7 +60,7 @@ export const serviceCategories = [
 		whatToExpect:
 			'The treatment is quick and can typically be completed with a few tiny injections in less than 30 minutes. Noticeable results are generally observed 5-7 days after treatment, with full results visible 14 days post-treatment.',
 
-		img: categoryBotox,
+		img: categoryNeurotoxins,
 		coming_soon: false,
 		faq: [
 			{

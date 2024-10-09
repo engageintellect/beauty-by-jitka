@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { getDirectionsUrl } from '$lib/utils';
 
 	const currentYear = new Date().getFullYear();
 	import { companyInfo } from '$lib/data';
@@ -39,11 +40,22 @@
 				<h3 class="text-xl font-semibold">Locations:</h3>
 				<div class="mt-2">
 					<h4 class="font-semibold">Long Beach</h4>
-					<p class="text-muted-foreground">{companyInfo.locations.longBeach.address}</p>
+					<a
+						href={getDirectionsUrl(companyInfo.locations.longBeach.address)}
+						class="text-muted-foreground"
+					>
+						{companyInfo.locations.longBeach.address}
+					</a>
 				</div>
 				<div class="mt-2">
 					<h4 class="font-semibold">Orange County</h4>
-					<p class="text-muted-foreground">{companyInfo.locations.coronaDelMar.address}</p>
+
+					<a
+						href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)}
+						class="text-muted-foreground"
+					>
+						{companyInfo.locations.coronaDelMar.address}
+					</a>
 				</div>
 			</div>
 

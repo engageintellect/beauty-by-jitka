@@ -3,6 +3,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import Icon from '@iconify/svelte';
 	import { companyInfo } from '$lib/data';
+	import { getDirectionsUrl } from '$lib/utils';
 
 	import { onDestroy, onMount, tick } from 'svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
@@ -61,11 +62,6 @@
 			ScrollTriggerInstance.getAll().forEach((trigger: any) => trigger.kill());
 		}
 	});
-
-	// Function to generate Google Maps directions URL
-	function getDirectionsUrl(address: string) {
-		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
-	}
 </script>
 
 <!-- LOCATIONS SECTION -->

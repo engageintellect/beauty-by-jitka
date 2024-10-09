@@ -1,48 +1,18 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
-	import Modal from '$lib/components/ui/Modal.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import CategoryCard from '$lib/components/ui/CategoryCard.svelte';
-	import { services, serviceCategories } from '$lib/data';
+	import { serviceCategories } from '$lib/data';
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
-	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import { slugify } from '$lib/utils';
-	import { animateMainStagger } from '$lib/animations';
-	import Alert from '$lib/components/ui/Alert.svelte';
-
-	let showModal = false;
-	let modalImageSrc = '';
-
-	function openModal(src: any) {
-		modalImageSrc = src;
-		showModal = true;
-	}
-
-	function closeModal() {
-		showModal = false;
-	}
+	import { animateMainStagger, animateTitle } from '$lib/animations';
 
 	onMount(() => {
-		const images = document.querySelectorAll('.animate-results');
 		animateMainStagger();
-		gsap.from(images, {
-			duration: 1,
-			opacity: 0,
-			y: 20,
-			stagger: 0.1,
-			ease: 'power2.out'
-		});
-
-		gsap.from('.animate-title', {
-			duration: 0.5,
-			opacity: 0,
-			x: 20,
-			ease: 'power2.out'
-		});
+		animateTitle();
 	});
 
 	let searchFiler = '';
@@ -61,15 +31,11 @@
 		</Button>
 
 		<Input bind:value={searchFiler} placeholder="Filter Category" class="w-full max-w-lg" />
-
-		<!-- <a href={'javascript:history.back()'}>
-			<Button size="lg" variant="outline" class="flex items-center gap-2">
-				<Icon icon="akar-icons:arrow-left" class="" />
-				<div class="uppercase">Back</div>
-			</Button>
-		</a> -->
 	</div>
-
+	<div class="animate-title mt-5 flex items-center gap-5 md:mt-10">
+		<div class="text-5xl font-bold uppercase">services</div>
+		<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
+	</div>
 	<div
 		class="animate-results my-5 mb-20 grid gap-2 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3"
 	>
@@ -102,8 +68,4 @@
 			{/each}
 		{/if}
 	</div>
-
-	{#if showModal}
-		<Modal imageSrc={modalImageSrc} onClose={closeModal} />
-	{/if}
 </div>

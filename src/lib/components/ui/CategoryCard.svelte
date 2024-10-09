@@ -14,7 +14,9 @@
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
 	<Card.Content>
-		<div class="relative rounded-b-lg border-t transition-all duration-300">
+		<div
+			class="relative rounded-b-lg border-t transition-all duration-300 md:hover:border-t-muted-foreground/50"
+		>
 			<LazyImage
 				src={img}
 				alt={name}
