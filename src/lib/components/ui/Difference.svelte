@@ -44,8 +44,8 @@
 	});
 </script>
 
-<div class="bg-background md:rounded-lg md:border md:p-5 md:shadow-lg">
-	<div class="text-section flex flex-col gap-5 p-2 md:p-0">
+<div class="rounded-lg bg-background md:border md:p-0 md:p-5 md:shadow-lg">
+	<div class="text-section flex flex-col gap-5 p-5 md:p-0">
 		<div class="text-5xl font-bold uppercase">See the difference</div>
 		<div class="text-2xl font-thin">
 			See the stunning results of our treatments with real before and after photos from our clients.

@@ -69,9 +69,9 @@
 			on:mouseenter={handleMouseEnter}
 			on:mouseleave={handleMouseLeave}
 		>
-			<Carousel.Content class="flex items-center p-5 md:p-0">
+			<Carousel.Content class="flex items-center px-5 md:px-0">
 				{#each results as result}
-					<Carousel.Item class="py-5 sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+					<Carousel.Item class="pb-5 pt-5 sm:basis-1/2 md:basis-1/3 md:pb-0 lg:basis-1/3">
 						<a href="/results">
 							<Card.Root class="shadow-lg  transition-all duration-200 md:hover:scale-[99%]">
 								<Card.Content class="flex h-full w-full items-center justify-center rounded-lg p-0">

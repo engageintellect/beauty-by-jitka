@@ -91,7 +91,7 @@
 
 <div class="animate-item mb-10 md:my-5 md:mb-20">
 	<div
-		class={`flex w-full flex-col gap-5 rounded-lg bg-background dark:bg-background md:flex-row md:gap-5 md:border md:pt-0 md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
+		class={`flex w-full flex-col gap-5 rounded-lg bg-secondaryBackground dark:bg-background md:flex-row md:gap-5 md:border md:bg-background md:pt-0 md:shadow-xl ${hidden ? 'opacity-0' : ''}`}
 	>
 		<div class="flex w-full flex-col rounded-l-lg md:max-w-lg md:p-10">
 			<div class="mx-auto flex w-full max-w-sm flex-col items-start gap-5 md:max-w-md">
