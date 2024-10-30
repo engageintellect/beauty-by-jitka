@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types.js';
-	export let data: PageData;
 	import Form from '$lib/components/ui/Form.svelte';
 	import { companyInfo } from '$lib/data.js';
+	export let data: PageData;
 </script>
 
 <svelte:head>

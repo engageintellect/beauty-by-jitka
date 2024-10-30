@@ -9,6 +9,7 @@
 	import { gsap } from 'gsap';
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
+	import { animateMainStagger } from '$lib/animations';
 
 	let navHidden = true;
 	let menuOpen = false;
@@ -51,12 +52,14 @@
 	function navigateAndCloseMenu() {
 		gsap.to('.mobile-menu', {
 			opacity: 0,
-			y: 0,
+			y: 10,
 			duration: 0.25,
 			ease: 'power2.in',
 			onComplete: () => {
 				menuOpen = false;
-			}
+			},
+
+			stagger: 0.1
 		});
 	}
 </script>
@@ -89,8 +92,8 @@
 				>
 
 				<a
-					href="/checkout/affirm"
-					class={$currentRoute.startsWith('/checkout/affirm')
+					href="/financing"
+					class={$currentRoute.startsWith('/financing')
 						? 'underline decoration-1 underline-offset-8'
 						: ''}>financing</a
 				>
@@ -137,7 +140,7 @@
 			<a href="/about" class="" on:click={navigateAndCloseMenu}>about</a>
 			<a href="/services" class="" on:click={navigateAndCloseMenu}>services</a>
 			<a href="/results" class="" on:click={navigateAndCloseMenu}>gallery</a>
-			<a href="/checkout/affirm" class="" on:click={navigateAndCloseMenu}>financing</a>
+			<a href="/financing" class="" on:click={navigateAndCloseMenu}>financing</a>
 			<a href="/contact" class="" on:click={navigateAndCloseMenu}>contact</a>
 		</div>
 

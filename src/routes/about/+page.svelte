@@ -158,14 +158,14 @@
 		<div class="my-5">
 			<div class="flex items-center gap-2">
 				<a href="/services" class="animate-item w-full">
-					<Button variant="default" class="flex w-full items-center gap-2 uppercase">
+					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
 						<div>Services</div>
 						<Icon icon="bx:plus-medical" class="h-5 w-5" />
 					</Button>
 				</a>
 
 				<a href="/results" class="animate-item w-full">
-					<Button variant="default" class="flex w-full items-center gap-2 uppercase">
+					<Button variant="outline" class="flex w-full items-center gap-2 uppercase">
 						<div>Patient Gallery</div>
 						<Icon icon="lucide:gallery-vertical-end" class="h-5 w-5" />
 					</Button>

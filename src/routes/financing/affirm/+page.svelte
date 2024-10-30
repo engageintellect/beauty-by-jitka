@@ -1,34 +1,28 @@
 <script lang="ts">
 	import { companyInfo } from '$lib/data';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import { goBack } from '$lib/utils';
 	import Icon from '@iconify/svelte';
-	import { animateMainStagger, animateTitle } from '$lib/animations';
+	import { animateMainStagger } from '$lib/animations';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		animateMainStagger();
-		animateTitle();
 	});
 </script>
 
 <svelte:head>
 	<title>Checkout : {companyInfo.name}</title>
-	<meta name="chckout" content={`${companyInfo.name} checkout.`} />
+	<meta name="checkout-affirm" content={`${companyInfo.name} checkout.`} />
 </svelte:head>
 <div class="flex items-center justify-between gap-5">
-	<Button on:click={goBack} variant="outline" class="flex items-center gap-2">
+	<Button href="/financing" variant="outline" class="flex items-center gap-2">
 		<Icon icon="akar-icons:arrow-left" class="" />
 		<div class="uppercase">Back</div>
 	</Button>
 </div>
-<div class="animate-title mt-5 flex items-center gap-5 md:mt-10">
-	<div class="text-5xl font-bold uppercase">financing</div>
-	<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
-</div>
-<div class="animate-item">
+<div class="">
 	<div
-		class="relative mb-20 mt-5 overflow-hidden rounded-lg border pt-[231%] shadow will-change-transform md:mt-10 md:pt-[231.6%]"
+		class="animate-item relative mb-20 mt-5 overflow-hidden rounded-lg border pt-[231%] shadow will-change-transform md:mt-10 md:pt-[231.6%]"
 	>
 		<iframe
 			title="affirm checkout"
