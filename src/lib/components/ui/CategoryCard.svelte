@@ -17,10 +17,10 @@
 		<div
 			class="relative rounded-b-lg border-t transition-all duration-300 md:hover:border-t-muted-foreground/50"
 		>
-			<LazyImage
+			<img
 				src={img}
 				alt={name}
-				imgClass={`h-full max-h-96 w-full shadow brightness-[110%] rounded-b-lg object-cover`}
+				class={`h-full max-h-96 w-full rounded-b-lg object-cover shadow brightness-[110%]`}
 			/>
 
 			{#if comingSoon}
