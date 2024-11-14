@@ -64,5 +64,5 @@
 </div>
 
 <div class="animate-item relative z-0 mb-20 mt-10 overflow-hidden">
-	<div id="all" class="w-full"></div>
+	<div id="all" class=""></div>
 </div>

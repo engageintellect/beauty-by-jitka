@@ -89,3 +89,21 @@
 ::view-transition-new(root) {
 	animation-duration: 0.25s;
 }
+
+/* CHERY WIDGET STYLES */
+.main-all_container-lL2Wi {
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: red;
+}
+
+.testimony-card_border-1Em5a {
+	display: none;
+}
+
+.testimony-title_container-2YHZf span {
+	border: 0 none;
+}
+.testimony-title_container-2YHZf > div {
+	display: flex;
+}
