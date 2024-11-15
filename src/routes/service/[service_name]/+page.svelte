@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { services } from '$lib/data';
-	import { gsap } from 'gsap';
-	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import { get } from 'svelte/store';
 	import { animateMainStagger } from '$lib/animations';
@@ -11,7 +9,6 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { goBack } from '$lib/utils';
 	import Icon from '@iconify/svelte';
-	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
 
 	let service: any;
 
@@ -39,10 +36,9 @@
 	</Button>
 </div>
 
-<div class="pb-20">
+<div class="animate-item pb-20">
 	{#if service}
 		<div
-			in:fade
 			class="animate-item mx-auto mt-5 max-w-3xl rounded-lg bg-background p-5 md:mt-10 md:border md:p-10 md:shadow"
 		>
 			<div class="flex flex-col items-start justify-between gap-10 md:flex-row">
@@ -72,7 +68,7 @@
 				</div>
 
 				<div class="animate-item flex h-full w-full justify-center">
-					<img src={service.img} alt={service.name} class="object-cover" />
+					<img src={service.img} alt={service.name} class="h-64 object-cover md:h-72" />
 				</div>
 			</div>
 		</div>

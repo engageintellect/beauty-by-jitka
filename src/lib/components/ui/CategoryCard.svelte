@@ -15,7 +15,7 @@
 		<div
 			class="absolute -right-1 -top-1 flex items-center gap-2 rounded-lg bg-rose-400 p-2 text-sm text-white"
 		>
-			<div>new</div>
+			<div class="uppercase">new</div>
 			<Icon icon="material-symbols:kid-star" class="" />
 		</div>
 	{/if}

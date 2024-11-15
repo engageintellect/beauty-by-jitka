@@ -3,6 +3,9 @@
 	import LazyImage from '$lib/components/ui/LazyImage.svelte';
 	import Icon from '@iconify/svelte';
 	import { Badge } from '$lib/components/ui/badge/index.js';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
+	import { slugify } from '$lib/utils';
 
 	export let name: string;
 	export let description: string;
@@ -18,12 +21,12 @@
 		<div
 			class="absolute -right-1 -top-1 flex items-center gap-2 rounded-lg bg-rose-400 p-2 text-sm text-white"
 		>
-			<div>new</div>
+			<div class="uppercase">new</div>
 			<Icon icon="material-symbols:kid-star" class="" />
 		</div>
 	{/if}
 
-	<Card.Header>
+	<Card.Header class="">
 		<Card.Title>{name}</Card.Title>
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
@@ -45,6 +48,17 @@
 					Coming Soon...
 				</div>
 			{/if}
+
+			<Card.Footer
+				class="flex items-center justify-between gap-2 transition-all duration-500 md:gap-5 md:opacity-0 md:group-hover/serviceItem:opacity-100"
+			>
+				<Button href={PUBLIC_BOOKING_LINK} variant="default" class="w-full uppercase"
+					>Book Appointment</Button
+				>
+				<Button href={`/service/${slugify(name)}`} variant="outline" class="w-full uppercase"
+					>Learn More</Button
+				>
+			</Card.Footer>
 		</div>
 	</Card.Content>
 	<!-- <Card.Footer class="flex justify-between">

@@ -183,7 +183,8 @@ export const serviceCategories = [
 	{
 		name: 'medical weight loss',
 		isNew: true,
-		tagline: 'Semaglutide weight loss treatment',
+		tagline:
+			'Achieve lasting weight loss with Semaglutide – a proven solution for controlling appetite and enhancing results.',
 		description: `You are not alone if you’re struggling to lose those extra pounds! Approximately 70% of American adults are considered overweight or obese. We are pleased to offer Semaglutide, a treatment that has made weight loss solutions more accessible. Take control of your weight loss journeys with Semaglutide.`,
 		aboutSection: [
 			{
@@ -198,7 +199,7 @@ export const serviceCategories = [
 			{
 				title: 'What to Expect',
 				content:
-					'The duration of the dermal filler procedure typically ranges from 30 minutes to 2 hours, depending on the areas being treated. Some mild swelling, bruising, or tenderness at the injection site is common but generally resolves within a few days. Results are often visible immediately, with improvements continuing over the next 2-3 weeks as the filler integrates with your skin. Depending on the type of filler used and the area treated, results can last between 6 to 24 months. For the best experience, follow all aftercare instructions provided by your practitioner.'
+					'Semaglutide is administered via a simple injection just under the skin (subcutaneously), typically in the abdomen. Your practitioner will guide you on how to administer the injections and adjust the dosage as needed. Most patients begin to see weight loss after their dose has been increased one to two times, typically within a month. It’s important to have realistic expectations and to stay consistent with your treatment plan to achieve the best results.'
 			},
 
 			{
@@ -257,7 +258,17 @@ Semaglutide is ideal for individuals with a body mass index (BMI) of 30 or great
 			{
 				index: 'q7',
 				q: 'Who shouldn’t take Semaglutide?',
-				a: 'thing one thing two thing three'
+				a: {
+					answerHeading: `Despite semaglutide being a good weight loss tool for many people, it's not for everyone. Certain people shouldn't take it:`,
+					answerList: [
+						`Pregnant or breastfeeding women`,
+						`People with a history of pancreatitis`,
+						`People with Type-1 diabetes`,
+						`People with an allergy to semaglutide (or any of its ingredients)`,
+						`People with Multiple Endocrine Neoplasia syndrome type 2`,
+						`Always consult a medical professional before taking semaglutide. Be open and honest about any pre-existing conditions and allergies, so we can make sure it's a good fit before beginning treatment.`
+					]
+				}
 			}
 		],
 
