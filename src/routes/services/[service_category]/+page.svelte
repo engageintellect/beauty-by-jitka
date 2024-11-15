@@ -23,8 +23,11 @@
 		// Find the service by slugified name
 		service = services.filter((s) => slugify(s.category) === params.service_category);
 		category = serviceCategories.find(
-			(cat) => cat.name.toLowerCase() === params.service_category.replace('-', ' ').toLowerCase()
+			(cat) => cat.name.toLowerCase() === params.service_category.replaceAll('-', ' ').toLowerCase()
 		);
+
+		console.log('stuff', service);
+		console.log('category', category);
 
 		// Wait for the DOM to be updated before running the animation
 		await tick();
@@ -61,10 +64,10 @@
 	<div class="mb-10 flex flex-col gap-10 px-2 md:mb-20 md:gap-20">
 		<div>
 			<div class="animate-item mt-10 text-5xl font-semibold uppercase">
-				{params.service_category.replace('-', ' ')}
+				{params.service_category.replaceAll('-', ' ')}
 			</div>
 
-			<div class="animate-item mt-5 text-base text-muted-foreground">
+			<div class="animate-item mt-5 text-base text-muted-foreground md:text-xl">
 				{category.description}
 			</div>
 		</div>
@@ -75,6 +78,7 @@
 				{#each service as s}
 					<a class="animate-item" href={`/service/${slugify(s.name)}`}>
 						<ServiceCard
+							isNew={s.isNew}
 							name={s.name}
 							description={s.description}
 							img={s.img}
@@ -87,42 +91,50 @@
 
 		<div class="animate-item">
 			<div class="text-3xl font-bold">About</div>
-			<div class="mt-5 flex flex-col gap-5 rounded-lg border bg-background p-5">
-				<div>
-					<div class="text-2xl font-semibold">
-						What are <span class="capitalize">{params.service_category.replace('-', ' ')}</span>?
-					</div>
-					<div class="text-base text-muted-foreground">{category.whatIsIt}</div>
-				</div>
+			<div class="mt-5 flex flex-col gap-10 rounded-lg border bg-background p-5">
+				{#each category.aboutSection as about}
+					<div class="flex flex-col gap-2">
+						<div class="text-2xl">{about.title}</div>
+						<div class="text-muted-foreground">{about.content}</div>
 
-				<div>
-					<div class="text-2xl font-semibold">
-						How <span class="capitalize">{params.service_category.replace('-', ' ')}</span> work:
-					</div>
-					<div class="text-base text-muted-foreground">{category.howItWorks}</div>
-				</div>
+						{#if about.list}
+							<ul class="mt-2">
+								{#each about.list as item}
+									<li class="ml-10 list-disc text-muted-foreground">{item}</li>
+								{/each}
+							</ul>
+						{/if}
 
-				<div>
-					<div class="text-2xl font-semibold">What to expect?</div>
-					<div class="text-base text-muted-foreground">{category.whatToExpect}</div>
-				</div>
+						{#if about.contentDisclaimer}
+							<div class="mt-5 text-sm font-thin text-muted-foreground">
+								{about.contentDisclaimer}
+							</div>
+						{/if}
+					</div>
+				{/each}
 			</div>
 		</div>
 
-		<div>
-			<div class="text-3xl font-bold">Frequently Asked Questions</div>
-			<FAQ data={category.faq} />
-		</div>
+		{#if category.faq}
+			<div>
+				<div class="text-3xl font-bold">Frequently Asked Questions</div>
+				<FAQ data={category.faq} />
+			</div>
+		{/if}
 
-		<div class="animate-item">
-			<div class="text-3xl font-bold">Pre Treatment Instructions</div>
-			<Instructions data={category.preTreatmentInstructions} />
-		</div>
+		{#if category.preTreatmentInstructions}
+			<div class="animate-item">
+				<div class="text-3xl font-bold">Pre Treatment Instructions</div>
+				<Instructions data={category.preTreatmentInstructions} />
+			</div>
+		{/if}
 
-		<div class="animate-item">
-			<div class="text-3xl font-bold">Post Treatment Instructions</div>
-			<Instructions data={category.postTreatmentInstructions} />
-		</div>
+		{#if category.postTreatmentInstructions}
+			<div class="animate-item">
+				<div class="text-3xl font-bold">Post Treatment Instructions</div>
+				<Instructions data={category.postTreatmentInstructions} />
+			</div>
+		{/if}
 
 		{#if category.choosingRight}
 			<div class="animate-item">
@@ -135,6 +147,12 @@
 			<div class="animate-item">
 				<div class="text-3xl font-bold">{category.conclusion.title}</div>
 				<div class="text-muted-foreground">{category.conclusion.content}</div>
+			</div>
+		{/if}
+
+		{#if category.disclaimer}
+			<div class="animate-item">
+				<div class="text-sm font-thin text-muted-foreground">{category.disclaimer.content}</div>
 			</div>
 		{/if}
 	</div>

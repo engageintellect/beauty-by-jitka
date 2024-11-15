@@ -1,26 +1,36 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card/index.js';
 	import LazyImage from '$lib/components/ui/LazyImage.svelte';
+	import Icon from '@iconify/svelte';
 
 	export let name: string;
 	export let description: string;
 	export let img: string;
 	export let comingSoon: boolean;
+	export let isNew: boolean;
 </script>
 
 <Card.Root class="group/serviceItem flex h-full w-full flex-col justify-between bg-background">
+	{#if isNew}
+		<div
+			class="absolute -right-1 -top-1 flex items-center gap-2 rounded-lg bg-rose-400 p-2 text-sm text-white"
+		>
+			<div>new</div>
+			<Icon icon="material-symbols:kid-star" class="" />
+		</div>
+	{/if}
 	<Card.Header>
 		<Card.Title>{name}</Card.Title>
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
 	<Card.Content>
 		<div
-			class="relative rounded-b-lg border-t transition-all duration-300 md:hover:border-t-muted-foreground/50"
+			class="relative overflow-hidden rounded-b-lg border-t transition-all duration-300 md:hover:border-t-muted-foreground/50"
 		>
 			<img
 				src={img}
 				alt={name}
-				class={`h-full max-h-96 w-full rounded-b-lg object-cover shadow brightness-[110%]`}
+				class={`transition-scale h-72 w-full rounded-b-lg object-cover shadow brightness-[110%] duration-300 md:group-hover/serviceItem:scale-[102%]`}
 			/>
 
 			{#if comingSoon}

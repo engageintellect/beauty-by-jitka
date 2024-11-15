@@ -12,7 +12,7 @@
 	{#each data as { q, a, index }}
 		<Accordion.Item value={index}>
 			<Accordion.Trigger>{q}</Accordion.Trigger>
-			<Accordion.Content>{a}</Accordion.Content>
+			<Accordion.Content class="text-muted-foreground">{a}</Accordion.Content>
 		</Accordion.Item>
 	{/each}
 </Accordion.Root>

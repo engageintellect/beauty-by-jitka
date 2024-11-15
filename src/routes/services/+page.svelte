@@ -37,7 +37,7 @@
 		<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
 	</div>
 	<div
-		class="animate-results my-5 mb-20 grid gap-2 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3"
+		class="animate-results my-5 mb-20 grid gap-5 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-2"
 	>
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
@@ -46,6 +46,7 @@
 					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
 				>
 					<CategoryCard
+						isNew={category.isNew}
 						name={category.name}
 						description={category.tagline}
 						img={category.img}
@@ -58,6 +59,7 @@
 				{#if category.name.toLowerCase().includes(searchFiler.toLowerCase())}
 					<a href={`/services/${slugify(category.name)}`}>
 						<CategoryCard
+							isNew={category.isNew}
 							name={category.name}
 							description={category.tagline}
 							img={category.img}
