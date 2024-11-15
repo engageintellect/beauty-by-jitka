@@ -121,10 +121,10 @@
 
 			<div class="animate-item mx-auto mt-10 flex w-full max-w-sm items-center gap-2 md:max-w-lg">
 				<a href={PUBLIC_BOOKING_LINK} class="group/bookingsButton w-full">
-					<Button size="lg" class="flex w-full items-center justify-between text-lg">
+					<Button size="lg" class="flex w-full items-center justify-between gap-2 text-lg">
 						<div class="uppercase">Booking</div>
 						<Icon
-							icon="teenyicons:appointments-outline"
+							icon="material-symbols:calendar-clock-outline"
 							class="h-7 w-7 transition-transform duration-300 lg:group-hover/bookingsButton:translate-x-1"
 						/>
 					</Button>
