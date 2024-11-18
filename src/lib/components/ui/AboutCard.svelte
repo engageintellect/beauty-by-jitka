@@ -108,7 +108,7 @@
 				sought-after facial injectors, attracting millions of views.
 			</div>
 			<div class="flex items-center justify-center gap-5">
-				<a href="/about">
+				<a data-sveltekit-preload-data href="/about">
 					<Button
 						size="lg"
 						class="group/readMoreButton flex w-full items-center gap-2 text-xl uppercase md:w-fit"

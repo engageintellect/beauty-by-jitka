@@ -35,6 +35,7 @@
 
 <div class="mt-10 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
 	<a
+		data-sveltekit-preload-data
 		data-sveltekit-reload
 		href="/financing/cherry"
 		class="animate-item group relative h-full rounded-lg border"
@@ -62,6 +63,7 @@
 	</a>
 
 	<a
+		data-sveltekit-preload-data
 		data-sveltekit-reload
 		href="/financing/affirm"
 		class="animate-item group relative h-full rounded-lg border"

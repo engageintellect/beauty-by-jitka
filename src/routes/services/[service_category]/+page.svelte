@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import { services, serviceCategories } from '$lib/data';
-	import { animateMainStagger } from '$lib/animations';
+	import { animateMainStagger, animateTitle } from '$lib/animations';
 	import { gsap } from 'gsap';
 	import { page } from '$app/stores';
 	import { get } from 'svelte/store';
@@ -35,6 +35,7 @@
 		// Run animations after DOM updates
 		if (category) {
 			animateMainStagger();
+			animateTitle();
 		}
 
 		gsap.from('.service-title', {
@@ -63,7 +64,7 @@
 {#if category}
 	<div class="mb-10 flex flex-col gap-10 px-2 md:mb-20 md:gap-20">
 		<div>
-			<div class="animate-item mt-10 text-5xl font-semibold uppercase">
+			<div class="animate-title mt-10 text-5xl font-semibold uppercase">
 				{params.service_category.replaceAll('-', ' ')}
 			</div>
 
@@ -76,7 +77,7 @@
 			<div class="text-3xl font-bold">Products</div>
 			<div class="animate-item mt-5 grid gap-4 md:grid-cols-2">
 				{#each service as s}
-					<a class="animate-item" href={`/service/${slugify(s.name)}`}>
+					<a data-sveltekit-preload-data class="animate-item" href={`/service/${slugify(s.name)}`}>
 						<ServiceCard
 							isNew={s.isNew}
 							name={s.name}

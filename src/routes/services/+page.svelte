@@ -42,6 +42,7 @@
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
 				<a
+					data-sveltekit-preload-data
 					class="animate-item"
 					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
 				>
@@ -57,7 +58,7 @@
 		{:else}
 			{#each serviceCategories as category}
 				{#if category.name.toLowerCase().includes(searchFiler.toLowerCase())}
-					<a href={`/services/${slugify(category.name)}`}>
+					<a data-sveltekit-preload-data href={`/services/${slugify(category.name)}`}>
 						<CategoryCard
 							isNew={category.isNew}
 							name={category.name}

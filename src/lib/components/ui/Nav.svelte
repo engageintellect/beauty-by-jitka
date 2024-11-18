@@ -4,12 +4,10 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import Icon from '@iconify/svelte';
-	import { companyInfo } from '$lib/data';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
-	import { animateMainStagger } from '$lib/animations';
 
 	let navHidden = true;
 	let menuOpen = false;
@@ -73,18 +71,21 @@
 
 			<div class="hidden items-center gap-5 text-lg md:flex">
 				<a
+					data-sveltekit-preload-data
 					href="/about"
 					class={$currentRoute.startsWith('/about')
 						? 'underline decoration-1 underline-offset-8'
 						: ''}>about</a
 				>
 				<a
+					data-sveltekit-preload-data
 					href="/services"
 					class={$currentRoute.startsWith('/service')
 						? 'underline decoration-1 underline-offset-8'
 						: ''}>services</a
 				>
 				<a
+					data-sveltekit-preload-data
 					href="/results"
 					class={$currentRoute.startsWith('/results')
 						? 'underline decoration-1 underline-offset-8'
@@ -92,6 +93,7 @@
 				>
 
 				<a
+					data-sveltekit-preload-data
 					href="/financing"
 					class={$currentRoute.startsWith('/financing')
 						? 'underline decoration-1 underline-offset-8'
@@ -99,6 +101,7 @@
 				>
 
 				<a
+					data-sveltekit-preload-data
 					href="/contact"
 					class={$currentRoute.startsWith('/contact')
 						? 'underline decoration-1 underline-offset-8'
@@ -131,17 +134,31 @@
 		<!-- Home link only visible on mobile -->
 
 		<div class="flex w-full flex-col items-center gap-5">
-			<a href="/" class="nav-logo text-2xl font-bold md:hidden" aria-label="Home">
+			<a
+				data-sveltekit-preload-data
+				href="/"
+				class="nav-logo text-2xl font-bold md:hidden"
+				aria-label="Home"
+			>
 				<img src={logo} alt="Jitka" class="h-16 w-16 transition-all duration-300" />
 			</a>
 
 			<a href="/" class="md:hidden" on:click={navigateAndCloseMenu}>home</a>
 
-			<a href="/about" class="" on:click={navigateAndCloseMenu}>about</a>
-			<a href="/services" class="" on:click={navigateAndCloseMenu}>services</a>
-			<a href="/results" class="" on:click={navigateAndCloseMenu}>gallery</a>
-			<a href="/financing" class="" on:click={navigateAndCloseMenu}>financing</a>
-			<a href="/contact" class="" on:click={navigateAndCloseMenu}>contact</a>
+			<a data-sveltekit-preload-data href="/about" class="" on:click={navigateAndCloseMenu}>about</a
+			>
+			<a data-sveltekit-preload-data href="/services" class="" on:click={navigateAndCloseMenu}
+				>services</a
+			>
+			<a data-sveltekit-preload-data href="/results" class="" on:click={navigateAndCloseMenu}
+				>gallery</a
+			>
+			<a data-sveltekit-preload-data href="/financing" class="" on:click={navigateAndCloseMenu}
+				>financing</a
+			>
+			<a data-sveltekit-preload-data href="/contact" class="" on:click={navigateAndCloseMenu}
+				>contact</a
+			>
 		</div>
 
 		<Button
