@@ -188,11 +188,6 @@ export const serviceCategories = [
 		description: `You are not alone if you’re struggling to lose those extra pounds! Approximately 70% of American adults are considered overweight or obese. We are pleased to offer Semaglutide, a treatment that has made weight loss solutions more accessible. Take control of your weight loss journeys with Semaglutide.`,
 		aboutSection: [
 			{
-				title: 'What is Semaglutide?',
-				content: `Semaglutide is a prescription medication specifically compounded to assist with weight management. When combined with a healthy diet and regular exercise, Semaglutide can help adults achieve significant weight loss. It belongs to a class of medications called glucagon-like peptide-1 (GLP-1) agonists, which mimic the natural hormone GLP-1 in the body. This treatment works by regulating blood sugar levels after meals, stimulating insulin secretion, and slowing down the release of sugar into the bloodstream. By delaying stomach emptying, Semaglutide helps you feel fuller for longer, reducing overall calorie consumption. Clinical studies have shown that weekly Semaglutide injections can lead to an average weight loss of 9-13% over a year when combined with healthy lifestyle habits.`
-			},
-
-			{
 				title: 'How Does Semaglutide Work?',
 				content: `Semaglutide is a prescription medication specifically compounded to assist with weight management. When combined with a healthy diet and regular exercise, Semaglutide can help adults achieve significant weight loss. It belongs to a class of medications called glucagon-like peptide-1 (GLP-1) agonists, which mimic the natural hormone GLP-1 in the body. This treatment works by regulating blood sugar levels after meals, stimulating insulin secretion, and slowing down the release of sugar into the bloodstream. By delaying stomach emptying, Semaglutide helps you feel fuller for longer, reducing overall calorie consumption. Clinical studies have shown that weekly Semaglutide injections can lead to an average weight loss of 9-13% over a year when combined with healthy lifestyle habits.`
 			},
