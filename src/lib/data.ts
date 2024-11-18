@@ -211,7 +211,8 @@ Semaglutide is ideal for individuals with a body mass index (BMI) of 30 or great
 					'Those with a history of thyroid cancer'
 				],
 
-				contentDisclaimer: `Disclaimer: Always consult a medical professional before starting Semaglutide to ensure it’s the right fit for you.`
+				contentDisclaimer: `Disclaimer: Always consult a medical professional before starting Semaglutide to ensure it’s the right fit for you.`,
+				insuranceDisclaimer: `Insurance Disclaimer: Please note that we do not accept insurance for these medications, as obtaining them through insurance can be both challenging and costly. However, we do accept HSA/FSA cards for payment, as well as offer competitive pricing and flexible financing options to make your treatment more affordable.`
 			}
 		],
 		img: weightLossImage,

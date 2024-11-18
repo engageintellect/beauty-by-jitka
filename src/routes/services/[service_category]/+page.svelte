@@ -111,6 +111,12 @@
 								{about.contentDisclaimer}
 							</div>
 						{/if}
+
+						{#if about.insuranceDisclaimer}
+							<div class="mt-2 text-sm font-thin text-muted-foreground">
+								{about.insuranceDisclaimer}
+							</div>
+						{/if}
 					</div>
 				{/each}
 			</div>
