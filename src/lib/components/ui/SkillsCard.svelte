@@ -180,16 +180,27 @@
 	<div class="card2 relative order-2 flex h-full w-full">
 		<div class="z-20 flex w-full flex-col gap-5 p-2 md:p-5">
 			<div class="w-full text-3xl font-bold uppercase">services</div>
-			<div class="text-2xl font-thin">
-				Offering a range of cosmetic injections to address your unique beauty goals.
-			</div>
-			<ul class="flex flex-col gap-2 text-xl font-thin">
+
+			<ul class="flex flex-col gap-2 text-2xl font-thin text-muted-foreground">
 				<li>
-					<strong>Neurotoxins:</strong> Smooth out fine lines and wrinkles for a youthful appearance.
+					<strong class="text-foreground">Neurotoxins:</strong> Smooth out fine lines and wrinkles for
+					a youthful appearance.
 				</li>
-				<li><strong>Dermal Fillers:</strong> Add volume and definition to your facial features.</li>
-				<li><strong>Lip Enhancements:</strong> Achieve fuller, more defined lips.</li>
-				<li><strong>Skin Rejuvenation:</strong> Revitalize your skin for a fresh, radiant glow.</li>
+				<li>
+					<strong class="text-foreground">Dermal Fillers:</strong> Add volume and definition to your
+					facial features.
+				</li>
+				<li>
+					<strong class="text-foreground">Lip Enhancements:</strong> Achieve fuller, more defined lips.
+				</li>
+				<li>
+					<strong class="text-foreground">Skin Rejuvenation:</strong> Revitalize your skin for a fresh,
+					radiant glow.
+				</li>
+				<li>
+					<strong class="text-foreground">Medical Weight Loss:</strong> Achieve your health goals with
+					personalized medical weight loss solutions.
+				</li>
 			</ul>
 			<div class="flex items-center gap-2">
 				<a href="/services">

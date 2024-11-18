@@ -46,7 +46,7 @@
 	</div>
 
 	<div
-		class="animate-results my-5 grid grid-cols-2 gap-2 md:mt-10 md:grid-cols-3 md:gap-5 lg:grid-cols-4"
+		class="animate-item my-5 grid grid-cols-2 gap-2 md:mt-10 md:grid-cols-3 md:gap-5 lg:grid-cols-4"
 	>
 		{#each results as result}
 			<div class="animate-item group">
