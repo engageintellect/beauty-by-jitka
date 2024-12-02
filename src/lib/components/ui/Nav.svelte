@@ -34,6 +34,11 @@
 				{ opacity: 0, y: 0 },
 				{ opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }
 			);
+			gsap.fromTo(
+				'.mobile-menu-content',
+				{ opacity: 0, y: 125 },
+				{ opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }
+			);
 		} else {
 			gsap.to('.mobile-menu', {
 				opacity: 0,
@@ -50,7 +55,7 @@
 	function navigateAndCloseMenu() {
 		gsap.to('.mobile-menu', {
 			opacity: 0,
-			y: 10,
+			y: 0,
 			duration: 0.25,
 			ease: 'power2.in',
 			onComplete: () => {
@@ -133,7 +138,7 @@
 	>
 		<!-- Home link only visible on mobile -->
 
-		<div class="flex w-full flex-col items-center gap-5">
+		<div class="mobile-menu-content my-10 flex w-full flex-col items-center gap-5">
 			<a
 				data-sveltekit-preload-data
 				href="/"

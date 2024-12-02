@@ -45,11 +45,18 @@
 		<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
 	</div>
 
+	<div class="animate-item mt-5 text-xl text-muted-foreground">
+		<span class="font-semibold text-foreground">Results that speak for themselves.</span>
+		Take a look at some of our clients' before and after photos. Feel free to
+		<a class="text-foreground underline" href="/contact">contact us</a> with any questions about specific
+		treatments.
+	</div>
+
 	<div
 		class="animate-item my-5 grid grid-cols-2 gap-2 md:mt-10 md:grid-cols-3 md:gap-5 lg:grid-cols-4"
 	>
 		{#each results as result}
-			<div class="animate-item group">
+			<div class="group">
 				<button
 					class="h-full w-full cursor-pointer rounded-lg object-cover shadow-lg transition-all duration-300 md:group-hover:-translate-y-[1px] md:group-hover:saturate-[110%]"
 					on:click={() => openModal(result.image)}

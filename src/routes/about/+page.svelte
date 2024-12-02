@@ -131,7 +131,7 @@
 	<!-- JITKA SECTION -->
 	<div class="jitka-section h-full w-full rounded-lg bg-background p-2 shadow-lg md:border md:p-5">
 		<div class="animate-item w-full text-3xl font-bold md:text-5xl">JITKA ZAVADILOVA, RN</div>
-		<div class="animate-item mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
+		<div class="animate-item w-full text-2xl font-thin text-muted-foreground md:text-3xl">
 			Registered Nurse / Co-founder
 		</div>
 
@@ -143,7 +143,7 @@
 				class="jitka-section-photo mr-5 h-40 w-32 rounded-lg bg-fuchsia-300 object-cover object-top shadow-xl md:mt-5 md:hidden md:w-1/3"
 			></enhanced:img>
 
-			<div class="animate-item flex-1 text-xl text-muted-foreground md:mt-5">
+			<div class="animate-item flex-1 text-xl text-muted-foreground md:mt-2">
 				Based in Orange County and Los Angeles, California.
 			</div>
 		</div>
@@ -199,7 +199,7 @@
 		class="doctor-section mt-20 h-full rounded-lg bg-background p-2 shadow-lg md:mt-36 md:border md:p-5"
 	>
 		<div class="w-full text-3xl font-bold md:text-5xl">DR. STEVEN REYNOLDS</div>
-		<div class="mt-2 w-full text-2xl font-thin md:mt-5 md:text-3xl">
+		<div class="w-full text-2xl font-thin text-muted-foreground md:text-3xl">
 			Medical Director / Co-founder
 		</div>
 		<!-- MOBILE IMAGE -->

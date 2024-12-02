@@ -36,6 +36,13 @@
 		<div class="text-5xl font-bold uppercase">services</div>
 		<!-- <Icon icon="ri:gallery-view-2" class="text-3xl md:text-5xl" /> -->
 	</div>
+
+	<div class="animate-item mt-5 text-xl text-muted-foreground">
+		<span class="font-semibold text-foreground">Results, fast.</span>
+		We specialize in provising a variety of safe, proven, and effective services to help you look and
+		feel your best.
+	</div>
+
 	<div
 		class="animate-results my-5 mb-20 grid gap-5 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-2"
 	>
