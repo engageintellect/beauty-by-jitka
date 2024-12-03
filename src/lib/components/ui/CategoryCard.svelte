@@ -27,11 +27,17 @@
 		<div
 			class="relative overflow-hidden rounded-b-lg border-t transition-all duration-300 md:hover:border-t-muted-foreground/50"
 		>
-			<img
-				src={img}
-				alt={name}
-				class={`transition-scale h-72 w-full rounded-b-lg object-cover shadow brightness-[110%] duration-300 md:group-hover/serviceItem:scale-[102%]`}
-			/>
+			{#if !img}
+				<div class={`flex h-72 w-full items-center justify-center`}>
+					<Icon icon="eos-icons:loading" class="text-5xl text-muted-foreground" />
+				</div>
+			{:else}
+				<img
+					src={img}
+					alt={name}
+					class={`transition-scale h-72 w-full rounded-b-lg object-cover shadow brightness-[110%] duration-300 md:group-hover/serviceItem:scale-[102%]`}
+				/>
+			{/if}
 
 			{#if comingSoon}
 				<div

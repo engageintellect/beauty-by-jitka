@@ -16,9 +16,11 @@
 </script>
 
 {#if showFooter}
-	<footer class="mx-auto w-full max-w-5xl border-t py-5" in:fade={{ duration: 1000 }}>
+	<footer class="mx-auto w-full border-t bg-background py-5" in:fade={{ duration: 1000 }}>
 		<!-- Mobile responsive layout -->
-		<div class="flex flex-col justify-between space-y-6 lg:flex-row lg:space-x-6 lg:space-y-0">
+		<div
+			class="mx-auto flex max-w-5xl flex-col justify-between space-y-6 lg:flex-row lg:space-x-6 lg:space-y-0"
+		>
 			<div class="text-center lg:text-left">
 				<div
 					class="mx-auto flex w-full max-w-5xl items-center justify-center lg:mx-0 lg:justify-start"

@@ -32,11 +32,17 @@
 	</Card.Header>
 	<Card.Content>
 		<div class="relative">
-			<LazyImage
-				src={img}
-				alt={name}
-				imgClass={`h-52 w-full rounded-lg object-contain transition-all duration-300 md:group-hover/serviceItem:scale-[102%] p-5`}
-			/>
+			{#if !img}
+				<div class={`flex h-72 w-full items-center justify-center`}>
+					<Icon icon="eos-icons:loading" class="text-5xl text-muted-foreground" />
+				</div>
+			{:else}
+				<LazyImage
+					src={img}
+					alt={name}
+					imgClass={`h-52 w-full rounded-lg object-contain transition-all duration-300 md:group-hover/serviceItem:scale-[102%] p-5`}
+				/>
+			{/if}
 
 			{#if comingSoon}
 				<div

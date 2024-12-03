@@ -47,7 +47,7 @@
 
 	<div class="animate-item mt-5 text-xl text-muted-foreground">
 		<span class="font-semibold text-foreground">Results that speak for themselves.</span>
-		Take a look at some of our clients' before and after photos. Feel free to
+		Take a look at some of our clients' before and after results. Feel free to
 		<a class="text-foreground underline" href="/contact">contact us</a> with any questions about specific
 		treatments.
 	</div>
@@ -62,11 +62,17 @@
 					on:click={() => openModal(result.image)}
 					on:keydown={(e) => e.key === 'Enter' && openModal(result.image)}
 				>
-					<enhanced:img
-						src={result.image}
-						alt="result"
-						class="h-full w-full rounded-lg object-cover"
-					></enhanced:img>
+					{#if !result.image}
+						<div class={`flex h-64 w-full items-center justify-center rounded-lg border`}>
+							<Icon icon="eos-icons:loading" class="text-5xl text-muted-foreground" />
+						</div>
+					{:else}
+						<enhanced:img
+							src={result.image}
+							alt="result"
+							class="h-full w-full rounded-lg object-cover"
+						></enhanced:img>
+					{/if}
 				</button>
 			</div>
 		{/each}

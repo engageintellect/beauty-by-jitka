@@ -48,19 +48,23 @@
 	>
 		{#if searchFiler === ''}
 			{#each serviceCategories as category}
-				<a
-					data-sveltekit-preload-data
-					class="animate-item"
-					href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
-				>
-					<CategoryCard
-						isNew={category.isNew}
-						name={category.name}
-						description={category.tagline}
-						img={category.img}
-						comingSoon={category.coming_soon}
-					/>
-				</a>
+				{#if category.img}
+					<a
+						data-sveltekit-preload-data
+						class="animate-item"
+						href={`${category.coming_soon === false ? `/services/${slugify(category.name)}` : '/coming-soon'}`}
+					>
+						<CategoryCard
+							isNew={category.isNew}
+							name={category.name}
+							description={category.tagline}
+							img={category.img}
+							comingSoon={category.coming_soon}
+						/>
+					</a>
+				{:else}
+					<div>hi</div>
+				{/if}
 			{/each}
 		{:else}
 			{#each serviceCategories as category}
