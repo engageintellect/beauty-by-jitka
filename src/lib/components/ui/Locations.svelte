@@ -80,7 +80,7 @@
 			<div class="mt-2">
 				<a href={getDirectionsUrl(companyInfo.locations.orangeCounty.address)} target="_blank">
 					<LocationCard
-						center={[-117.8725, 33.6007]}
+						center={[-117.9057, 33.6241]}
 						name={companyInfo.locations.orangeCounty.address}
 					/>
 				</a>
