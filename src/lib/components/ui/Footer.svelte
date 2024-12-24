@@ -43,20 +43,20 @@
 				<div class="mt-2">
 					<h4 class="font-semibold">Long Beach</h4>
 					<a
-						href={getDirectionsUrl(companyInfo.locations.longBeach.address)}
+						href={getDirectionsUrl(companyInfo.locations.losAngeles.address)}
 						class="text-muted-foreground"
 					>
-						{companyInfo.locations.longBeach.address}
+						{companyInfo.locations.losAngeles.address}
 					</a>
 				</div>
 				<div class="mt-2">
 					<h4 class="font-semibold">Orange County</h4>
 
 					<a
-						href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)}
+						href={getDirectionsUrl(companyInfo.locations.orangeCounty.address)}
 						class="text-muted-foreground"
 					>
-						{companyInfo.locations.coronaDelMar.address}
+						{companyInfo.locations.orangeCounty.address}
 					</a>
 				</div>
 			</div>

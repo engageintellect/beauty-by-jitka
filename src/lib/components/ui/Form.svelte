@@ -246,8 +246,8 @@
 							<Select.Value class="text-lg" placeholder="Select Location" />
 						</Select.Trigger>
 						<Select.Content>
-							<Select.Item class="text-lg" label="Corona Del Mar" value="Corona Del Mar"
-								>Corona Del Mar</Select.Item
+							<Select.Item class="text-lg" label="Orange County" value="Orange County"
+								>Orange County</Select.Item
 							>
 							<Select.Item class="text-lg" label="Long Beach" value="Long Beach"
 								>Long Beach</Select.Item

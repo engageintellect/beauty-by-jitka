@@ -69,37 +69,37 @@
 	<div class="mb-5 text-5xl font-bold uppercase">Locations</div>
 	<div class="flex flex-col items-center gap-5 sm:flex-row">
 		<div class="w-full">
-			<div class="w-full text-xl font-thin">Corona Del Mar</div>
-			<div class="w-full text-lg">{companyInfo.locations.coronaDelMar.address}</div>
-			<a href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)} target="_blank">
+			<div class="w-full text-xl font-thin">Orange County</div>
+			<div class="w-full text-lg">{companyInfo.locations.orangeCounty.address}</div>
+			<a href={getDirectionsUrl(companyInfo.locations.orangeCounty.address)} target="_blank">
 				<Button variant="outline" class="flex items-center gap-2">
 					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
 			<div class="mt-2">
-				<a href={getDirectionsUrl(companyInfo.locations.coronaDelMar.address)} target="_blank">
+				<a href={getDirectionsUrl(companyInfo.locations.orangeCounty.address)} target="_blank">
 					<LocationCard
 						center={[-117.8725, 33.6007]}
-						name={companyInfo.locations.coronaDelMar.address}
+						name={companyInfo.locations.orangeCounty.address}
 					/>
 				</a>
 			</div>
 		</div>
 		<div class="w-full">
 			<div class="w-full text-xl font-thin">Long Beach</div>
-			<div class="w-full text-lg">{companyInfo.locations.longBeach.address}</div>
-			<a href={getDirectionsUrl(companyInfo.locations.longBeach.address)} target="_blank">
+			<div class="w-full text-lg">{companyInfo.locations.losAngeles.address}</div>
+			<a href={getDirectionsUrl(companyInfo.locations.losAngeles.address)} target="_blank">
 				<Button variant="outline" class="flex items-center gap-2">
 					<div class="uppercase">Directions</div>
 					<Icon icon="material-symbols:location-on" class="h-5 w-5" />
 				</Button>
 			</a>
 			<div class="mt-2">
-				<a href={getDirectionsUrl(companyInfo.locations.longBeach.address)} target="_blank">
+				<a href={getDirectionsUrl(companyInfo.locations.losAngeles.address)} target="_blank">
 					<LocationCard
 						center={[-118.1229, 33.7562]}
-						name={companyInfo.locations.longBeach.address}
+						name={companyInfo.locations.losAngeles.address}
 					/>
 				</a>
 			</div>

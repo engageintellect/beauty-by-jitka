@@ -36,12 +36,12 @@ export const companyInfo = {
 	},
 
 	locations: {
-		coronaDelMar: {
-			address: '2711 East Coast Hwy, Suite #1 Corona Del Mar, CA 92625',
+		orangeCounty: {
+			address: '901 Dover Drive, Suite #201 Newport Beach, CA 92660',
 			phone: '+1234567890'
 		},
 
-		longBeach: {
+		losAngeles: {
 			address: '5865 E. Naples Plaza Long Beach, CA 90803',
 			phone: '+1234567890'
 		}
