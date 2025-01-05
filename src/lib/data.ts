@@ -37,7 +37,7 @@ export const companyInfo = {
 
 	locations: {
 		orangeCounty: {
-			address: '901 Dover Drive, Suite #201 Newport Beach, CA 92660',
+			address: '901 Dover Drive, Suite #210 Newport Beach, CA 92660',
 			phone: '+1234567890'
 		},
 
