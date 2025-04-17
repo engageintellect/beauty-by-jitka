@@ -7,7 +7,7 @@ import restylaneRefyneImage from '$lib/assets/images/services/restylane-refyne.p
 import restylaneDefyneImage from '$lib/assets/images/services/restylane-defyne.png';
 import stemCellImage from '$lib/assets/images/services/stemcell.png';
 import prpImage from '$lib/assets/images/services/prp.png';
-import semaglutideImage from '$lib/assets/images/services/semaglutide.png';
+import semaglutideImage from '$lib/assets/images/semaglutide.png';
 import weightLossImage from '$lib/assets/images/services/medical-weight-loss.png';
 import juvedermVollureImage from '$lib/assets/images/services/juvederm-vollure.png';
 
@@ -181,8 +181,8 @@ export const serviceCategories = [
 	},
 
 	{
-		name: 'medical weight loss',
-		isNew: true,
+		name: 'semaglutide weight loss',
+		isNew: false,
 		tagline:
 			'Achieve lasting weight loss with Semaglutide – a proven solution for controlling appetite and enhancing results.',
 		description: `You are not alone if you’re struggling to lose those extra pounds! Approximately 70% of American adults are considered overweight or obese. We are pleased to offer Semaglutide, a treatment that has made weight loss solutions more accessible. Take control of your weight loss journeys with Semaglutide.`,
@@ -568,8 +568,8 @@ Semaglutide is ideal for individuals with a body mass index (BMI) of 30 or great
 export const services = [
 	{
 		name: 'Semaglutide',
-		category: 'medical weight loss',
-		isNew: true,
+		category: 'semaglutide weight loss',
+		isNew: false,
 
 		description:
 			'Semaglutide is a prescription GLP-1 agonist that aids in weight loss by regulating blood sugar, slowing digestion, and reducing appetite, leading to significant weight reduction when paired with a healthy diet and exercise.',
