@@ -37,7 +37,7 @@ export const companyInfo = {
 
 	locations: {
 		orangeCounty: {
-			address: '901 Dover Drive, Suite #210 Newport Beach, CA 92660',
+      address: '4980 Barranca Pkwy, #201 Irvine, CA 92604',
 			phone: '+1234567890'
 		},
 
