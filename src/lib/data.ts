@@ -16,7 +16,7 @@ import categoryDermalFillers from '$lib/assets/images/results/result-29.png';
 
 export const companyInfo = {
 	name: 'Beauty by Jitka',
-	phone: '9499935222',
+	phone: '9494184911',
 	email: 'info@beautybyjitka.com',
 	url: 'https://beautybyjitka.com',
 
@@ -37,7 +37,7 @@ export const companyInfo = {
 
 	locations: {
 		orangeCounty: {
-      address: '4980 Barranca Pkwy, #201 Irvine, CA 92604',
+			address: '4980 Barranca Pkwy, #201 Irvine, CA 92604',
 			phone: '+1234567890'
 		},
 

@@ -123,7 +123,7 @@
 
 			<div class="mt-5 flex items-center text-xl">
 				<div>Or, send us a</div>
-				<a href="sms:9499935222" class="ml-2">
+				<a href="sms:9494184911" class="ml-2">
 					<Button variant="outline" class="flex items-center gap-2 uppercase">
 						<div>text message</div>
 					</Button>
