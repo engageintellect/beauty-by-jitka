@@ -12,6 +12,7 @@
 	import Icon from '@iconify/svelte';
 	import FAQ from '$lib/components/ui/FAQ.svelte';
 	import Instructions from '$lib/components/ui/Instructions.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let service: any;
 	let category: any;
@@ -48,9 +49,12 @@
 </script>
 
 <svelte:head>
-	<title>{service ? service.name : 'Service Not Found'}</title>
-	{#if service}
-		<meta name="description" content={service.description} />
+	{#if category}
+		<Seo
+			title={category.name.charAt(0).toUpperCase() + category.name.slice(1)}
+			description={category.tagline || category.description}
+			canonicalPath={`/services/${params.service_category}`}
+		/>
 	{/if}
 </svelte:head>
 

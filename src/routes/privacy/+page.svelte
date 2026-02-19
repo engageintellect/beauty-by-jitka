@@ -1,12 +1,14 @@
 <script>
 	export let data;
 	import { companyInfo } from '$lib/data';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Privacy Policy</title>
-	<meta name="description" content="Privacy Policy for our website." />
-</svelte:head>
+<Seo
+	title="Privacy Policy"
+	description="Read the Beauty by Jitka privacy policy. Learn how we collect, use, and protect your personal information."
+	canonicalPath="/privacy"
+/>
 
 <main class="mx-auto max-w-4xl space-y-8 p-2">
 	<h1 class="mb-4 text-3xl font-bold">Privacy Policy</h1>

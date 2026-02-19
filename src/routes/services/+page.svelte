@@ -9,6 +9,7 @@
 	import { goBack } from '$lib/utils';
 	import { slugify } from '$lib/utils';
 	import { animateMainStagger, animateTitle } from '$lib/animations';
+	import Seo from '$lib/components/Seo.svelte';
 
 	onMount(() => {
 		animateMainStagger();
@@ -18,10 +19,12 @@
 	let searchFiler = '';
 </script>
 
-<svelte:head>
-	<title>Services : {companyInfo.name}</title>
-	<meta name="description" content={`${companyInfo.name} services menu.`} />
-</svelte:head>
+<Seo
+	title="Services"
+	description="Explore our full menu of aesthetic treatments including Botox, Dysport, dermal fillers, Juvederm, Restylane, semaglutide weight loss, and PRP therapy at Beauty by Jitka."
+	canonicalPath="/services"
+	keywords="Botox, Dysport, dermal fillers, Juvederm, Restylane, semaglutide, PRP, aesthetic services, medspa treatments"
+/>
 
 <div>
 	<div class="flex items-center justify-between gap-5">

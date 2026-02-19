@@ -9,6 +9,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { goBack } from '$lib/utils';
 	import Icon from '@iconify/svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let service: any;
 
@@ -23,9 +24,12 @@
 </script>
 
 <svelte:head>
-	<title>{service ? service.name : 'Service Not Found'}</title>
 	{#if service}
-		<meta name="description" content={service.description} />
+		<Seo
+			title={service.name}
+			description={service.description}
+			canonicalPath={`/service/${params.service_name}`}
+		/>
 	{/if}
 </svelte:head>
 

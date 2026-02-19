@@ -1,12 +1,14 @@
 <script lang="ts">
 	export let data;
 	import { companyInfo } from '$lib/data';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Terms of Service</title>
-	<meta name="description" content="Terms of Service for our website." />
-</svelte:head>
+<Seo
+	title="Terms of Service"
+	description="Review the Beauty by Jitka terms of service. Understand your rights and responsibilities when using our website and services."
+	canonicalPath="/terms"
+/>
 
 <main class="mx-auto max-w-4xl p-8">
 	<h1 class="mb-4 text-3xl font-bold">Terms of Service</h1>

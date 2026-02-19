@@ -7,6 +7,7 @@
 	import cherryImage from '$lib/assets/images/financing/cherry.png';
 	import affirmImage from '$lib/assets/images/financing/affirm2.png';
 	import { Badge } from '$lib/components/ui/badge/index.js';
+	import Seo from '$lib/components/Seo.svelte';
 
 	onMount(() => {
 		animateMainStagger();
@@ -14,10 +15,12 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Financing : {companyInfo.name}</title>
-	<meta name="financing" content={`${companyInfo.name} checkout.`} />
-</svelte:head>
+<Seo
+	title="Financing Options"
+	description="Make your beauty treatments affordable with flexible financing from Cherry and Affirm. Beauty by Jitka offers easy payment plans for Botox, fillers, and more."
+	canonicalPath="/financing"
+	keywords="medspa financing, Cherry financing, Affirm financing, payment plans aesthetic treatments, beauty treatment financing"
+/>
 <div class="flex items-center justify-between gap-5">
 	<Button href={'/'} variant="outline" class="flex items-center gap-2">
 		<Icon icon="akar-icons:arrow-left" class="" />

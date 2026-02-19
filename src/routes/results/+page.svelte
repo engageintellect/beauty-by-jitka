@@ -8,6 +8,7 @@
 	import { companyInfo } from '$lib/data';
 	import { goBack } from '$lib/utils';
 	import { animateTitle, animateMainStagger } from '$lib/animations';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let showModal = false;
 	let modalImageSrc = '';
@@ -27,13 +28,12 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Before & Afters : {companyInfo.name}</title>
-	<meta
-		name="description"
-		content={`${companyInfo.name} "Before & After" results from our clients.`}
-	/>
-</svelte:head>
+<Seo
+	title="Before & After Gallery"
+	description="See real before and after results from Beauty by Jitka clients. Browse our gallery of Botox, dermal filler, and aesthetic treatment transformations."
+	canonicalPath="/results"
+	keywords="before and after, Botox results, dermal filler results, aesthetic treatment photos, medspa gallery"
+/>
 
 <div>
 	<Button on:click={goBack} variant="outline" class="flex items-center gap-2">

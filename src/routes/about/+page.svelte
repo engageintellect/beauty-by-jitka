@@ -10,6 +10,7 @@
 	import { PUBLIC_BOOKING_LINK } from '$env/static/public';
 	import { animateMainStagger } from '$lib/animations';
 	import SocialLinks from '$lib/components/ui/SocialLinks.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	function getDirectionsUrl(address: string) {
 		return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -115,13 +116,12 @@
 	});
 </script>
 
-<svelte:head>
-	<title>About : {companyInfo.name}</title>
-	<meta
-		name="description"
-		content={`Our story and team, and locations. ${companyInfo.name} is dedicated to providing top-notch services to our clients.`}
-	/>
-</svelte:head>
+<Seo
+	title="About Us"
+	description="Meet Jitka Zavadilova, RN and Dr. Steven Reynolds — the expert team behind Beauty by Jitka. Located in Irvine and Long Beach, California, offering personalized aesthetic treatments."
+	canonicalPath="/about"
+	keywords="about Beauty by Jitka, Jitka Zavadilova RN, Dr Steven Reynolds, nurse injector Orange County, medical spa team"
+/>
 
 <Button on:click={goBack} variant="outline" class="flex items-center gap-2">
 	<Icon icon="akar-icons:arrow-left" class="" />
